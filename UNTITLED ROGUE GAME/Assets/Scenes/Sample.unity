@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!212 &56987222 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7552595161569111368, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-  m_PrefabInstance: {fileID: 1142946024}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &220419473
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae62162626f244488af6aff00addad84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1142946024
+--- !u!1001 &1459450967
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -369,42 +364,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1766844559632480837, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766844560173034799, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: m_Size.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766844560173034799, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 1766844560934434724, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
+      propertyPath: baseStats.attackConfig
       value: 
-      objectReference: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-    - target: {fileID: 1766844560173034799, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766844560934434720, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: armPivot
-      value: 
-      objectReference: {fileID: 2115954608}
-    - target: {fileID: 1766844560934434720, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: characterRenderers.Array.data[0]
-      value: 
-      objectReference: {fileID: 56987222}
-    - target: {fileID: 1766844560934434720, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: characterRenderers.Array.data[1]
-      value: 
-      objectReference: {fileID: 56987222}
+      objectReference: {fileID: 11400000, guid: 0ba3f546f9492eb42b23f1e7deaf9601, type: 2}
     - target: {fileID: 1766844560934434728, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1766844560934434730, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: 4f35d0f548360a04eb99bbd373814496, type: 3}
     - target: {fileID: 1766844560934434731, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -445,6 +412,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7552595161569111368, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1933196349, guid: aa2455d7abcac634288edaf2c015eb61, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -542,15 +513,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2115954608 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1766844560173034796, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
-  m_PrefabInstance: {fileID: 1142946024}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1984805196}
   - {fileID: 220419480}
-  - {fileID: 1142946024}
+  - {fileID: 1459450967}
