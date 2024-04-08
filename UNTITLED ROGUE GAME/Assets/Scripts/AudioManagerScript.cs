@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 public class AudioManagerScript : MonoBehaviour
 {
-    [DoNotSerialize] public static AudioManagerScript instance;
+    [NonSerialized] public static AudioManagerScript instance;
     [Header("------------Audio Source --------------")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
