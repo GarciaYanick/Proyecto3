@@ -365,6 +365,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1766844560934434724, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
+      propertyPath: baseStats.speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766844560934434724, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
       propertyPath: baseStats.attackConfig
       value: 
       objectReference: {fileID: 11400000, guid: 0ba3f546f9492eb42b23f1e7deaf9601, type: 2}
@@ -415,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 7552595161569111368, guid: 64235cecdc7652f448a04a63ede9d93e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1933196349, guid: aa2455d7abcac634288edaf2c015eb61, type: 3}
+      objectReference: {fileID: -1289754732, guid: aa2455d7abcac634288edaf2c015eb61, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

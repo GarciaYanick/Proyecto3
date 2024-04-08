@@ -9,7 +9,7 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
     /// </summary>
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(TopDownCharacterController))]
-    public abstract class TopDownAnimations : MonoBehaviour
+    public abstract class Animations : MonoBehaviour
     {
         protected Animator animator;
         protected TopDownCharacterController controller;

@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
 {
-    public class SampleCharacterAnimation : TopDownAnimations
+    public class CharacterAnimation : Animations
     {
-        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
+        
         private static readonly int Attack = Animator.StringToHash("Attack");
         private static readonly int IsHurt = Animator.StringToHash("IsHurt");
         
@@ -13,7 +13,10 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
         [SerializeField] private ParticleSystem dustParticleSystem;
         
         private HealthSystem _healthSystem;
-        
+
+        private Vector2 velocity;
+
+
         protected override void Awake()
         {
             base.Awake();
@@ -24,6 +27,7 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
         {
             controller.OnAttackEvent.AddListener(_ => Attacking());
             controller.OnMoveEvent.AddListener(Move);
+            velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
 
             if (_healthSystem != null)
             {
@@ -32,42 +36,34 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
             }
         }
 
-        /// <summary>
-        ///     To call when the character moves, change the animation to the walking one
-        /// </summary>
-        /// <param name="movementDirection"> The new movement direction </param>
-        private void Move(Vector2 movementDirection)
+
+        private void Update()
         {
-            animator.SetBool(IsWalking, movementDirection.magnitude > .5f);
+            if (velocity.magnitude != 0) animator.SetBool("isMoving", true);
+            else animator.SetBool("isMoving", false);
         }
 
-        /// <summary>
-        ///     To call when the character attack
-        /// </summary>
+        private void Move(Vector2 movementDirection)
+        {
+            animator.SetFloat("Horizontal", movementDirection.x);
+            animator.SetFloat("Vertical", movementDirection.y);
+        }
+
         private void Attacking()
         {
             animator.SetTrigger(Attack);
         }
 
-        /// <summary>
-        ///     To call when the character takes damage
-        /// </summary>
         private void Hurt()
         {
             animator.SetBool(IsHurt, true);
         }
 
-        /// <summary>
-        ///     To call when the character ends its invincibility time
-        /// </summary>
         public void InvincibilityEnd()
         {
             animator.SetBool(IsHurt, false);
         }
 
-        /// <summary>
-        ///     Creates dust particles when the character walks, called from an animation
-        /// </summary>
         public void CreateDustParticles()
         {
             if (createDustOnWalk)
