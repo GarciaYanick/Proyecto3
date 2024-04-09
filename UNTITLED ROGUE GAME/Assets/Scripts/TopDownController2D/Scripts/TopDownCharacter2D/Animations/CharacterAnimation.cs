@@ -37,16 +37,11 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
         }
 
 
-        private void Update()
-        {
-            if (velocity.magnitude != 0) animator.SetBool("isMoving", true);
-            else animator.SetBool("isMoving", false);
-        }
-
         private void Move(Vector2 movementDirection)
         {
             animator.SetFloat("Horizontal", movementDirection.x);
             animator.SetFloat("Vertical", movementDirection.y);
+            CreateDustParticles();
         }
 
         private void Attacking()
