@@ -2,13 +2,11 @@
 
 namespace TopDownCharacter2D.Attacks.Range
 {
-    /// <summary>
-    ///     This class contains the configuration of a ranged attack
-    /// </summary>
-    [CreateAssetMenu(fileName = "RangedAttackConfig", menuName = "TopDownController/Attacks/Range", order = 0)]
+
+    [CreateAssetMenu(fileName = "RangedWeapon", menuName = "Weapons/Range")]
     public class RangedAttackConfig : AttackConfig
     {
-        [Tooltip("The duration of a projectile before disappearing")]
+        [Tooltip("The duration of a projectile before disappearing")] 
         public float duration;
 
         [Tooltip("The maximum angle variation of the projectile")]
