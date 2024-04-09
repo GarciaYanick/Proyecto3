@@ -13,11 +13,6 @@ public class MenuManager : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
-    public void SceneChange(string sceneName)
-    {
-        
-    }
     
     public void Quit()
     {
@@ -33,9 +28,7 @@ public class MenuManager : MonoBehaviour
     {
         animator.SetTrigger("StartGame");
 
-        yield return new WaitForSeconds(clip.length + 1);
-
-        SceneManager.LoadScene("MainScene");
+        yield return new WaitForSeconds(clip.length + 0.1f);
     }
 
 
