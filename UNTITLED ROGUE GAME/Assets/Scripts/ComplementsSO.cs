@@ -15,24 +15,8 @@ public class ComplementsSO : ItemSO
     private void OnEnable()
     {
         multiplier = stats[Random.Range(0, stats.Length)];
-        switch (Rarity)
-        {
-            case "Rare":
-                statMultiplier = 1.10f;
-                break;
-            case "Epic":
-                statMultiplier = 1.20f;
-                break;
-            case "Mythic":
-                statMultiplier = 1.30f;
-                break;
-            case "Legendary":
-                statMultiplier = 1.40f;
-                break;
-            default:
-                statMultiplier = 1;
-                break;
-        }
+
+        statMultiplier = 1 + (Random.Range(10*Rarity+10, 10 * Rarity +20)/100);
     }
 
 }

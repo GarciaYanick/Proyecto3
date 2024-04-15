@@ -11,17 +11,15 @@ public class ItemSO : ScriptableObject
 
     private static readonly string[] Rarities = { "Rare", "Epic", "Mythic", "Legendary" };
 
-    public string Rarity;
-     
-    
+    public string RarityString;
+    [DoNotSerialize] public int Rarity;
 
     private void OnEnable()
     {
-        if (Rarity == null)
+        if (RarityString == "")
         {
-            int rnd = Random.Range(0, Rarities.Length);
-
-            Rarity = Rarities[rnd];
+            Rarity = Random.Range(0, Rarities.Length);
+            RarityString = Rarities[Rarity];
         }
         
     }
