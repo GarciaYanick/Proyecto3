@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossController : BossStateController, IDamageable
+public class EnemyController : EnemyStateController, IDamageable
 {
     public float HP;
     public float AttackDistance;

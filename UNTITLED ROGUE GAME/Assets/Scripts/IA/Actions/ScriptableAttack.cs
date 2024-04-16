@@ -10,7 +10,7 @@ public class ScriptableAttack : ScriptableAction
         //GameManager.gm.UpdateText("va te perdono");
     }
 
-    public override void OnSetState(BossStateController sc)
+    public override void OnSetState(EnemyStateController sc)
     {
         base.OnSetState(sc);
         //GameManager.gm.UpdateText("a q te meto");

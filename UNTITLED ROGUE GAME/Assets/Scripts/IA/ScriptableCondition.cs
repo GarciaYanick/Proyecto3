@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class ScriptableCondition : ScriptableObject
 {
-     public abstract bool Check(BossStateController sc);
+     public abstract bool Check(EnemyStateController sc);
     
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public abstract class ScriptableAction : ScriptableObject
 {
-    protected BossStateController sc;
+    protected EnemyStateController sc;
     public abstract void OnFinishedState();
 
-    public virtual void OnSetState(BossStateController sc) {
+    public virtual void OnSetState(EnemyStateController sc) {
         this.sc = sc;
     }
 

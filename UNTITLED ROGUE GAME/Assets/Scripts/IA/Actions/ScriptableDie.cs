@@ -10,7 +10,7 @@ public class ScriptableDie : ScriptableAction
         //GameManager.gm.UpdateText("me mori");
     }
 
-    public override void OnSetState(BossStateController sc)
+    public override void OnSetState(EnemyStateController sc)
     {
         base.OnSetState(sc);
        // GameManager.gm.UpdateText("me estoy muriendo");

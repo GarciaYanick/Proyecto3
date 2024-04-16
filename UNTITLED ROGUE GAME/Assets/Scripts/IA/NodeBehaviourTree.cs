@@ -10,11 +10,11 @@ public class NodeBehaviourTree : ScriptableObject
     public List<ScriptableCondition> abortConditions;
     public ScriptableAction action;
     //public TypeOfCondition type;
-    public bool Condition(BossStateController sc)
+    public bool Condition(EnemyStateController sc)
     {
         return cond.Check(sc);
     }
-    public bool AbortCondition(BossStateController sc)
+    public bool AbortCondition(EnemyStateController sc)
     {
         var abort = false;
         if(abortConditions!=null)

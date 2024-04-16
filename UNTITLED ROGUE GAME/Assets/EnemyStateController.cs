@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossStateController : MonoBehaviour
+public class EnemyStateController : MonoBehaviour
 {
     public NodeBehaviourTree currentState;
     public GameObject target = null;

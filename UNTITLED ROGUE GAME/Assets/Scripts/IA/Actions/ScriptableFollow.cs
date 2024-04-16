@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class ScriptableFollow : ScriptableAction
 {
-    private BossMovement _chaseBehaviour;
-    private BossController _enemyController;
+    private EnemyMovement _chaseBehaviour;
+    private EnemyController _enemyController;
     public override void OnFinishedState()
     {
         _chaseBehaviour.StopChasing();
     }
 
-    public override void OnSetState(BossStateController sc)
+    public override void OnSetState(EnemyStateController sc)
     {
         base.OnSetState(sc);
         //GameManager.gm.UpdateText("Te persigo");
-        _chaseBehaviour = sc.GetComponent<BossMovement>();
-        _enemyController = (BossController)sc;
+        _chaseBehaviour = sc.GetComponent<EnemyMovement>();
+        _enemyController = (EnemyController)sc;
     }
 
     public override void OnUpdate()
