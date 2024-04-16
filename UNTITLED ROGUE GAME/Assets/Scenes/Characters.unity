@@ -310,7 +310,7 @@ MonoBehaviour:
   currentState: {fileID: 11400000, guid: 486115779b5d2084b95d79f3e48ed93c, type: 2}
   target: {fileID: 0}
   HP: 100
-  AttackDistance: 8
+  AttackDistance: 2
 --- !u!114 &778883765
 MonoBehaviour:
   m_ObjectHideFlags: 0
