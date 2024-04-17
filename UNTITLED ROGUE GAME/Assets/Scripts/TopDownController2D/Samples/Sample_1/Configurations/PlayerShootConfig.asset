@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aca20c846ab409baaeb6c4782674e6c, type: 3}
   m_Name: PlayerShootConfig
   m_EditorClassIdentifier: 
-  size: 0.6
-  delay: 0.15
+  itemID: 0
+  itemImage: {fileID: 21300000, guid: b4bc7753b0ca2f54c818fc6c63778318, type: 3}
+  Rarity: comun
+  size: 0.1
+  delay: 1
   power: 1
   speed: 15
   target:
@@ -21,6 +24,6 @@ MonoBehaviour:
     m_Bits: 64
   duration: 2
   spread: 0
-  numberOfProjectilesPerShot: 1
+  numberOfProjectilesPerShot: 4
   multipleProjectilesAngle: 7
-  projectileColor: {r: 1, g: 0.8455281, b: 0, a: 1}
+  projectileColor: {r: 0.48235297, g: 0.7058824, b: 0.52156866, a: 1}

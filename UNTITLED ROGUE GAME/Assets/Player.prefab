@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 1766844560934434727}
   - component: {fileID: 1766844560934434720}
   - component: {fileID: 1766844560934434717}
-  - component: {fileID: 1766844560934434716}
   - component: {fileID: 1766844560934434719}
   - component: {fileID: 1766844560934434718}
   - component: {fileID: 2129650104}
@@ -429,7 +428,7 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 100
     speed: 5
-    attackConfig: {fileID: 11400000, guid: 0ba3f546f9492eb42b23f1e7deaf9601, type: 2}
+    attackConfig: {fileID: 11400000, guid: 63a66bc5d0f6fef4da842af4089bebba, type: 2}
 --- !u!114 &1766844560934434725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,8 +465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48187ebcaf5f40b1a85c377de069a771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armRenderer: {fileID: 0}
-  characterRenderers: []
+  armRenderer: {fileID: 2703301905782474157}
+  characterRenderers:
+  - {fileID: 2703301905782474157}
   armPivot: {fileID: 1766844560292611532}
 --- !u!114 &1766844560934434717
 MonoBehaviour:
@@ -484,27 +484,6 @@ MonoBehaviour:
   recoilStrength: 0.5
   projectileSizeModifyRecoil: 1
   projectileSpawnPosition: {fileID: 1766844559632480837}
---- !u!114 &1766844560934434716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766844560934434728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca98f300fe1c407c8aeb7438407d736c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effects:
-  - triggerEvent: 2
-    particleSystem: {fileID: 0}
-    soundEffect: {fileID: 8300000, guid: 5ad5016c812df2a45b299edea1581906, type: 3}
-    screenShake: 1
-  - triggerEvent: 4
-    particleSystem: {fileID: 0}
-    soundEffect: {fileID: 8300000, guid: 596832cd88648a544a225bfa557d23f8, type: 3}
-    screenShake: 1
 --- !u!114 &1766844560934434719
 MonoBehaviour:
   m_ObjectHideFlags: 0
