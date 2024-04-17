@@ -20,7 +20,8 @@ public class EnemyController : EnemyStateController, IDamageable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        target = collision.gameObject;
+
+        target = GameObject.Find("Player");
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

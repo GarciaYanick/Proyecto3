@@ -17,4 +17,5 @@ MonoBehaviour:
   cond: {fileID: 11400000, guid: 588e8c13abb40d942ba33a7592ffab23, type: 2}
   abortConditions:
   - {fileID: 11400000, guid: 440ad31d36dea4b4a9883583230821e2, type: 2}
+  - {fileID: 11400000, guid: b52c85d678a6bf7438be53e98f5f773a, type: 2}
   action: {fileID: 11400000, guid: 1249adbf3cda71441aadb00faa00927e, type: 2}
