@@ -284,6 +284,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3990919152631378806, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: AttackDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5532126102540879366, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
       propertyPath: m_Name
       value: Dave The Magical Cheese Wizard

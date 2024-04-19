@@ -5,14 +5,20 @@ using UnityEngine;
     "ScriptableObjects2/ScriptableAction/ScriptableAttack", order = 1)]
 public class ScriptableAttack : ScriptableAction
 {
+    public Animator animator;
+
     public override void OnFinishedState()
     {
         //GameManager.gm.UpdateText("va te perdono");
+        animator.Play("Movement");
     }
 
     public override void OnSetState(EnemyStateController sc)
     {
         base.OnSetState(sc);
+        animator = sc.GetComponent<Animator>();
+
+        animator.Play("Attack");
         //GameManager.gm.UpdateText("a q te meto");
     }
 
