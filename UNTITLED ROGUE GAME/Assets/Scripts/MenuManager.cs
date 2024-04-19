@@ -7,7 +7,8 @@ public class MenuManager : MonoBehaviour
 {
     private Animator animator;
 
-    public AnimationClip clip;
+    public AnimationClip flipClip;
+    public AnimationClip reverseClip;
 
     private void Awake()
     {
@@ -19,17 +20,35 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void LoadAnimationTransition()
+    public void LoadStartAnimationTransition()
     {
-        StartCoroutine(LoadAnimation());
+        StartCoroutine(LoadStartAnimation());
     }
 
-    IEnumerator LoadAnimation()
+    public void LoadReverseAnimationTransition()
     {
+        StartCoroutine(LoadReverseAnimation());
+    }
+
+    IEnumerator LoadStartAnimation()
+    {
+
+        Debug.Log("XD");
+
         animator.SetTrigger("StartGame");
 
-        yield return new WaitForSeconds(clip.length + 0.1f);
+        yield return new WaitForSeconds(flipClip.length + 0.1f);
     }
+
+    IEnumerator LoadReverseAnimation()
+    {
+        Debug.Log("Reverse");
+        animator.SetTrigger("BackToMenu");
+
+        yield return new WaitForSeconds(reverseClip.length + 0.1f);
+    }
+
+
 
 
 
