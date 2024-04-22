@@ -12,23 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a685ae18494b34e819615474595277, type: 3}
   m_Name: MeleeConfig
   m_EditorClassIdentifier: 
+  itemID: 0
+  itemImage: {fileID: 0}
+  Rarity: 
   size: 1
-  delay: 1
+  delay: 0.5
   power: 1
-  speed: 1
+  speed: 0.5
   target:
     serializedVersion: 2
-    m_Bits: 128
-  swingAngle: 90
-  thrustDistance: 10
+    m_Bits: 64
+  swingAngle: 60
+  thrustDistance: 0.5
   swingCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0

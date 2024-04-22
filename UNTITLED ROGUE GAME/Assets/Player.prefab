@@ -169,6 +169,8 @@ GameObject:
   - component: {fileID: 1766844560934434719}
   - component: {fileID: 1766844560934434718}
   - component: {fileID: 2129650104}
+  - component: {fileID: 4815302889050122317}
+  - component: {fileID: 955271559766856999}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -460,7 +462,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766844560934434728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48187ebcaf5f40b1a85c377de069a771, type: 3}
   m_Name: 
@@ -476,7 +478,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766844560934434728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19ae9f83edb74d3d854cf6668f8de1a7, type: 3}
   m_Name: 
@@ -537,6 +539,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createDustOnWalk: 1
   dustParticleSystem: {fileID: 1766844560953468154}
+--- !u!114 &4815302889050122317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766844560934434728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0727c97c1c41942a30a5e7f56714c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &955271559766856999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766844560934434728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d29ef4b7fd48cd95a0736eb0d8e71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackObject: {fileID: 5921577697177155323, guid: 66cfaddbd96a6f748a943c9dc3b7d34e, type: 3}
+  attackPivot: {fileID: 1766844560292611532}
 --- !u!1 &1766844560953468153
 GameObject:
   m_ObjectHideFlags: 0

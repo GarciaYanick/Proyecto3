@@ -5,9 +5,6 @@ using UnityEngine.Events;
 
 namespace TopDownCharacter2D.Controllers
 {
-    /// <summary>
-    ///     A basic controller for a character
-    /// </summary>
     [RequireComponent(typeof(CharacterStatsHandler))]
     public abstract class TopDownCharacterController : MonoBehaviour
     {
@@ -26,9 +23,6 @@ namespace TopDownCharacter2D.Controllers
             HandleAttackDelay();
         }
 
-        /// <summary>
-        ///     Only trigger a attack event when the attack delay is over
-        /// </summary>
         private void HandleAttackDelay()
         {
             if (Stats.CurrentStats.attackConfig == null)
