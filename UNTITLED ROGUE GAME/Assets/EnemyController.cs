@@ -6,6 +6,7 @@ public class EnemyController : EnemyStateController, IDamageable
 {
     public float HP;
     public float AttackDistance;
+    public GameObject bulletPrefab;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +17,12 @@ public class EnemyController : EnemyStateController, IDamageable
     public void OnHurt(float damage)
     {
         HP -= damage;
+    }
+    public void LaunchBullet()
+    {
+        GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
+        var bulletrb = bullet.GetComponent<Rigidbody2D>();
+        bulletrb.velocity = target.transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -285,6 +285,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3990919152631378806, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 6476304075420885884, guid: bb3e106ed5b03624aad789d4aa243b35, type: 3}
+    - target: {fileID: 3990919152631378806, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
       propertyPath: AttackDistance
       value: 4
       objectReference: {fileID: 0}

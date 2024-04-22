@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScriptableAttack : ScriptableAction
 {
     public Animator animator;
+    public EnemyController enemyController;
 
     public override void OnFinishedState()
     {
@@ -17,8 +18,9 @@ public class ScriptableAttack : ScriptableAction
     {
         base.OnSetState(sc);
         animator = sc.GetComponent<Animator>();
-
+        enemyController = sc.GetComponent<EnemyController>();
         animator.Play("Attack");
+        enemyController.LaunchBullet();
         //GameManager.gm.UpdateText("a q te meto");
     }
 
