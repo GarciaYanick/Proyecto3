@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
    public List<GameObject> DifLevels = new List<GameObject>();
    public List<GameObject> BossLevels = new List<GameObject>();
 
-   public int currentLevel;
+   public int currentLevel = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +19,13 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
 
         }
         else Destroy(gameObject);
-        musicSource.volume = 0.35f;
-
     }
     public void LevelChange()
     {
