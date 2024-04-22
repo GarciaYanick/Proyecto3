@@ -1428,6 +1428,8 @@ GameObject:
   - component: {fileID: 4598225359087018719}
   - component: {fileID: 6780573468402970064}
   - component: {fileID: 4835373981290984546}
+  - component: {fileID: 8293746451872606201}
+  - component: {fileID: 4239481497789083817}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -1459,6 +1461,26 @@ Tilemap:
   m_GameObject: {fileID: 7419597741551934348}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 7, y: -15, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 8, y: -15, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 6, y: -14, z: 0}
     second:
       serializedVersion: 2
@@ -3615,7 +3637,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fb0bc321336cf8141973c3ca1bacf58b, type: 2}
   - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: 086ef120552e13941a2fc267b23e8fd4, type: 2}
-  - m_RefCount: 135
+  - m_RefCount: 137
     m_Data: {fileID: 11400000, guid: f1870f3a44ac6094c860064fbe393961, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 20633f0bd173cf148a983b92321bad28, type: 2}
@@ -3664,7 +3686,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 21
     m_Data: {fileID: 792855658, guid: b905faf92b4f4594092461f064f381e6, type: 3}
-  - m_RefCount: 135
+  - m_RefCount: 137
     m_Data: {fileID: 1959005555, guid: b905faf92b4f4594092461f064f381e6, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 714527871, guid: b905faf92b4f4594092461f064f381e6, type: 3}
@@ -3709,7 +3731,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: -577727721, guid: b905faf92b4f4594092461f064f381e6, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 215
+  - m_RefCount: 217
     m_Data:
       e00: 1
       e01: 0
@@ -3728,13 +3750,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 215
+  - m_RefCount: 217
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -9, y: -14, z: 0}
-  m_Size: {x: 24, y: 19, z: 1}
+  m_Origin: {x: -9, y: -15, z: 0}
+  m_Size: {x: 24, y: 20, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -3803,3 +3825,60 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &8293746451872606201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419597741551934348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abead1a13bccec340b87d4fd7d8ccf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &4239481497789083817
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419597741551934348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 8.034671, y: -14.745267}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5393162, y: 0.5094662}
+  m_EdgeRadius: 0
