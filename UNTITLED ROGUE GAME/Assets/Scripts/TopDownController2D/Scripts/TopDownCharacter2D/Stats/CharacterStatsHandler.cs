@@ -6,13 +6,14 @@ using TopDownCharacter2D.Attacks;
 using TopDownCharacter2D.Attacks.Melee;
 using TopDownCharacter2D.Attacks.Range;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TopDownCharacter2D.Stats
 {
     /// <summary>
     ///     Handles the stats and their modification for a character
     /// </summary>
-    public class CharacterStatsHandler : MonoBehaviour
+    public class CharacterStatsHandler : MonoBehaviour, IDamageable
     {
         [SerializeField] [Tooltip("The default stats of this character")]
         private CharacterStats baseStats;
@@ -22,6 +23,9 @@ namespace TopDownCharacter2D.Stats
 
         public CharacterStats CurrentStats { get; private set; }
 
+        public float hp;
+        public float maxhp;
+        public Slider healthSlider;
         private void Awake()
         {
             UpdateCharacterStats(null, null);
@@ -179,6 +183,14 @@ namespace TopDownCharacter2D.Stats
             
             currentMeleeAttacks.thrustDistance = 
                 operation(currentMeleeAttacks.thrustDistance, meleeAttacksModifier.thrustDistance);
+        }
+
+        public void OnHurt(float damage)
+        {
+            hp -= damage;
+            healthSlider.value = hp / maxhp;
+            var animator = healthSlider.GetComponent<Animator>();
+            animator.SetTrigger("PlayEffect");
         }
 
         #region Stats limits
