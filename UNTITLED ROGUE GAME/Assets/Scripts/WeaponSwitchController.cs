@@ -14,7 +14,7 @@ public class WeaponSwitchController : MonoBehaviour
     {
         pInput = gameObject.GetComponent<PlayerInput>();
 
-        pInput.input
+        //pInput.input;
     }
 
     // Update is called once per frame
