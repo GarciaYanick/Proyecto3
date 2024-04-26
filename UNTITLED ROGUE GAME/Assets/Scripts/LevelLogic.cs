@@ -15,6 +15,6 @@ public class LevelLogic : MonoBehaviour
         gameObject.SetActive(false);
         GameManager.Instance.currentLevel++;
         GameManager.Instance.LevelChange();
-        
+        collision.gameObject.transform.position = new Vector2(0,0);
     }
 }
