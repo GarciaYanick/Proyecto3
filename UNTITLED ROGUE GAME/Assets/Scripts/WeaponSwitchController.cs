@@ -12,9 +12,7 @@ public class WeaponSwitchController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pInput = gameObject.GetComponent<PlayerInput>();
-
-        //pInput.input;
+        //Repasar eventoss
     }
 
     // Update is called once per frame
