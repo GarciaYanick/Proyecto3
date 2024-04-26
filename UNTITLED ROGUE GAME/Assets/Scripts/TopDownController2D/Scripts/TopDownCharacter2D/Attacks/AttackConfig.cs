@@ -25,24 +25,7 @@ namespace TopDownCharacter2D.Attacks
         {
             if (power == 0)
             {
-                switch (Rarity)
-                {
-                    case "Rare":
-                        power = Random.Range(1, 5);
-                        break;
-                    case "Epic":
-                        power = Random.Range(6, 10);
-                        break;
-                    case "Mythic":
-                        power = Random.Range(11, 15);
-                        break;
-                    case "Legendary":
-                        power = Random.Range(16, 20);
-                        break;
-                    default:
-                        power = 5;
-                        break;
-                }
+                power = Random.Range(Rarity * 1 + 1, Rarity * 5 + 5);
             }
         }
     }
