@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : EnemyStateController, IDamageable
 {
     public float HP;
+    public float maxhp;
+    public Slider healthSlider;
     public float AttackDistance;
     public GameObject bulletPrefab;
 
@@ -17,6 +20,9 @@ public class EnemyController : EnemyStateController, IDamageable
     public void OnHurt(float damage)
     {
         HP -= damage;
+        healthSlider.value = HP / maxhp;
+        var animator = healthSlider.GetComponent<Animator>();
+        animator.SetTrigger("PlayEffect");
     }
     public void LaunchBullet()
     {

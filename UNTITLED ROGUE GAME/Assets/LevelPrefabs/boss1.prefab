@@ -12,13 +12,15 @@ GameObject:
   - component: {fileID: 911821103529198164}
   - component: {fileID: 5219737721912096860}
   - component: {fileID: 5212093045850847998}
+  - component: {fileID: 1275724011045239390}
+  - component: {fileID: 8301491800713329395}
   m_Layer: 0
   m_Name: boss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1988262515764591556
 Transform:
   m_ObjectHideFlags: 0
@@ -34,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 5133972712527406120}
   - {fileID: 5858295693926483357}
+  - {fileID: 4944891395039995603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &911821103529198164
@@ -156,6 +159,63 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1275724011045239390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714723360790652560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abead1a13bccec340b87d4fd7d8ccf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &8301491800713329395
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714723360790652560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -8.895184}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6452894, y: 0.32064438}
+  m_EdgeRadius: 0
 --- !u!1 &8061113100055761432
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +227,6 @@ GameObject:
   - component: {fileID: 5133972712527406120}
   - component: {fileID: 3595008792146943941}
   - component: {fileID: 4580222275085818842}
-  - component: {fileID: 1865709034879626381}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -3165,51 +3224,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!61 &1865709034879626381
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8061113100055761432}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.012352943, y: -8.8023205}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.701517, y: 0.32558823}
-  m_EdgeRadius: 0
 --- !u!1 &8317138485490089469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,3 +4185,73 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1001 &785276035951104010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1988262515764591556}
+    m_Modifications:
+    - target: {fileID: 4128528582814796967, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128528582814796967, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532126102540879366, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_Name
+      value: Dave The Magical Cheese Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.32957458
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.40792847
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5939059
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+--- !u!4 &4944891395039995603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+  m_PrefabInstance: {fileID: 785276035951104010}
+  m_PrefabAsset: {fileID: 0}
