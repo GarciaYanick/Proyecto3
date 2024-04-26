@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1200051578, guid: b31a77c028ebaba4fb4422ec738272dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -246,4 +246,7 @@ MonoBehaviour:
   currentState: {fileID: 11400000, guid: 486115779b5d2084b95d79f3e48ed93c, type: 2}
   target: {fileID: 0}
   HP: 100
-  AttackDistance: 4
+  maxhp: 100
+  healthSlider: {fileID: 0}
+  AttackDistance: 1
+  bulletPrefab: {fileID: 0}

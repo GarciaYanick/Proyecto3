@@ -28,7 +28,10 @@ namespace TopDownCharacter2D.Stats
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
         }
-
+        private void FixedUpdate()
+        {
+            CheckHealth();
+        }
         private void UpdateCharacterStats(object sender, NotifyCollectionChangedEventArgs e)
         {
             AttackConfig config = null;
@@ -164,11 +167,18 @@ namespace TopDownCharacter2D.Stats
         public void OnHurt(float damage)
         {
             hp -= damage;
+            CheckHealth();
             healthSlider.value = hp / maxhp;
             var animator = healthSlider.GetComponent<Animator>();
             animator.SetTrigger("PlayEffect");
         }
-
+        public void CheckHealth()
+        {
+            if (hp <= 0)
+            {
+                GameManager.Instance.SetGameOver();
+            }
+        }
         #region Stats limits
 
         private const float MinAttackDelay = 0.03f;

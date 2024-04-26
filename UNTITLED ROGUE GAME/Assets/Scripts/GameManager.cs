@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
 
    public int currentLevel = 1;
 
+    public WinCanvasManager canvasManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +60,13 @@ public class GameManager : MonoBehaviour
             case 15:
                 BossLevels[Random.Range(0, BossLevels.Count)].SetActive(true);
                 break;
+            case 16:
+                SceneManager.LoadScene("Win");
+                break;
         }
+    }
+    public void SetGameOver()
+    {
+        canvasManager.ShowGameOverMenu();
     }
 }

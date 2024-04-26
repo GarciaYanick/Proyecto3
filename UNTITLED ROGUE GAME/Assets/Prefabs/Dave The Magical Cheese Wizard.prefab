@@ -678,7 +678,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &8320944638869202775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,8 +707,8 @@ MonoBehaviour:
   currentState: {fileID: 11400000, guid: 486115779b5d2084b95d79f3e48ed93c, type: 2}
   target: {fileID: 0}
   HP: 100
-  maxhp: 0
-  healthSlider: {fileID: 0}
+  maxhp: 100
+  healthSlider: {fileID: 7136167910334209596}
   AttackDistance: 2
   bulletPrefab: {fileID: 0}
 --- !u!1 &6392153732522924424

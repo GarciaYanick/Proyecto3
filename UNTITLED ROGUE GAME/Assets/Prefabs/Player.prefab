@@ -514,8 +514,8 @@ MonoBehaviour:
     maxHealth: 100
     speed: 5
     attackConfig: {fileID: 11400000, guid: 0ba3f546f9492eb42b23f1e7deaf9601, type: 2}
-  hp: 0
-  maxhp: 0
+  hp: 100
+  maxhp: 100
   healthSlider: {fileID: 0}
 --- !u!114 &1766844560934434725
 MonoBehaviour:
