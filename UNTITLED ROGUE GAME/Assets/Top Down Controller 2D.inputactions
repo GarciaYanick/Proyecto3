@@ -34,21 +34,21 @@
                 },
                 {
                     "name": "RangeWeapon",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "4b3fb10e-d19d-4cb1-b2d4-7946db291551",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MeleeWeapon",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "b7411258-a163-4df3-93b9-534088afe940",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
