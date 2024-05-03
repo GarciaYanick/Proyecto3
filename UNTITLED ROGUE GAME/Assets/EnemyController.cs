@@ -11,16 +11,17 @@ public class EnemyController : EnemyStateController, IDamageable
     public Slider healthSlider;
     public float AttackDistance;
     public GameObject bulletPrefab;
+    public GameObject sword;
 
     // Update is called once per frame
     void Update()
     {
         StateTransition();
         if (currentState.action != null) currentState.action.OnUpdate();
+        
     }
     public void OnHurt(float damage)
     {
-        
         HP -= damage;
         healthSlider.value = HP / maxhp;
         var animator = healthSlider.GetComponent<Animator>();
@@ -32,6 +33,11 @@ public class EnemyController : EnemyStateController, IDamageable
         GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
         var bulletrb = bullet.GetComponent<Rigidbody2D>();
         bulletrb.velocity = target.transform.position - transform.position;
+    }
+    public void RotateSword()
+    {
+        var swordScript = sword.GetComponent<RotateSword>();
+        swordScript.RotateArm(target.transform.position);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

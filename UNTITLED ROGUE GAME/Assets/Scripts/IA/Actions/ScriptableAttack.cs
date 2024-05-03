@@ -20,10 +20,15 @@ public class ScriptableAttack : ScriptableAction
         animator = sc.GetComponent<Animator>();
         enemyController = sc.GetComponent<EnemyController>();
         animator.Play("Attack");
-        enemyController.LaunchBullet();
+        if (enemyController.bulletPrefab != null) enemyController.LaunchBullet();
+        else
+        {
+            var sword = enemyController.sword.GetComponent<RotateSword>();
+            sword.Attack();
+        }
         //GameManager.gm.UpdateText("a q te meto");
     }
-
+    
     public override void OnUpdate()
     {
        // GameManager.gm.UpdateText("que te meto asin");
