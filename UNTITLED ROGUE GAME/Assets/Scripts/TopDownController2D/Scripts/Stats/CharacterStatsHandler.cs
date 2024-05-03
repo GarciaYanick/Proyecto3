@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace TopDownCharacter2D.Stats
 {
-    public class CharacterStatsHandler : MonoBehaviour
+    public class CharacterStatsHandler : MonoBehaviour, IDamageable
     {
         [SerializeField] [Tooltip("The default stats of this character")]
         private CharacterStats baseStats;

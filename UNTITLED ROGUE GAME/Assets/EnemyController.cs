@@ -22,16 +22,16 @@ public class EnemyController : EnemyStateController, IDamageable
     {
         
         HP -= damage;
-        //healthSlider.value = HP / maxhp;
-        //var animator = healthSlider.GetComponent<Animator>();
-        //animator.SetTrigger("PlayEffect");
+        healthSlider.value = HP / maxhp;
+        var animator = healthSlider.GetComponent<Animator>();
+        animator.SetTrigger("PlayEffect");
         if (HP < 0) Destroy(gameObject);
     }
     public void LaunchBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
         var bulletrb = bullet.GetComponent<Rigidbody2D>();
-        bulletrb.velocity = target.transform.position;
+        bulletrb.velocity = target.transform.position - transform.position;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
