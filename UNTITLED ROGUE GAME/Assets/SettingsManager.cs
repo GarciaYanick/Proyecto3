@@ -18,31 +18,22 @@ public class SettingsManager : MonoBehaviour
     public Text muteText;
     public Text fpsYesNoText;
 
-
-    public Text fpsText;
-
     public float musicSliderValue;
     public float SFXSliderValue;
 
     public bool isMuted = false;
-
-    private int lastFrameIndex;
-    private float[] frameDeltaTimeArray;
 
     void Awake()
     {
         musicSliderValue = musicSlider.value;
         SFXSliderValue = SFXSlider.value;
 
-        frameDeltaTimeArray = new float[100];
+
     }
 
     void Update()
     {
-        frameDeltaTimeArray[lastFrameIndex] = Time.deltaTime;
-        lastFrameIndex = (lastFrameIndex + 1) % frameDeltaTimeArray.Length;
-
-        fpsText.text = Mathf.RoundToInt(CalculateFPS()).ToString();
+       
     }
 
     public void SetMusic(float volume)
@@ -105,29 +96,22 @@ public class SettingsManager : MonoBehaviour
         }
     }
 
-    public float CalculateFPS()
-    {
-        float total = 0f;
-
-        foreach(float deltaTime in frameDeltaTimeArray)
-        {
-            total += deltaTime;
-        }
-
-        return frameDeltaTimeArray.Length / total;
-    }
-
     public void ShowFPS()
     {
         if (fpsToggle.isOn)
         {
-            fpsText.gameObject.SetActive(true);
+            GameManager.Instance.isFrameTextActive = true;
+            Debug.Log(GameManager.Instance.isFrameTextActive);
             fpsYesNoText.text = "Yes";
         }
         else
         {
             fpsYesNoText.text = "No";
-            fpsText.gameObject.SetActive(false);
+
+            GameManager.Instance.isFrameTextActive = false;
+
+
+            Debug.Log(GameManager.Instance.isFrameTextActive);
         }
     }
 
