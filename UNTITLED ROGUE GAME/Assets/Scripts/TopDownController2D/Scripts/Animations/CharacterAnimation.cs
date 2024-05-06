@@ -42,6 +42,7 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
             animator.SetFloat("Horizontal", movementDirection.x);
             animator.SetFloat("Vertical", movementDirection.y);
             CreateDustParticles();
+            animator.SetBool("isMoving", true);
         }
 
         private void Attacking()
