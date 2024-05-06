@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4395966484679267665}
   m_Layer: 0
   m_Name: walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9023,7 +9023,7 @@ Transform:
   m_Children:
   - {fileID: 1541150097461781989}
   - {fileID: 4144891057668116695}
-  - {fileID: 7300423219944513958}
+  - {fileID: 5162049299725291378}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &5304784348365427392
@@ -9197,7 +9197,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7001324, y: 0.6161003}
   m_EdgeRadius: 0
---- !u!1001 &3110374219730311039
+--- !u!1001 &7046821649692827185
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9205,65 +9205,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5579143952126179470}
     m_Modifications:
-    - target: {fileID: 4128528582814796967, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 1151424597759964703, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4128528582814796967, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 1151424597759964703, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5532126102540879366, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
-      propertyPath: m_Name
-      value: Dave The Magical Cheese Wizard
-      objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.096954346
+      value: 0.032546997
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7538261
+      value: -1.7079582
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.5939059
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+    - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663775710716749232, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_Name
+      value: Stormageddon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357950138026211772, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
---- !u!4 &7300423219944513958 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+--- !u!4 &5162049299725291378 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
-  m_PrefabInstance: {fileID: 3110374219730311039}
+  m_CorrespondingSourceObject: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+  m_PrefabInstance: {fileID: 7046821649692827185}
   m_PrefabAsset: {fileID: 0}

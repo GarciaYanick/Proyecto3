@@ -12,6 +12,7 @@ public class EnemyController : EnemyStateController, IDamageable
     public float AttackDistance;
     public GameObject bulletPrefab;
     public GameObject sword;
+    public SpriteRenderer enemySprite;
 
     // Update is called once per frame
     void Update()
@@ -23,10 +24,18 @@ public class EnemyController : EnemyStateController, IDamageable
     public void OnHurt(float damage)
     {
         HP -= damage;
-        healthSlider.value = HP / maxhp;
-        var animator = healthSlider.GetComponent<Animator>();
-        animator.SetTrigger("PlayEffect");
-        if (HP < 0) Destroy(gameObject);
+        if (healthSlider != null)
+        {
+            healthSlider.value = HP / maxhp;
+            var animator = healthSlider.GetComponent<Animator>();
+            animator.SetTrigger("PlayEffect");
+        }
+        else
+        {
+            UnityEngine.Color newcolor = new(0f, HP / maxhp, 0f, 1.0f);
+            enemySprite.color = newcolor;
+        }
+        if (HP <= 0) Destroy(gameObject);
     }
     public void LaunchBullet()
     {

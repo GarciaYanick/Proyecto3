@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8725417761687420891}
   m_Layer: 0
   m_Name: walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12937,7 +12937,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 26
+      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13394,14 +13394,14 @@ Tilemap:
     m_Data: {fileID: 1047498911, guid: b905faf92b4f4594092461f064f381e6, type: 3}
   - m_RefCount: 369
     m_Data: {fileID: 334127514, guid: b905faf92b4f4594092461f064f381e6, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1937415728, guid: b905faf92b4f4594092461f064f381e6, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1856834284, guid: b905faf92b4f4594092461f064f381e6, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: -1138195659, guid: b905faf92b4f4594092461f064f381e6, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1937415728, guid: b905faf92b4f4594092461f064f381e6, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1105
     m_Data:
@@ -13727,11 +13727,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4128528582814796967, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4128528582814796967, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5532126102540879366, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
       propertyPath: m_Name
