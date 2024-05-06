@@ -13,7 +13,7 @@ namespace TopDownCharacter2D.Stats
     public class CharacterStatsHandler : MonoBehaviour, IDamageable
     {
         [SerializeField] [Tooltip("The default stats of this character")]
-        private CharacterStats baseStats;
+        public CharacterStats baseStats;
 
         public readonly ObservableCollection<CharacterStats>
             statsModifiers = new ObservableCollection<CharacterStats>();
@@ -31,6 +31,8 @@ namespace TopDownCharacter2D.Stats
         private void FixedUpdate()
         {
             CheckHealth();
+            UpdateCharacterStats(null, null);
+            statsModifiers.CollectionChanged += UpdateCharacterStats;
         }
         private void UpdateCharacterStats(object sender, NotifyCollectionChangedEventArgs e)
         {

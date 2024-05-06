@@ -1,23 +1,58 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TopDownCharacter2D;
+using TopDownCharacter2D.Attacks;
+using TopDownCharacter2D.Attacks.Melee;
+using TopDownCharacter2D.Controllers;
+using TopDownCharacter2D.Stats;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 public class WeaponSwitchController : MonoBehaviour
 {
-    private PlayerInput pInput;
+    [SerializeField] private GameObject _weaponSprite;
+    [SerializeField] private GameObject _bulletSpawnPoint;
 
+    [SerializeField] private AttackConfig _weaponRange;
+    [SerializeField] private AttackConfig _weaponMelee;
 
+    private CharacterStatsHandler _statsHandler;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        //Repasar eventoss
+        _statsHandler = gameObject.GetComponent<CharacterStatsHandler>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void OnRangeWeapon()
     {
-        
+        gameObject.GetComponent<TopDownShooting>().enabled = true;
+        gameObject.GetComponent<TopDownAimRotation>().enabled = true;
+
+        gameObject.GetComponent<MeleeAttackController>().enabled = false;
+        gameObject.GetComponent<TopDownMelee>().enabled = false;
+
+        _weaponSprite.SetActive(true);
+        _bulletSpawnPoint.SetActive(true);
+
+        _statsHandler.baseStats.attackConfig = _weaponRange;
+    }
+
+    public void OnMeleeWeapon()
+    {
+        gameObject.GetComponent<TopDownShooting>().enabled = false;
+        gameObject.GetComponent<TopDownAimRotation>().enabled = false;
+
+        gameObject.GetComponent<MeleeAttackController>().enabled = true;
+        gameObject.GetComponent<TopDownMelee>().enabled = true;
+
+        _weaponSprite.SetActive(false);
+        _bulletSpawnPoint.SetActive(false);
+
+        _statsHandler.baseStats.attackConfig = _weaponMelee;
     }
 }
