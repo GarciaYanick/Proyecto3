@@ -668,7 +668,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f6f3a328ad0230498c8b0b3c3ca3f68, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -711,6 +711,7 @@ MonoBehaviour:
   healthSlider: {fileID: 7136167910334209596}
   AttackDistance: 2
   bulletPrefab: {fileID: 0}
+  sword: {fileID: 0}
 --- !u!1 &6392153732522924424
 GameObject:
   m_ObjectHideFlags: 0
