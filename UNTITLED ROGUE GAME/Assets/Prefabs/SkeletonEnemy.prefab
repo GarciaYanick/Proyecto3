@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6378941528708149774}
   - component: {fileID: 6325660691503928493}
   - component: {fileID: 4195122134779471505}
+  - component: {fileID: 7231801621916611150}
   m_Layer: 0
   m_Name: SkeletonEnemy
   m_TagString: Untagged
@@ -252,3 +253,19 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   sword: {fileID: 0}
   enemySprite: {fileID: 8126006811663899777}
+  moneyOnDeath: 0
+--- !u!114 &7231801621916611150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666567218772782352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469dbcd7c3ebc0b46a072dda4eca044b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsHandler: {fileID: 0}
+  enemyController: {fileID: 0}
+  moneyOnDeath: 10

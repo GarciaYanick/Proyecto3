@@ -5,17 +5,20 @@ using UnityEngine;
 
 public class collectMoney : MonoBehaviour
 {
+    public GameObject coin;
     public CharacterStatsHandler statsHandler;
     // Start is called before the first frame update
     private void Start()
     {
-        statsHandler.GetComponent<CharacterStatsHandler>();
+        statsHandler = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-       if (collision.CompareTag("coin"))
+       if (collision.CompareTag("Player"))
        {
             statsHandler.money++;
+            Debug.Log("dinero " + statsHandler.money);
+            coin.SetActive(false);
        }
     }
 }

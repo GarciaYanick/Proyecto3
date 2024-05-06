@@ -13,8 +13,12 @@ public class EnemyController : EnemyStateController, IDamageable
     public GameObject bulletPrefab;
     public GameObject sword;
     public SpriteRenderer enemySprite;
+    public CharacterStatsHandler stats;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
+    }
     void Update()
     {
         StateTransition();
@@ -35,7 +39,11 @@ public class EnemyController : EnemyStateController, IDamageable
             UnityEngine.Color newcolor = new(0f, HP / maxhp, 0f, 1.0f);
             enemySprite.color = newcolor;
         }
-        if (HP <= 0) Destroy(gameObject);
+        if (HP <= 0)
+        {
+            stats.money += 10;
+            Destroy(gameObject);
+        }
     }
     public void LaunchBullet()
     {
