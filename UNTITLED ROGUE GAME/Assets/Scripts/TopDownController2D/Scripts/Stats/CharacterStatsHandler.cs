@@ -23,6 +23,7 @@ namespace TopDownCharacter2D.Stats
         public float hp;
         public float maxhp;
         public Slider healthSlider;
+        public SpriteRenderer weaponSprite;
         public int money;
 
         private void Awake()
@@ -43,6 +44,7 @@ namespace TopDownCharacter2D.Stats
             if (baseStats.attackConfig != null)
             {
                 config = Instantiate(baseStats.attackConfig);
+                weaponSprite.sprite = config.itemImage;
             }
 
             CurrentStats = new CharacterStats {attackConfig = config};
@@ -67,6 +69,7 @@ namespace TopDownCharacter2D.Stats
                     UpdateStats((o, o1) => o * o1, modifier);
                 }
             }
+            
 
             LimitAllStats();
         }
