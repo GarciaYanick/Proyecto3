@@ -178,6 +178,7 @@ MonoBehaviour:
   hp: 0
   maxhp: 0
   healthSlider: {fileID: 0}
+  weaponSprite: {fileID: 0}
 --- !u!114 &220419476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5556,6 +5557,11 @@ Transform:
   - {fileID: 1238136354}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1950310404 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3658244459107867238, guid: f33c82fa394c94740967737f45b7777c, type: 3}
+  m_PrefabInstance: {fileID: 7955959438170976576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1766844559614968828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4460578321434795092, guid: f33c82fa394c94740967737f45b7777c, type: 3}
@@ -5674,6 +5680,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6244980388661445195, guid: f33c82fa394c94740967737f45b7777c, type: 3}
+      propertyPath: weaponSprite
+      value: 
+      objectReference: {fileID: 1950310404}
+    - target: {fileID: 7405821536436999610, guid: f33c82fa394c94740967737f45b7777c, type: 3}
+      propertyPath: _weaponRange
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d8099ef38553e1439df9a7d0966324b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
