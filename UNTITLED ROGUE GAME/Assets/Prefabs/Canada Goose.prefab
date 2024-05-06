@@ -563,6 +563,7 @@ MonoBehaviour:
   healthSlider: {fileID: 2729699773495402913}
   AttackDistance: 3
   bulletPrefab: {fileID: 7978926196703455774, guid: f6181dc281b13ac44baa3e7a0293a333, type: 3}
+  sword: {fileID: 0}
 --- !u!114 &7249531386141226444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +593,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f6f3a328ad0230498c8b0b3c3ca3f68, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
