@@ -23,10 +23,13 @@ namespace TopDownCharacter2D.Stats
         public float hp;
         public float maxhp;
         public Slider healthSlider;
+        public int money;
+
         private void Awake()
         {
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
+
         }
         private void FixedUpdate()
         {
