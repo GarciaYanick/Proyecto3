@@ -373,6 +373,7 @@ MonoBehaviour:
   hp: 100
   maxhp: 100
   healthSlider: {fileID: 0}
+  money: 0
 --- !u!114 &2518287987090293933
 MonoBehaviour:
   m_ObjectHideFlags: 0

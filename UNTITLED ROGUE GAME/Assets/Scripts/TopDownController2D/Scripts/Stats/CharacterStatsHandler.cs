@@ -33,6 +33,7 @@ namespace TopDownCharacter2D.Stats
         }
         private void FixedUpdate()
         {
+            Debug.Log(money);
             CheckHealth();
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
