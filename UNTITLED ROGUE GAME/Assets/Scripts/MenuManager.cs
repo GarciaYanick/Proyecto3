@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        AudioManagerScript.instance.StartMenuTheme();
     }
     
     public void Quit()
