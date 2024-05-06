@@ -48,14 +48,10 @@ namespace TopDownCharacter2D.Controllers
         private readonly MoveEvent onMoveEvent = new MoveEvent();
         private readonly AttackEvent onAttackEvent = new AttackEvent();
         private readonly LookEvent onLookEvent = new LookEvent();
-        private readonly RangeWeaponEvent onRangeWeaponEvent = new RangeWeaponEvent();
-        private readonly MeleeWeaponEvent onMeleeWeaponEvent = new MeleeWeaponEvent();
 
         public UnityEvent<Vector2> OnMoveEvent => onMoveEvent;
         public UnityEvent<AttackConfig> OnAttackEvent => onAttackEvent;
         public UnityEvent<Vector2> LookEvent => onLookEvent;
-        public UnityEvent<Boolean> RangeWeaponEvent => onRangeWeaponEvent;
-        public UnityEvent<Boolean> MeleeWeaponEvent => onMeleeWeaponEvent;
 
         #endregion
     }
