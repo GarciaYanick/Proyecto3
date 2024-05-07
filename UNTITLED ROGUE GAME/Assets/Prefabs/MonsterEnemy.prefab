@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 4942984046362267585}
   - component: {fileID: 4534573892349604356}
   - component: {fileID: 97334302553865317}
-  - component: {fileID: 6569692055288358137}
   m_Layer: 0
   m_Name: MonsterEnemy
   m_TagString: Untagged
@@ -251,21 +250,6 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   AttackDistance: 1
   bulletPrefab: {fileID: 0}
-  sword: {fileID: 0}
+  sword: {fileID: 5921577697177155323, guid: 66cfaddbd96a6f748a943c9dc3b7d34e, type: 3}
   enemySprite: {fileID: 9200107214392598535}
-  moneyOnDeath: 0
---- !u!114 &6569692055288358137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771051433904993691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469dbcd7c3ebc0b46a072dda4eca044b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statsHandler: {fileID: 0}
-  enemyController: {fileID: 0}
-  moneyOnDeath: 10
+  stats: {fileID: 0}

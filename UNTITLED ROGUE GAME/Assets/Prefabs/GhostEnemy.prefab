@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 5906444862049444779}
   - component: {fileID: 2377933774216662362}
   - component: {fileID: 6471011300465408215}
-  - component: {fileID: -9219650894415503384}
   m_Layer: 0
   m_Name: GhostEnemy
   m_TagString: Untagged
@@ -250,22 +249,7 @@ MonoBehaviour:
   maxhp: 100
   healthSlider: {fileID: 0}
   AttackDistance: 1
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 138633536859697717, guid: f278563b5d305654ca09b3c79b6a4146, type: 3}
   sword: {fileID: 0}
   enemySprite: {fileID: 5559592393494059248}
-  moneyOnDeath: 0
---- !u!114 &-9219650894415503384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2462697833635199836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469dbcd7c3ebc0b46a072dda4eca044b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statsHandler: {fileID: 0}
-  enemyController: {fileID: 0}
-  moneyOnDeath: 10
+  stats: {fileID: 0}
