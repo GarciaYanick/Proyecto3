@@ -11,29 +11,63 @@ public class SettingsManager : MonoBehaviour
 
     public Toggle muteToggle;
     public Toggle fpsToggle;
+    public Toggle fullScreenToggle;
 
     public Slider musicSlider;
     public Slider SFXSlider;
 
     public Text muteText;
     public Text fpsYesNoText;
+    public Text fullScreenYesNoText;
 
     public float musicSliderValue;
     public float SFXSliderValue;
 
     public bool isMuted = false;
 
+    Resolution[] resolutions;
+
+    public Dropdown resolutionDropdown;
+
     void Awake()
     {
         musicSliderValue = musicSlider.value;
         SFXSliderValue = SFXSlider.value;
 
+        
+    }
 
+    private void Start()
+    {
+        resolutions = Screen.resolutions;
+
+        resolutionDropdown.ClearOptions();
+
+        List<string> options = new List<string>();
+
+        System.Array.Reverse(resolutions);
+
+        int currentResolutionIndex = 0;
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + "x" + resolutions[i].height;
+            options.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }
+
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+
+        resolutionDropdown.RefreshShownValue();
     }
 
     void Update()
     {
-       
+
     }
 
     public void SetMusic(float volume)
@@ -87,12 +121,12 @@ public class SettingsManager : MonoBehaviour
         if (muteToggle.isOn)
         {
             Mute();
-            fpsYesNoText.text = "No";
+            muteText.text = "No";
         }
         else
         {
             UnMute();
-            fpsYesNoText.text = "Yes";
+            muteText.text = "Yes";
         }
     }
 
@@ -101,7 +135,6 @@ public class SettingsManager : MonoBehaviour
         if (fpsToggle.isOn)
         {
             GameManager.Instance.isFrameTextActive = true;
-            Debug.Log(GameManager.Instance.isFrameTextActive);
             fpsYesNoText.text = "Yes";
         }
         else
@@ -109,10 +142,29 @@ public class SettingsManager : MonoBehaviour
             fpsYesNoText.text = "No";
 
             GameManager.Instance.isFrameTextActive = false;
-
-
-            Debug.Log(GameManager.Instance.isFrameTextActive);
         }
+    }
+
+    public void SetFullScreen()
+    {
+        if (fullScreenToggle.isOn)
+        {
+            Screen.fullScreen = true;
+            fullScreenYesNoText.text = "Yes";
+        }
+        else
+        {
+            Screen.fullScreen = false;
+            fullScreenYesNoText.text = "No";
+        }
+
+    }
+
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
 }
