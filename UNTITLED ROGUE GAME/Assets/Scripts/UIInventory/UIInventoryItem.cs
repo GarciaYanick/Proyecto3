@@ -16,7 +16,7 @@ public class UIInventoryItem : MonoBehaviour
 
     public event Action<UIInventoryItem> OnItemClicked,
         OnItemDroppedOn, OnItemBeginDrag, OnItemEndDrag,
-        OnRightMouseBttnClick;
+        OnRightMouseBtnClick;
 
     private bool empty = true;
 
@@ -69,7 +69,7 @@ public class UIInventoryItem : MonoBehaviour
         PointerEventData pointerData = (PointerEventData)data;
         if (pointerData.button == PointerEventData.InputButton.Right)
         {
-            OnRightMouseBttnClick?.Invoke(this);
+            OnRightMouseBtnClick?.Invoke(this);
         }
         else
         {
