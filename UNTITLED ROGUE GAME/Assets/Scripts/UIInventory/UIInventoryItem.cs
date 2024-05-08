@@ -40,6 +40,7 @@ public class UIInventoryItem : MonoBehaviour
     {
         this.itemImage.gameObject.SetActive(true);
         this.itemImage.sprite = sprite;
+        empty = false;
     }
 
     public void Select()

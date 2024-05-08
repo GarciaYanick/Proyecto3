@@ -51,7 +51,7 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleItemSelection(UIInventoryItem item)
     {
-        Debug.Log(item.name);
+        Debug.Log("Pulsado");
     }
 
     public void Show()

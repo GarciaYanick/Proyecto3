@@ -7,7 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField]
     private UIInventoryPage inventoryUI;
 
-    public int invSize = 80;
+    public int invSize;
 
     private void Start()
     {
