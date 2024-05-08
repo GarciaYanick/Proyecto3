@@ -25,7 +25,7 @@ public class ChestLogic : MonoBehaviour
     {
         if ( collision.CompareTag("Player"))
         {
-            //animacion para abrir cofre e instanciacion del item recogible/ pantalla de item obtenido
+            //animacion para abrir cofre e instanciacion del item recogible/ pantalla de item obtenido 
         }
     }
 }
