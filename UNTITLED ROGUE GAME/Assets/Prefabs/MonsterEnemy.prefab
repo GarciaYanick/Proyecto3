@@ -256,6 +256,7 @@ MonoBehaviour:
   sword: {fileID: 5625104338266838362}
   enemySprite: {fileID: 9200107214392598535}
   stats: {fileID: 0}
+  monetaryValue: 10
 --- !u!1 &5625104338266838362
 GameObject:
   m_ObjectHideFlags: 0

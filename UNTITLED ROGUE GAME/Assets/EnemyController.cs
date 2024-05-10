@@ -16,6 +16,7 @@ public class EnemyController : EnemyStateController, IDamageable
     public GameObject sword;
     public SpriteRenderer enemySprite;
     public CharacterStatsHandler stats;
+    public int monetaryValue;
     
     private void Start()
     {
@@ -45,7 +46,7 @@ public class EnemyController : EnemyStateController, IDamageable
         if (HP <= 0)
         {
             bulletSpeed += 2;
-            stats.money += 10;
+            stats.money += monetaryValue;
             Destroy(gameObject);
         }
     }

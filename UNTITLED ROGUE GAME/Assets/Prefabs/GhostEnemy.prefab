@@ -255,3 +255,4 @@ MonoBehaviour:
   sword: {fileID: 0}
   enemySprite: {fileID: 5559592393494059248}
   stats: {fileID: 0}
+  monetaryValue: 10

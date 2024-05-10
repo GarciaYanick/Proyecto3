@@ -558,12 +558,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: {fileID: 11400000, guid: 486115779b5d2084b95d79f3e48ed93c, type: 2}
   target: {fileID: 0}
+  typeEnemy: 0
   HP: 100
   maxhp: 100
   healthSlider: {fileID: 2729699773495402913}
   AttackDistance: 3
   bulletPrefab: {fileID: 7978926196703455774, guid: f6181dc281b13ac44baa3e7a0293a333, type: 3}
+  bulletSpeed: 0
   sword: {fileID: 0}
+  enemySprite: {fileID: 0}
+  stats: {fileID: 0}
+  monetaryValue: 100
 --- !u!114 &7249531386141226444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +645,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8571428, y: 2.4285715}
+    oldSize: {x: 1.625, y: 2.125}
     newSize: {x: 1.8571428, y: 2.4285715}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
