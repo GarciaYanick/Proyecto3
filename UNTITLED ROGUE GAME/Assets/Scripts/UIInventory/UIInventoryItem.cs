@@ -36,7 +36,7 @@ public class UIInventoryItem : MonoBehaviour
         borderImage.enabled = false;
     }
 
-    public void SetData(Sprite sprite, int quantity)
+    public void SetData(Sprite sprite)
     {
         this.itemImage.gameObject.SetActive(true);
         this.itemImage.sprite = sprite;
@@ -70,6 +70,7 @@ public class UIInventoryItem : MonoBehaviour
         PointerEventData pointerData = (PointerEventData)data;
         if (pointerData.button == PointerEventData.InputButton.Right)
         {
+            Debug.Log("Has puslado");
             OnRightMouseBtnClick?.Invoke(this);
         }
         else

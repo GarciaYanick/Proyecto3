@@ -7,11 +7,15 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField]
     private UIInventoryPage inventoryUI;
 
-    public int invSize;
+    public int invCharSize;
+
+    public int invBagSize;
+
+    public int invBaseSize;
 
     private void Start()
     {
-        inventoryUI.InitializeInvUI(invSize);       
+        inventoryUI.InitializeInvUI(invCharSize, invBagSize, invBaseSize);       
     }
 
     private void Update()
