@@ -9152,6 +9152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abead1a13bccec340b87d4fd7d8ccf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemies: []
 --- !u!61 &4892812057886190606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9205,6 +9206,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5579143952126179470}
     m_Modifications:
+    - target: {fileID: 875364420870014788, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1151424597759964703, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9212,6 +9217,14 @@ PrefabInstance:
     - target: {fileID: 1151424597759964703, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892051006596876196, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 404
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892051006596876196, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -416.5
       objectReference: {fileID: 0}
     - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9256,6 +9269,26 @@ PrefabInstance:
     - target: {fileID: 4663775710716749232, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_Name
       value: Stormageddon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675203886080869717, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -56.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675203886080869717, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504151245422032810, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -536.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504151245422032810, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.9045105
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504151245422032810, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.9027004
       objectReference: {fileID: 0}
     - target: {fileID: 7357950138026211772, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_SortingOrder

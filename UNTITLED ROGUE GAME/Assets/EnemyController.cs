@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TopDownCharacter2D.Stats;
@@ -14,6 +15,7 @@ public class EnemyController : EnemyStateController, IDamageable
     public GameObject sword;
     public SpriteRenderer enemySprite;
     public CharacterStatsHandler stats;
+    public EventHandler OnKilled;
 
     private void Start()
     {
@@ -42,6 +44,7 @@ public class EnemyController : EnemyStateController, IDamageable
         if (HP <= 0)
         {
             stats.money += 10;
+            OnKilled?.Invoke(this, EventArgs.Empty);
             Destroy(gameObject);
         }
     }

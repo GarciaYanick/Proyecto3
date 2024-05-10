@@ -13513,7 +13513,7 @@ GameObject:
   - component: {fileID: 725090430989259251}
   m_Layer: 0
   m_Name: boss3
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13672,7 +13672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abead1a13bccec340b87d4fd7d8ccf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemies: []
+  _enemies:
+  - {fileID: 9073117412581835071}
 --- !u!61 &725090430989259251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13855,6 +13856,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+--- !u!1 &9073117412581835071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5532126102540879366, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
+  m_PrefabInstance: {fileID: 3543276646050531129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9175569345316073952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5654855245885388505, guid: 381ee5127ab6e0a419b83086ff317325, type: 3}
