@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class UIInventoryPage : MonoBehaviour
 {
+    [Header("Important")]
     [SerializeField]
     private UIInventoryItem itemPrefab;
     [SerializeField]
     private UIInventoryItem itemBasePrefab;
+    [SerializeField]
+    private UIInventoryImage invImage;
 
+    [Header("Paneles")]
     [SerializeField]
     private RectTransform contentPanel;
     [SerializeField]
@@ -17,9 +21,15 @@ public class UIInventoryPage : MonoBehaviour
     [SerializeField]
     private RectTransform contentBasePanel;
 
+    [Header("Others")]
     List<UIInventoryItem> inventoryItems = new List<UIInventoryItem>();
-
     public Sprite image;
+
+    private void Awake()
+    {
+        Hide();
+        invImage.ResetImage();
+    }
 
     public void InitializeInvUI(int invCharSize, int invBagSize, int invBaseSize)
     {
@@ -85,13 +95,14 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleItemSelection(UIInventoryItem item)
     {
-        
+        invImage.SetImage(image);
+        inventoryItems[0].Select();
     }
 
     public void Show()
     {
         gameObject.SetActive(true);
-
+        invImage.ResetImage();
         inventoryItems[0].SetData(image);
     }
 

@@ -23307,6 +23307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3856814103876923009, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
   itemBasePrefab: {fileID: 7675165136547926928, guid: 9051ae2019142ca4ea8ccc2de30e464e, type: 3}
+  invImage: {fileID: 2436961038803591296, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
   contentPanel: {fileID: 405533706}
   contentBagPanel: {fileID: 979854699}
   contentBasePanel: {fileID: 24209395}
