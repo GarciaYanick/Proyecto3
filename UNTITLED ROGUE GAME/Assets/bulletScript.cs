@@ -10,7 +10,7 @@ public class bulletScript : MonoBehaviour
         var temp = collision.gameObject.GetComponent<CharacterStatsHandler>() as IDamageable;
         if (temp != null)
         {
-            temp.OnHurt(5);
+            temp.OnHurt(15);
         }
     }
 }

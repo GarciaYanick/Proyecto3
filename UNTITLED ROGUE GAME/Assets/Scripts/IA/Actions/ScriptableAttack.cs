@@ -7,6 +7,7 @@ public class ScriptableAttack : ScriptableAction
 {
     public Animator animator;
     public EnemyController enemyController;
+    private float horizontal;
 
     public override void OnFinishedState()
     {
@@ -19,11 +20,13 @@ public class ScriptableAttack : ScriptableAction
         base.OnSetState(sc);
         animator = sc.GetComponent<Animator>();
         enemyController = sc.GetComponent<EnemyController>();
+        horizontal = animator.GetFloat("Horizontal");
         animator.Play("Attack");
         if (enemyController.bulletPrefab != null) enemyController.LaunchBullet();
         else
         {
             var sword = enemyController.sword.GetComponent<RotateSword>();
+            sword.RotateArm(horizontal);
             sword.Attack();
         }
         //GameManager.gm.UpdateText("a q te meto");

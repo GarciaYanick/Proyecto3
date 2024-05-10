@@ -9,12 +9,22 @@ public class RotateSword : MonoBehaviour
     public Transform pivot;
     public Animator anim;
 
-    public void RotateArm(Vector2 direction)
+    /*public void RotateArm(Vector2 direction)
     {
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         //armRenderer.flipY = Mathf.Abs(rotZ) > 90f;
 
         pivot.rotation = Quaternion.Euler(0, 0, rotZ);
+    }*/
+    public void RotateArm(float horizontal)
+    {
+        if (horizontal >= 0) pivot.rotation = Quaternion.Euler(0, 0, pivot.transform.position.z - 135);
+        else if (horizontal <= 0) pivot.rotation = Quaternion.Euler(0, 0, pivot.transform.position.z + 135);
+    }
+    IEnumerator ReverseSword()
+    {
+        yield return new WaitForSeconds(1f);
+
     }
     public void Attack()
     {
@@ -25,6 +35,7 @@ public class RotateSword : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         anim.SetBool("Attack", false);
+        pivot.rotation = Quaternion.Euler(0,0,0);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
