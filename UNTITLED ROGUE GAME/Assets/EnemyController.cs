@@ -41,6 +41,7 @@ public class EnemyController : EnemyStateController, IDamageable
             UnityEngine.Color newcolor = new(0f, HP / maxhp, 0f, 1.0f);
             enemySprite.color = newcolor;
         }
+        if (HP <= 50 && this.gameObject.name == "Dave The Magical Cheese Wizard") bulletSpeed = 5;
         if (HP <= 0)
         {
             bulletSpeed += 2;
