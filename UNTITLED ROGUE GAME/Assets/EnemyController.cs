@@ -6,15 +6,17 @@ using UnityEngine.UI;
 
 public class EnemyController : EnemyStateController, IDamageable
 {
+    public int typeEnemy;
     public float HP;
     public float maxhp;
     public Slider healthSlider;
     public float AttackDistance;
     public GameObject bulletPrefab;
+    public int bulletSpeed;
     public GameObject sword;
     public SpriteRenderer enemySprite;
     public CharacterStatsHandler stats;
-
+    
     private void Start()
     {
         stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
@@ -41,6 +43,7 @@ public class EnemyController : EnemyStateController, IDamageable
         }
         if (HP <= 0)
         {
+            bulletSpeed += 2;
             stats.money += 10;
             Destroy(gameObject);
         }
@@ -49,13 +52,13 @@ public class EnemyController : EnemyStateController, IDamageable
     {
         GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
         var bulletrb = bullet.GetComponent<Rigidbody2D>();
-        bulletrb.velocity = target.transform.position - transform.position;
+        bulletrb.velocity = (target.transform.position - transform.position) * bulletSpeed;
     }
-    public void RotateSword()
+    /*public void RotateSword()
     {
         var swordScript = sword.GetComponent<RotateSword>();
         swordScript.RotateArm(target.transform.position);
-    }
+    }*/
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var temp = collision.gameObject.GetComponent<CharacterStatsHandler>() as IDamageable;

@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507a7c0f00066674889ba6d262d93a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 5
 --- !u!114 &6471011300465408215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,11 +245,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: {fileID: 11400000, guid: 486115779b5d2084b95d79f3e48ed93c, type: 2}
   target: {fileID: 0}
-  HP: 100
-  maxhp: 100
+  typeEnemy: 0
+  HP: 70
+  maxhp: 70
   healthSlider: {fileID: 0}
-  AttackDistance: 1
-  bulletPrefab: {fileID: 138633536859697717, guid: f278563b5d305654ca09b3c79b6a4146, type: 3}
+  AttackDistance: 3
+  bulletPrefab: {fileID: 5677097977542289125, guid: ee1b18aa5dbb5c44ca5a5c0401414585, type: 3}
+  bulletSpeed: 2
   sword: {fileID: 0}
   enemySprite: {fileID: 5559592393494059248}
   stats: {fileID: 0}
