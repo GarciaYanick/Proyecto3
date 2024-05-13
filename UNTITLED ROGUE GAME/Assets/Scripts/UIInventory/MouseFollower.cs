@@ -16,9 +16,9 @@ public class MouseFollower : MonoBehaviour
         item = GetComponentInChildren<UIInventoryItem>();
     }
 
-    public void SetData(Sprite sprite, int quantity)
+    public void SetData(Sprite sprite)
     {
-        item.SetData(sprite, quantity);
+        item.SetData(sprite);
     }
 
     private void Update()
@@ -29,13 +29,13 @@ public class MouseFollower : MonoBehaviour
             Input.mousePosition,
             canvas.worldCamera,
             out position
-            );
-        transform.position = canvas.transform.TranformPoint(position);
+                );
+        transform.position = canvas.transform.TransformPoint(position);
     }
 
     public void Toggle(bool val)
     {
         Debug.Log("Take this " + val);
-        gameObje
+        gameObject.SetActive(val);
     }
 }

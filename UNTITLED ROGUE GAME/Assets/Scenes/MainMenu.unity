@@ -13618,6 +13618,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8822745094383571900, guid: 9051ae2019142ca4ea8ccc2de30e464e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14922,6 +14926,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7361483046676328664, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361483046676328664, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361483046676328664, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -14999,7 +15011,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897242635}
   m_Enabled: 1
-  m_Alpha: 0.5
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -23561,6 +23573,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 3856814103876923009, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
   itemBasePrefab: {fileID: 7675165136547926928, guid: 9051ae2019142ca4ea8ccc2de30e464e, type: 3}
   invImage: {fileID: 2436961038803591296, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
+  mouseFollower: {fileID: 1772177748}
   contentPanel: {fileID: 405533706}
   contentBagPanel: {fileID: 979854699}
   contentBasePanel: {fileID: 24209395}
@@ -30639,6 +30652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772177746}
   - component: {fileID: 1772177747}
+  - component: {fileID: 1772177748}
   m_Layer: 5
   m_Name: MouseFollower
   m_TagString: Untagged
@@ -30681,6 +30695,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 1
   m_VerticalFit: 1
+--- !u!114 &1772177748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772177745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0367c0f303b684482dba29c99d3674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  item: {fileID: 0}
 --- !u!1 &1773188399
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class UIInventoryPage : MonoBehaviour
     private UIInventoryItem itemBasePrefab;
     [SerializeField]
     private UIInventoryImage invImage;
+    [SerializeField]
+    private MouseFollower mouseFollower;
 
     [Header("Paneles")]
     [SerializeField]
@@ -28,6 +30,7 @@ public class UIInventoryPage : MonoBehaviour
     private void Awake()
     {
         Hide();
+        mouseFollower.Toggle(false);
         invImage.ResetImage();
     }
 
@@ -80,7 +83,7 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleEndDrag(UIInventoryItem item)
     {
-        
+        mouseFollower.Toggle(false);
     }
 
     private void HandleSwap(UIInventoryItem item)
@@ -90,7 +93,8 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleBeginDrag(UIInventoryItem item)
     {
-        
+        mouseFollower.Toggle(true);
+        mouseFollower.SetData(image);
     }
 
     private void HandleItemSelection(UIInventoryItem item)
