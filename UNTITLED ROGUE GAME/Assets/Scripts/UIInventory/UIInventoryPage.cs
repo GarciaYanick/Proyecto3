@@ -25,7 +25,9 @@ public class UIInventoryPage : MonoBehaviour
 
     [Header("Others")]
     List<UIInventoryItem> inventoryItems = new List<UIInventoryItem>();
-    public Sprite image;
+    public Sprite image, image2;
+    
+    private int currentDragItem = -1;
 
     private void Awake()
     {
@@ -88,13 +90,26 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleSwap(UIInventoryItem item)
     {
-        
+        int index = inventoryItems.IndexOf(item);
+        if (index == -1)
+        {
+            mouseFollower.Toggle(false);
+            currentDragItem = -1;
+            return;
+        }
+        inventoryItems[currentDragItem].SetData(index == 0 ? image : image2);
+        inventoryItems[index].SetData(index == 0 ? image : image2);
+        mouseFollower.Toggle(false);
+        currentDragItem = -1;
     }
 
     private void HandleBeginDrag(UIInventoryItem item)
     {
+        int index = inventoryItems.IndexOf(item);
+        if (index == -1) return;
+        currentDragItem = index;
         mouseFollower.Toggle(true);
-        mouseFollower.SetData(image);
+        mouseFollower.SetData(index == 0 ? image : image2);
     }
 
     private void HandleItemSelection(UIInventoryItem item)
@@ -108,6 +123,7 @@ public class UIInventoryPage : MonoBehaviour
         gameObject.SetActive(true);
         invImage.ResetImage();
         inventoryItems[0].SetData(image);
+        inventoryItems[1].SetData(image2);
     }
 
     public void Hide() 

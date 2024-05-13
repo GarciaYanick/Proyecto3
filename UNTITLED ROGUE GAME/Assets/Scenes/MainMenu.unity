@@ -23578,6 +23578,7 @@ MonoBehaviour:
   contentBagPanel: {fileID: 979854699}
   contentBasePanel: {fileID: 24209395}
   image: {fileID: -1403046778, guid: 3ab1a2b06d3dfec41ba92c9c49b79993, type: 3}
+  image2: {fileID: 21300000, guid: e05ac46fd31fb434db7a0e8fea68bc73, type: 3}
 --- !u!1 &1369874431
 GameObject:
   m_ObjectHideFlags: 0
