@@ -2,12 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChestLogic : MonoBehaviour
 {
     private LevelLogic _levelLogic;
     private Animator _anim;
+
+    [SerializeField] private GameObject _weaponColectable;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +35,24 @@ public class ChestLogic : MonoBehaviour
         {
             //animacion para abrir cofre e instanciacion del item recogible/ pantalla de item obtenido 
             _anim.SetBool( "OpenChest", true );
+
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
+    }
+
+    public void DestroySelf()
+    {
+
+        switch (/*UnityEngine.Random.Range(0, 1)*/ 0)
+        {
+            case 0:
+                Instantiate(_weaponColectable, gameObject.transform.position, Quaternion.identity);
+                break;
+
+            case 1:
+                break;
+        }
+
+        Destroy(gameObject);
     }
 }

@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 1
   itemImage: {fileID: 1865382532, guid: cbd4e2b2ab2a16149b38996f4998bf75, type: 3}
-  RarityString: 
-  Rarity: 0
+  RarityString: Mythic
+  Rarity: 2
   size: 2
   delay: 1
-  power: 5
+  power: 3
   speed: 0.5
   target:
     serializedVersion: 2
     m_Bits: 64
   swingAngle: 90
-  thrustDistance: 1
+  thrustDistance: 0
   swingCurve:
     serializedVersion: 2
     m_Curve:

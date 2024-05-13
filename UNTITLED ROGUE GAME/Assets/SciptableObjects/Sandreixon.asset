@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4a685ae18494b34e819615474595277, type: 3}
-  m_Name: MeleeConfig
+  m_Name: Sandreixon
   m_EditorClassIdentifier: 
   itemID: 0
-  itemImage: {fileID: 0}
-  Rarity: 
+  itemImage: {fileID: -1526172112, guid: cbd4e2b2ab2a16149b38996f4998bf75, type: 3}
+  RarityString: Legendary
+  Rarity: 3
   size: 1
   delay: 0.5
   power: 1
@@ -23,7 +24,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   swingAngle: 60
-  thrustDistance: 0.5
+  thrustDistance: 1
   swingCurve:
     serializedVersion: 2
     m_Curve:

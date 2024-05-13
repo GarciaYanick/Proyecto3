@@ -4,13 +4,8 @@ using System.Collections.Generic;
 using TopDownCharacter2D;
 using TopDownCharacter2D.Attacks;
 using TopDownCharacter2D.Attacks.Melee;
-using TopDownCharacter2D.Controllers;
 using TopDownCharacter2D.Stats;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
 
 public class WeaponSwitchController : MonoBehaviour
 {
@@ -25,6 +20,7 @@ public class WeaponSwitchController : MonoBehaviour
     private void Start()
     {
         _statsHandler = gameObject.GetComponent<CharacterStatsHandler>();
+        OnRangeWeapon();
     }
 
 
@@ -54,5 +50,17 @@ public class WeaponSwitchController : MonoBehaviour
         _bulletSpawnPoint.SetActive(false);
 
         _statsHandler.baseStats.attackConfig = _weaponMelee;
+    }
+
+    public void SwapRangeWeapon(AttackConfig newWeapon)
+    {
+        _weaponRange = newWeapon;
+        OnRangeWeapon();
+    }
+
+    public void SwapMeleeWeapon(AttackConfig newWeapon)
+    {
+        _weaponMelee = newWeapon;
+        OnMeleeWeapon();
     }
 }

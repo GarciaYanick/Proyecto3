@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4
   itemImage: {fileID: 21300000, guid: ee967f8464e4ba147bef4229550baad7, type: 3}
-  RarityString: 
+  RarityString: Rare
   Rarity: 0
   size: 1
   delay: 0.5
@@ -25,6 +25,6 @@ MonoBehaviour:
     m_Bits: 0
   duration: 1
   spread: 0
-  numberOfProjectilesPerShot: 1
-  multipleProjectilesAngle: 0
-  projectileColor: {r: 0.65395, g: 0.95699996, b: 0.7071166, a: 1}
+  numberOfProjectilesPerShot: 3
+  multipleProjectilesAngle: 75
+  projectileColor: {r: 0.65395, g: 0.95699996, b: 0.45882353, a: 1}

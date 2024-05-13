@@ -1297,13 +1297,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 979592354543354270, guid: 1ea0e535be7b43945a6aca2407aecb42, type: 3}
+      propertyPath: _weaponColectable
+      value: 
+      objectReference: {fileID: 5353044591655271335, guid: ea76f80f0215a2945977c0ea1f63746f, type: 3}
     - target: {fileID: 4315569727161335615, guid: 1ea0e535be7b43945a6aca2407aecb42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4315569727161335615, guid: 1ea0e535be7b43945a6aca2407aecb42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.17
+      value: -10.554
       objectReference: {fileID: 0}
     - target: {fileID: 4315569727161335615, guid: 1ea0e535be7b43945a6aca2407aecb42, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1420,7 +1424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4887724417475653143, guid: f33c82fa394c94740967737f45b7777c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.333333
+      value: -8.333332
       objectReference: {fileID: 0}
     - target: {fileID: 6244980388661445195, guid: f33c82fa394c94740967737f45b7777c, type: 3}
       propertyPath: healthSlider
@@ -1453,7 +1457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 839368711329481076, guid: e430e2d9718807746a0ebaf83839262e, type: 3}
       propertyPath: _enemies
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 839368711329481076, guid: e430e2d9718807746a0ebaf83839262e, type: 3}
       propertyPath: _enemies.Array.size
