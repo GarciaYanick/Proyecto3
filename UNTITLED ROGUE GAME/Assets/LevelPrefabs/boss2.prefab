@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2437175120140951831}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.3999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1508,7 +1508,7 @@ Transform:
   m_GameObject: {fileID: 6403247942945344178}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9023,7 +9023,7 @@ Transform:
   m_Children:
   - {fileID: 1541150097461781989}
   - {fileID: 4144891057668116695}
-  - {fileID: 5162049299725291378}
+  - {fileID: 7051698939641292363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &5304784348365427392
@@ -9197,7 +9197,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7001324, y: 0.6161003}
   m_EdgeRadius: 0
---- !u!1001 &7046821649692827185
+--- !u!1001 &5166952977952831240
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9215,15 +9215,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.032546997
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7079582
+      value: -0.020000339
       objectReference: {fileID: 0}
     - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5939059
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9257,17 +9257,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stormageddon
       objectReference: {fileID: 0}
-    - target: {fileID: 7357950138026211772, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
---- !u!4 &5162049299725291378 stripped
+--- !u!4 &7051698939641292363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2767495546629722435, guid: a875a25049f5a7541b5f09b2df09899b, type: 3}
-  m_PrefabInstance: {fileID: 7046821649692827185}
+  m_PrefabInstance: {fileID: 5166952977952831240}
   m_PrefabAsset: {fileID: 0}
