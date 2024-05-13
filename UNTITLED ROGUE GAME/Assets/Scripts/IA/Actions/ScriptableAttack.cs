@@ -23,7 +23,7 @@ public class ScriptableAttack : ScriptableAction
         horizontal = animator.GetFloat("Horizontal");
         animator.Play("Attack");
         if (enemyController.bulletPrefab != null) enemyController.LaunchBullet();
-        else
+        else if (enemyController.sword != null)
         {
             var sword = enemyController.sword.GetComponent<RotateSword>();
             sword.RotateArm(horizontal);
