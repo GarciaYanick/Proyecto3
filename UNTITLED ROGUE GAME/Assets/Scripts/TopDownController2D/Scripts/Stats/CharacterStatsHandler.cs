@@ -23,6 +23,7 @@ namespace TopDownCharacter2D.Stats
         public float hp;
         public float maxhp;
         public Slider healthSlider;
+        public Slider inventoryHealth;
         public SpriteRenderer weaponSprite;
         public int money;
 
@@ -30,7 +31,7 @@ namespace TopDownCharacter2D.Stats
         {
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
-
+            inventoryHealth.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         }
         private void FixedUpdate()
         {
@@ -38,6 +39,10 @@ namespace TopDownCharacter2D.Stats
             CheckHealth();
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
+        }
+        private void ValueChangeCheck()
+        {
+            inventoryHealth.value = healthSlider.value;
         }
         private void UpdateCharacterStats(object sender, NotifyCollectionChangedEventArgs e)
         {

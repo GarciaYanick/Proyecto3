@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using TopDownCharacter2D.Stats;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +10,8 @@ public class WinCanvasManager : MonoBehaviour
 {
     public GameObject hudmenu;
     public GameObject gameOverMenu;
+    public GameObject inventoryMenu;
+    public Text coinsText;
 
     public Text fpsText;
 
@@ -30,7 +34,7 @@ public class WinCanvasManager : MonoBehaviour
         {
             fpsText.gameObject.SetActive(false);
         }
-
+        SetMoney();
     }
 
     private void Update()
@@ -63,7 +67,23 @@ public class WinCanvasManager : MonoBehaviour
 
         return frameDeltaTimeArray.Length / total;
     }
-
+    public void OpenInventory()
+    {
+        Time.timeScale = 0f;
+        hudmenu.SetActive(false);
+        inventoryMenu.SetActive(true);
+    }
+    public void SetMoney()
+    {
+        var player = GameObject.Find("Player").GetComponent<CharacterStatsHandler>();
+        coinsText.text=  player.money.ToString();
+    }
+    public void ReturnToGame()
+    {
+        inventoryMenu.SetActive(false);
+        Time.timeScale = 1.0f;
+        hudmenu.SetActive(true );
+    }
     public void QuitGame()
     {
         Application.Quit();
