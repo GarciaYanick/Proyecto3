@@ -21,7 +21,7 @@ namespace TopDownCharacter2D.Attacks
         public LayerMask target;
 
 
-        private void OnEnable()
+        private void Start()
         {
             if (power == 0)
             {

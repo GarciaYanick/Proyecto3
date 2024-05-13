@@ -12,7 +12,7 @@ public class ComplementsSO : ItemSO
 
     public string multiplier;
 
-    private void OnEnable()
+    private void Start()
     {
         multiplier = stats[Random.Range(0, stats.Length)];
 

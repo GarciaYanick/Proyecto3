@@ -559,7 +559,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: 364256282, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4bc7753b0ca2f54c818fc6c63778318, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3425,13 +3425,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 50
 --- !u!222 &149006366
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4128,18 +4128,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d2b7f1b1155d77e4780c6003c2696452, type: 3}
-    m_FontSize: 175
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: Anillo de Compromiso
 --- !u!222 &173039170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7932,13 +7932,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: "Tu padre te mira con deaprovaci\xF3n"
 --- !u!222 &307923255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8334,13 +8334,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: "Con este anillo , todos los enemigos de genero femenino huir\xE1n de ti."
 --- !u!222 &323979545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9949,7 +9949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: Esta escopeta dispara cabezas de gato que gritan AMIAU AKBAR
 --- !u!222 &397896757
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10103,7 +10103,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0.9
-  m_Text: Malicia Script
+  m_Text: Malicenth
 --- !u!222 &400668568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10144,7 +10144,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1875816788}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.27558982}
+  m_AnchorMin: {x: 0, y: 0.27558976}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -12872,7 +12872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: 935863093, guid: 48b89c1a267395443b2ce0d5c742bf73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13274,7 +13274,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 404658682}
   m_HandleRect: {fileID: 404658681}
   m_Direction: 2
-  m_Value: 1.0000004
+  m_Value: 0.9999997
   m_Size: 0.7244102
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -14113,13 +14113,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 200
 --- !u!222 &541419738
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14571,13 +14571,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: "Con este gran casco y una bata ser\xE1s el mejor cubata."
 --- !u!222 &571249091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16167,13 +16167,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: El Rizzeador
 --- !u!222 &631993623
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16846,18 +16846,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d2b7f1b1155d77e4780c6003c2696452, type: 3}
-    m_FontSize: 175
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: Cubo de la infinidad
 --- !u!222 &658991974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17233,13 +17233,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 80
 --- !u!222 &669796242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17464,13 +17464,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 60
 --- !u!222 &678821588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17695,13 +17695,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: Baratija
 --- !u!222 &686041933
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17767,7 +17767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c0d759bf8991e14bbe82a90dfa2465f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18456,7 +18456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4bc7753b0ca2f54c818fc6c63778318, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23372,13 +23372,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: Escopeta
 --- !u!222 &908291227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23744,13 +23744,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 300
 --- !u!222 &914622305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23816,7 +23816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: -1403046778, guid: 3ab1a2b06d3dfec41ba92c9c49b79993, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24883,13 +24883,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 150
 --- !u!222 &973782129
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26131,13 +26131,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: Es una larga historia ...
 --- !u!222 &1016083899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26651,13 +26651,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 100
 --- !u!222 &1032938514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28406,13 +28406,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: "Hamas Mohar\xE9"
 --- !u!222 &1095054876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28713,13 +28713,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 350
 --- !u!222 &1105888132
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28860,7 +28860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: 1865382532, guid: cbd4e2b2ab2a16149b38996f4998bf75, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31371,13 +31371,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: "No vale ni 1\u20AC pero te han estafado bien en el mercadillo por \xE9l."
 --- !u!222 &1201281766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31502,7 +31502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -22, y: -0.000061035156}
+  m_AnchoredPosition: {x: -22, y: 0.000091552734}
   m_SizeDelta: {x: 1920, y: 1650.4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1205476826
@@ -34311,13 +34311,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: Gran armadura protectora hecha por los mismisimos enanos del inframundo.
 --- !u!222 &1327440043
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34921,13 +34921,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: "Pistola L\xE1ser"
 --- !u!222 &1341619419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36204,13 +36204,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: Sandra
 --- !u!222 &1403332503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37243,18 +37243,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d2b7f1b1155d77e4780c6003c2696452, type: 3}
-    m_FontSize: 175
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 188
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: Armadura Cota de Malla
 --- !u!222 &1454426627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37927,7 +37927,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Chaleco con rizz
+  m_Text: Sudadera Otaku
 --- !u!222 &1473168285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41213,7 +41213,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 589211973, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: -1403046778, guid: 3ab1a2b06d3dfec41ba92c9c49b79993, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -44154,13 +44154,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 50
 --- !u!222 &1746426492
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45250,13 +45250,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: "Con este arma podr\xE1s cortar chuletones."
 --- !u!222 &1793484110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45406,13 +45406,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 100
 --- !u!222 &1811554300
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52692,13 +52692,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Con esto puesto seguro que no tienes miedo de rizzearte a Paola, Yanick.
+  m_Text: Hace Pium Pium Pium
 --- !u!222 &2096663402
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53197,7 +53197,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1578341190}
   m_Direction: 2
   m_Value: 1.0000004
-  m_Size: 0.7244102
+  m_Size: 0.72441024
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
