@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -13,9 +14,16 @@ public class GameManager : MonoBehaviour
 
     public int currentLevel = 1;
 
+    public bool isMutedBool = false;
+    public Text mutedText;
+    public bool mutedToggleValue = false;
+    public float musicSliderValue;
+    public float SFXSliderValue;
+
     public bool isFrameTextActive;
 
     public WinCanvasManager canvasManager;
+
 
     void OnEnable()
     {
@@ -25,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        DataManager.instance.LoadData();
         LevelChange();
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -19,7 +20,15 @@ public class MenuManager : MonoBehaviour
     public GameObject maliciaShopPanel;
     public GameObject maliciaProfilePanel;
 
+    public AudioMixer musicMixer;
+    public AudioMixer SFXMixer;
+
     [SerializeField]public GameObject currentPanel;
+
+    private void OnEnable()
+    {
+      
+    }
 
     private void Awake()
     {
