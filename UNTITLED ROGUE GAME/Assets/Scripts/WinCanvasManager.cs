@@ -8,11 +8,15 @@ public class WinCanvasManager : MonoBehaviour
 {
     public GameObject hudmenu;
     public GameObject gameOverMenu;
+    public GameObject pauseMenu;
 
     public Text fpsText;
 
     private int lastFrameIndex;
     private float[] frameDeltaTimeArray;
+    private bool isGamePaused;
+
+
 
 
     private void Awake()
@@ -21,7 +25,6 @@ public class WinCanvasManager : MonoBehaviour
 
         if (GameManager.Instance.isFrameTextActive)
         {
-
             Debug.Log(GameManager.Instance.isFrameTextActive);
             fpsText.gameObject.SetActive(true);
         }
@@ -38,7 +41,9 @@ public class WinCanvasManager : MonoBehaviour
         frameDeltaTimeArray[lastFrameIndex] = Time.deltaTime;
         lastFrameIndex = (lastFrameIndex + 1) % frameDeltaTimeArray.Length;
 
-        fpsText.text = Mathf.RoundToInt(CalculateFPS()).ToString();
+        fpsText.text = "FPS: " + Mathf.RoundToInt(CalculateFPS()).ToString();
+
+        PauseMenu();
     }
 
     public void ShowGameOverMenu()
@@ -62,6 +67,41 @@ public class WinCanvasManager : MonoBehaviour
         }
 
         return frameDeltaTimeArray.Length / total;
+    }
+
+    public void PauseMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isGamePaused)
+            {
+                Resume();
+            }
+
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        isGamePaused = false;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void Pause()
+    {
+        isGamePaused = true;
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     public void QuitGame()

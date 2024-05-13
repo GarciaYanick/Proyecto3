@@ -10996,7 +10996,6 @@ GameObject:
   - component: {fileID: 435322590}
   - component: {fileID: 435322589}
   - component: {fileID: 435322588}
-  - component: {fileID: 435322587}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -11024,18 +11023,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1915, y: 150}
   m_Pivot: {x: 0.5, y: 1}
---- !u!114 &435322587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435322585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f1dbdd0b5ead144d87bfb517de84811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &435322588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12799,7 +12786,7 @@ MonoBehaviour:
   m_MinValue: -40
   m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: -5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -19012,7 +18999,6 @@ GameObject:
   - component: {fileID: 725210561}
   - component: {fileID: 725210560}
   - component: {fileID: 725210559}
-  - component: {fileID: 725210562}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -19146,18 +19132,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725210557}
   m_CullTransparentMesh: 1
---- !u!114 &725210562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725210557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f1dbdd0b5ead144d87bfb517de84811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &732234555
 GameObject:
   m_ObjectHideFlags: 0
@@ -49661,7 +49635,7 @@ MonoBehaviour:
   m_MinValue: -40
   m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: -5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

@@ -27,7 +27,7 @@ public class MenuManager : MonoBehaviour
 
     private void OnEnable()
     {
-      
+        Time.timeScale = 1f;
     }
 
     private void Awake()
@@ -53,9 +53,6 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator LoadStartAnimation()
     {
-
-        Debug.Log("XD");
-
         animator.SetTrigger("StartGame");
 
         yield return new WaitForSeconds(flipClip.length + 0.1f);
@@ -63,7 +60,6 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator LoadReverseAnimation()
     {
-        Debug.Log("Reverse");
         animator.SetTrigger("BackToMenu");
 
         yield return new WaitForSeconds(reverseClip.length + 0.1f);

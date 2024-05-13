@@ -29,6 +29,8 @@ public class SettingsManager : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("muteToggleValue del GameManager es: " + GameManager.Instance.mutedToggleValue);
+
         muteToggle.isOn = GameManager.Instance.mutedToggleValue;
 
         if(GameManager.Instance.mutedText != null)
@@ -37,17 +39,17 @@ public class SettingsManager : MonoBehaviour
             muteText = GameManager.Instance.mutedText;
         }
 
+        Debug.Log("Variable llamada musicSliderValue es: " + musicSliderValue);
+        Debug.Log("Music slider value del slider es: " + musicSlider.value);
+
         musicSliderValue = musicSlider.value;
+
         SFXSliderValue = SFXSlider.value;
 
-        Debug.Log(GameManager.Instance.musicSliderValue);
+        Debug.Log("Variable del GameManager llamada musicSliderValue es: " + GameManager.Instance.musicSliderValue);
+
         musicSlider.value = GameManager.Instance.musicSliderValue;
         SFXSlider.value = GameManager.Instance.SFXSliderValue;
-    }
-
-    void Awake()
-    {
-
     }
 
     private void Start()
@@ -88,7 +90,7 @@ public class SettingsManager : MonoBehaviour
         musicMixer.SetFloat("MusicVolume", volume);
         GameManager.Instance.musicSliderValue = volume;
 
-        Debug.Log("ismutedbool: " + GameManager.Instance.isMutedBool);
+        Debug.Log("ismutedbool del gameManager: " + GameManager.Instance.isMutedBool);
 
         if (!GameManager.Instance.isMutedBool)
         {
