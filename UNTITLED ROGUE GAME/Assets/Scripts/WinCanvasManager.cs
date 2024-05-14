@@ -34,7 +34,6 @@ public class WinCanvasManager : MonoBehaviour
         {
             fpsText.gameObject.SetActive(false);
         }
-        SetMoney();
     }
 
     private void Update()
@@ -43,6 +42,11 @@ public class WinCanvasManager : MonoBehaviour
         lastFrameIndex = (lastFrameIndex + 1) % frameDeltaTimeArray.Length;
 
         fpsText.text = Mathf.RoundToInt(CalculateFPS()).ToString();
+    }
+    private void FixedUpdate()
+    {
+
+        SetMoney();
     }
 
     public void ShowGameOverMenu()

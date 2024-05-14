@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        AudioManagerScript.instance.StartMenuTheme();
+        //AudioManagerScript.instance.StartMenuTheme();
     }
     
     public void Quit()
@@ -79,7 +79,10 @@ public class MenuManager : MonoBehaviour
     {
         StartCoroutine(CloseBookCoroutine());
     }
-
+    public void ReturnMenuTheme()
+    {
+        AudioManagerScript.instance.StartMenuTheme();
+    }
     IEnumerator SetInventoryPanelActive()
     {
         yield return new WaitForSeconds(0.5f);

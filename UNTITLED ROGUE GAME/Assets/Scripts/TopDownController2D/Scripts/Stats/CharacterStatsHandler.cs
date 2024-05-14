@@ -31,7 +31,11 @@ namespace TopDownCharacter2D.Stats
         {
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
-            inventoryHealth.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+            
+        }
+        private void Start()
+        {
+            //inventoryHealth.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         }
         private void FixedUpdate()
         {
@@ -39,6 +43,7 @@ namespace TopDownCharacter2D.Stats
             CheckHealth();
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
+            ValueChangeCheck();
         }
         private void ValueChangeCheck()
         {
