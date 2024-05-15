@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - coin
+  - Level
   layers:
   - Default
   - TransparentFX

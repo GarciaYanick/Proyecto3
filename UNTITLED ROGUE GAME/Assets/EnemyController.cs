@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TopDownCharacter2D.Stats;
@@ -17,7 +18,7 @@ public class EnemyController : EnemyStateController, IDamageable
     public SpriteRenderer enemySprite;
     public CharacterStatsHandler stats;
     public int monetaryValue;
-    
+    public EventHandler OnKilled;
     private void Start()
     {
         stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
@@ -47,6 +48,7 @@ public class EnemyController : EnemyStateController, IDamageable
         {
             bulletSpeed += 2;
             stats.money += monetaryValue;
+            OnKilled?.Invoke(this, EventArgs.Empty);
             Destroy(gameObject);
         }
     }
