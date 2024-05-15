@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 385.5, y: -405.50446}
+  m_AnchoredPosition: {x: 404, y: -388}
   m_SizeDelta: {x: 665.4435, y: 90.3715}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7136167910334209596
@@ -324,7 +324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.8, y: -137.6}
+  m_AnchoredPosition: {x: -73, y: -124.00001}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8503183433238355712
@@ -632,7 +632,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -678,7 +678,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &8320944638869202775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,9 +710,9 @@ MonoBehaviour:
   HP: 100
   maxhp: 100
   healthSlider: {fileID: 7136167910334209596}
-  AttackDistance: 2
-  bulletPrefab: {fileID: 0}
-  bulletSpeed: 0
+  AttackDistance: 4
+  bulletPrefab: {fileID: 6476304075420885884, guid: bb3e106ed5b03624aad789d4aa243b35, type: 3}
+  bulletSpeed: 1.33
   sword: {fileID: 0}
   enemySprite: {fileID: 0}
   stats: {fileID: 0}

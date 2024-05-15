@@ -13,7 +13,7 @@ public class EnemyController : EnemyStateController, IDamageable
     public Slider healthSlider;
     public float AttackDistance;
     public GameObject bulletPrefab;
-    public int bulletSpeed;
+    public float bulletSpeed;
     public GameObject sword;
     public SpriteRenderer enemySprite;
     public CharacterStatsHandler stats;

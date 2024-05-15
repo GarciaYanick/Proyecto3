@@ -203,7 +203,7 @@ RectTransform:
   m_Father: {fileID: 8686424433895744644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -454,7 +454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5341774116501263980
 Transform:
   m_ObjectHideFlags: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
   healthSlider: {fileID: 2729699773495402913}
   AttackDistance: 3
   bulletPrefab: {fileID: 7978926196703455774, guid: f6181dc281b13ac44baa3e7a0293a333, type: 3}
-  bulletSpeed: 0
+  bulletSpeed: 2
   sword: {fileID: 0}
   enemySprite: {fileID: 0}
   stats: {fileID: 0}

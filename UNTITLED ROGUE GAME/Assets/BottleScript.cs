@@ -22,7 +22,7 @@ public class BottleScript : MonoBehaviour
         if (temp != null)
         {
             rb.gravityScale = 0;
-            temp.OnHurt(5);
+            temp.OnHurt(10);
             animator.SetTrigger("Splash");
         }
     }
