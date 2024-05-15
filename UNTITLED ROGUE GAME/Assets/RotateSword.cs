@@ -18,6 +18,7 @@ public class RotateSword : MonoBehaviour
     }*/
     public void RotateArm(float horizontal)
     {
+        Debug.Log("QARM");
         if (horizontal >= 0) pivot.rotation = Quaternion.Euler(0, 0, pivot.transform.position.z - 135);
         else if (horizontal <= 0) pivot.rotation = Quaternion.Euler(0, 0, pivot.transform.position.z + 135);
     }
