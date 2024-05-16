@@ -20,8 +20,8 @@ public class MenuManager : MonoBehaviour
     public GameObject maliciaShopPanel;
     public GameObject maliciaProfilePanel;
 
-    public AudioMixer musicMixer;
-    public AudioMixer SFXMixer;
+
+    public float initialAudio = -20f;
 
     [SerializeField]public GameObject currentPanel;
 
@@ -35,7 +35,7 @@ public class MenuManager : MonoBehaviour
         animator = GetComponent<Animator>();
         AudioManagerScript.instance.StartMenuTheme();
     }
-    
+
     public void Quit()
     {
         Application.Quit();

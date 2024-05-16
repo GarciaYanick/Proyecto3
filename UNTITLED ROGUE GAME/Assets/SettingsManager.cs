@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
-    public AudioMixer musicMixer;
-    public AudioMixer SFXMixer;
+    //public AudioMixer musicMixer;
+    //public AudioMixer SFXMixer;
 
     public Toggle muteToggle;
     public Toggle fpsToggle;
@@ -87,7 +87,7 @@ public class SettingsManager : MonoBehaviour
 
     public void SetMusic(float volume)
     {
-        musicMixer.SetFloat("MusicVolume", volume);
+        AudioManagerScript.instance.musicMixer.SetFloat("MusicVolume", volume);
         GameManager.Instance.musicSliderValue = volume;
 
         Debug.Log("ismutedbool del gameManager: " + GameManager.Instance.isMutedBool);
@@ -102,7 +102,7 @@ public class SettingsManager : MonoBehaviour
 
     public void SetSFX(float volume)
     {
-        SFXMixer.SetFloat("SFXVolume", volume);
+        AudioManagerScript.instance.SFXMixer.SetFloat("SFXVolume", volume);
         GameManager.Instance.SFXSliderValue = volume;
 
         if (!GameManager.Instance.isMutedBool)
@@ -115,11 +115,11 @@ public class SettingsManager : MonoBehaviour
     {
         GameManager.Instance.isMutedBool = true;
 
-        //musicMixer.SetFloat("MusicVolume", -80f);
-        //SFXMixer.SetFloat("MusicVolume", -80f);
+        musicSlider.value = -35;
+        SFXSlider.value = -35;
 
-        musicSlider.value = -40;
-        SFXSlider.value = -40;
+        AudioManagerScript.instance.musicMixer.SetFloat("MusicVolume", -80f);
+        AudioManagerScript.instance.SFXMixer.SetFloat("SFXVolume", -80f);
 
         muteText.text = "Yes";
     }
@@ -128,8 +128,8 @@ public class SettingsManager : MonoBehaviour
     {
         GameManager.Instance.isMutedBool = false;
 
-        musicMixer.SetFloat("MusicVolume", musicSliderValue);
-        SFXMixer.SetFloat("MusicVolume", SFXSliderValue);
+        AudioManagerScript.instance.musicMixer.SetFloat("MusicVolume", musicSliderValue);
+        AudioManagerScript.instance.SFXMixer.SetFloat("MusicVolume", SFXSliderValue);
 
         musicSlider.value = musicSliderValue;
         SFXSlider.value = SFXSliderValue;

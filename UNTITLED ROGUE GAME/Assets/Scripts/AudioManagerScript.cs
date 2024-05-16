@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
 {
@@ -20,6 +22,20 @@ public class AudioManagerScript : MonoBehaviour
     public AudioClip collectCoin;
     public AudioClip killEnemy;
 
+    public AudioMixer musicMixer;
+    public AudioMixer SFXMixer;
+
+    public Slider sliderOcultoDeLaHoja;
+
+    private void OnEnable()
+    {
+        Debug.Log("OnEnable AudioManager");
+
+        //sliderOcultoDeLaHoja.value = -20f;
+
+        //musicMixer.SetFloat("MusicVolume", sliderOcultoDeLaHoja.value);
+
+    }
 
     void Awake()
     {
@@ -31,11 +47,15 @@ public class AudioManagerScript : MonoBehaviour
         }
         else Destroy(gameObject);
         musicSource.volume = 0.35f;
-
     }
+
+    //public void SetMixerOnStart(float volume)
+    //{
+    //    musicMixer.SetFloat("MusicVolume", volume);
+    //}
+
     void Start()
     {
-        musicSource.volume = 0.35f;
         musicSource.clip = menuTheme;
         musicSource.Play();
     }

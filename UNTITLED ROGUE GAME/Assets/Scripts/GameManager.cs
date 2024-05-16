@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,12 +23,16 @@ public class GameManager : MonoBehaviour
 
     public bool isFrameTextActive;
 
+
+
     public WinCanvasManager canvasManager;
 
 
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
