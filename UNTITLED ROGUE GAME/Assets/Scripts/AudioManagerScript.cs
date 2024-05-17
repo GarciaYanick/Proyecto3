@@ -10,8 +10,8 @@ public class AudioManagerScript : MonoBehaviour
 {
     [NonSerialized] public static AudioManagerScript instance;
     [Header("------------Audio Source --------------")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource sfxSource;
+    [SerializeField] public AudioSource musicSource;
+    [SerializeField] public AudioSource sfxSource;
 
     [Header("------------Audio Clips -------------")]
     public AudioClip menuTheme;
@@ -22,19 +22,16 @@ public class AudioManagerScript : MonoBehaviour
     public AudioClip collectCoin;
     public AudioClip killEnemy;
 
-    public AudioMixer musicMixer;
-    public AudioMixer SFXMixer;
-
-    public Slider sliderOcultoDeLaHoja;
-
     private void OnEnable()
     {
-        Debug.Log("OnEnable AudioManager");
+        Debug.Log("En el audioManager es: " + GameManager.Instance.isThereSaveData);
 
-        //sliderOcultoDeLaHoja.value = -20f;
-
-        //musicMixer.SetFloat("MusicVolume", sliderOcultoDeLaHoja.value);
-
+        if (GameManager.Instance.isThereSaveData)
+        {
+            Debug.Log("Game Manager MusicSliderValue: " + GameManager.Instance.musicSliderValue);
+            musicSource.volume = GameManager.Instance.musicSliderValue;
+            sfxSource.volume = GameManager.Instance.SFXSliderValue;
+        }
     }
 
     void Awake()
@@ -46,7 +43,6 @@ public class AudioManagerScript : MonoBehaviour
 
         }
         else Destroy(gameObject);
-        musicSource.volume = 0.35f;
     }
 
     //public void SetMixerOnStart(float volume)

@@ -22,9 +22,7 @@ public class GameManager : MonoBehaviour
     public float SFXSliderValue;
 
     public bool isFrameTextActive;
-
-
-
+    public bool isThereSaveData = false;
     public WinCanvasManager canvasManager;
 
 
@@ -33,11 +31,23 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
 
 
+        Debug.Log("En el DataManager es: " + DataManager.instance.isThereSaveFile);
+
+        if (DataManager.instance.isThereSaveFile)
+        {
+            isThereSaveData = true;
+        }
+
+
+        Debug.Log("En el GameManager es: " + isThereSaveData);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         DataManager.instance.LoadData();
+
+       
+
         LevelChange();
     }
 
@@ -53,6 +63,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("GameManager Awake");
+
         if (Instance == null)
         {
             Instance = this;

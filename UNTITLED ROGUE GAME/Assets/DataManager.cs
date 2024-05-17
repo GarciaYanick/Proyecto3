@@ -10,6 +10,8 @@ public class DataManager : MonoBehaviour
     public string SaveFiles;
     public GameData gameData = new GameData();
 
+    public bool isThereSaveFile;
+
 
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class DataManager : MonoBehaviour
     {
         if (File.Exists(SaveFiles))
         {
+            isThereSaveFile = true;
+
             string content = File.ReadAllText(SaveFiles);
             Debug.Log("JSON Content: " + content);
             GameData loadedData = JsonUtility.FromJson<GameData>(content);
@@ -38,6 +42,8 @@ public class DataManager : MonoBehaviour
 
             gameData.musicSliderValue = loadedData.musicSliderValue;
             gameData.SFXSliderValue = loadedData.SFXSliderValue;
+
+            gameData.isThereSaveData = loadedData.isThereSaveData;
 
             //gameData.bytes = loadedData.bytes;
             //gameData.powerUps = loadedData.powerUps;
@@ -55,6 +61,7 @@ public class DataManager : MonoBehaviour
             GameManager.Instance.mutedText = gameData.muteText;
             GameManager.Instance.mutedToggleValue = gameData.muteToggleValue;
             GameManager.Instance.musicSliderValue = gameData.musicSliderValue;
+            GameManager.Instance.isThereSaveData = gameData.isThereSaveData;
 
 
 
@@ -71,6 +78,8 @@ public class DataManager : MonoBehaviour
 
     public void SaveData()
     {
+        isThereSaveFile = true;
+
         GameData newData = new GameData();
         {
             newData.isMutedBool = GameManager.Instance.isMutedBool;
@@ -79,6 +88,9 @@ public class DataManager : MonoBehaviour
 
             newData.musicSliderValue = GameManager.Instance.musicSliderValue;
             newData.SFXSliderValue = GameManager.Instance.SFXSliderValue;
+
+            GameManager.Instance.isThereSaveData = true;
+            newData.isThereSaveData = GameManager.Instance.isThereSaveData;
 
             //if (Inventory.instance != null)
             //{

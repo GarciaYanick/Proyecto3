@@ -48,8 +48,18 @@ public class SettingsManager : MonoBehaviour
 
         Debug.Log("Variable del GameManager llamada musicSliderValue es: " + GameManager.Instance.musicSliderValue);
 
-        musicSlider.value = GameManager.Instance.musicSliderValue;
-        SFXSlider.value = GameManager.Instance.SFXSliderValue;
+        if(GameManager.Instance.isThereSaveData)
+        {
+            musicSlider.value = GameManager.Instance.musicSliderValue;
+            SFXSlider.value = GameManager.Instance.SFXSliderValue;
+        }
+
+        else
+        {
+            musicSlider.value = AudioManagerScript.instance.musicSource.volume;
+            SFXSlider.value = AudioManagerScript.instance.sfxSource.volume;
+        }
+
     }
 
     private void Start()
@@ -87,7 +97,8 @@ public class SettingsManager : MonoBehaviour
 
     public void SetMusic(float volume)
     {
-        AudioManagerScript.instance.musicMixer.SetFloat("MusicVolume", volume);
+        AudioManagerScript.instance.musicSource.volume = volume;
+
         GameManager.Instance.musicSliderValue = volume;
 
         Debug.Log("ismutedbool del gameManager: " + GameManager.Instance.isMutedBool);
@@ -102,7 +113,8 @@ public class SettingsManager : MonoBehaviour
 
     public void SetSFX(float volume)
     {
-        AudioManagerScript.instance.SFXMixer.SetFloat("SFXVolume", volume);
+        AudioManagerScript.instance.sfxSource.volume = volume;
+
         GameManager.Instance.SFXSliderValue = volume;
 
         if (!GameManager.Instance.isMutedBool)
@@ -118,8 +130,8 @@ public class SettingsManager : MonoBehaviour
         musicSlider.value = -35;
         SFXSlider.value = -35;
 
-        AudioManagerScript.instance.musicMixer.SetFloat("MusicVolume", -80f);
-        AudioManagerScript.instance.SFXMixer.SetFloat("SFXVolume", -80f);
+        AudioManagerScript.instance.musicSource.volume = 0f;
+        AudioManagerScript.instance.sfxSource.volume = 0f;
 
         muteText.text = "Yes";
     }
@@ -128,8 +140,8 @@ public class SettingsManager : MonoBehaviour
     {
         GameManager.Instance.isMutedBool = false;
 
-        AudioManagerScript.instance.musicMixer.SetFloat("MusicVolume", musicSliderValue);
-        AudioManagerScript.instance.SFXMixer.SetFloat("MusicVolume", SFXSliderValue);
+        AudioManagerScript.instance.musicSource.volume = musicSliderValue;
+        AudioManagerScript.instance.sfxSource.volume = SFXSliderValue;
 
         musicSlider.value = musicSliderValue;
         SFXSlider.value = SFXSliderValue;
