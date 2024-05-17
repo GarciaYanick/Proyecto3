@@ -18,8 +18,6 @@ MonoBehaviour:
   - quantity: 0
     item: {fileID: 0}
   - quantity: 0
-    item: {fileID: 11400000, guid: 7e4f583ddc2e61d4683e05f65ecd9b2a, type: 2}
-  - quantity: 0
     item: {fileID: 0}
   - quantity: 0
     item: {fileID: 0}
@@ -46,7 +44,9 @@ MonoBehaviour:
   - quantity: 0
     item: {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
   - quantity: 0
-    item: {fileID: 0}
+    item: {fileID: 11400000, guid: 7e4f583ddc2e61d4683e05f65ecd9b2a, type: 2}
+  - quantity: 0
+    item: {fileID: 11400000, guid: 63a66bc5d0f6fef4da842af4089bebba, type: 2}
   - quantity: 0
     item: {fileID: 0}
   - quantity: 0
