@@ -706,7 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: {fileID: 11400000, guid: 486115779b5d2084b95d79f3e48ed93c, type: 2}
   target: {fileID: 0}
-  typeEnemy: 0
+  typeEnemy: 1
   HP: 100
   maxhp: 100
   healthSlider: {fileID: 7136167910334209596}

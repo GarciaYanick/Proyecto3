@@ -29,6 +29,8 @@ public class UIInventoryPage : MonoBehaviour
     public event Action<int, int> OnSwapItems;
     private int currentDragItem = -1;
 
+    [SerializeField] private ItemActionPanel actionPanel;
+
     private void Awake()
     {
         Hide();
@@ -77,7 +79,21 @@ public class UIInventoryPage : MonoBehaviour
             uiItem.OnRightMouseBtnClick += HandleShowItemActions;
         }
     }
+    public void AddSlots(int quantity)
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
+            uiItem.transform.SetParent(contentBagPanel);
+            inventoryItems.Add(uiItem);
 
+            uiItem.OnItemClicked += HandleItemSelection;
+            uiItem.OnItemBeginDrag += HandleBeginDrag;
+            uiItem.OnItemDroppedOn += HandleSwap;
+            uiItem.OnItemEndDrag += HandleEndDrag;
+            uiItem.OnRightMouseBtnClick += HandleShowItemActions;
+        }
+    }
     public void UpdateData(int index, Sprite image)
     {
         if (inventoryItems.Count > index) 
@@ -88,7 +104,12 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleShowItemActions(UIInventoryItem item)
     {
-        
+        int index = inventoryItems.IndexOf(item);
+        if (index == -1)
+        {
+            return;
+        }
+        OnItemActionRequested?.Invoke(index);
     }
 
     private void HandleEndDrag(UIInventoryItem item)
@@ -147,13 +168,22 @@ public class UIInventoryPage : MonoBehaviour
         invImage.ResetImage();
         DeselectAllItems();
     }
-
+    public void AddAction(string actionName, Action performAction)
+    {
+        actionPanel.AddButton(actionName, performAction);
+    }
+    public void ShowItemAction(int itemIndex)
+    {
+        actionPanel.Toggle(true);
+        actionPanel.transform.position = inventoryItems[itemIndex].transform.position;
+    }
     private void DeselectAllItems()
     {
         foreach (UIInventoryItem item in inventoryItems)
         {
             item.Deselect();
         }
+        actionPanel.Toggle(false);  
     }
 
     public void Hide() 

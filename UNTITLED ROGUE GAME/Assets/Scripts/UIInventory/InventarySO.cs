@@ -8,7 +8,7 @@ using UnityEngine.Animations;
     [CreateAssetMenu]
     public class InventarySO : ScriptableObject
     {
-        [SerializeField] private List<InventoryItem> inventoryItems;
+        [SerializeField] public List<InventoryItem> inventoryItems;
         [field: SerializeField] public int Size { get; private set; } = 16;
         public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
         public void Initialize()
@@ -19,7 +19,7 @@ using UnityEngine.Animations;
                 inventoryItems.Add(InventoryItem.GetEmptyItem());
             }
         }
-        public int AddItem(ItemSO item, int quantity)
+        public int AddItem(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
 
                 for (int i = 0; i < inventoryItems.Count; i++)
@@ -27,7 +27,7 @@ using UnityEngine.Animations;
                     if (IsInventoryFull()) return quantity;
                     while(quantity > 0 && IsInventoryFull() == false)
                     {
-                        quantity -= AddItemToFirstFreeSlot(item,1);
+                        quantity -= AddItemToFirstFreeSlot(item,1,itemState);
                         
                     }
                     InformAboutChange();
@@ -40,12 +40,13 @@ using UnityEngine.Animations;
             
         }
 
-        private int AddItemToFirstFreeSlot(ItemSO item, int quantity)
+        private int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
             InventoryItem newItem = new InventoryItem
             {
                 item = item,
-                quantity = quantity
+                quantity = quantity,
+                itemState = new List<ItemParameter>(itemState==null ? item.DefaultParametersList : itemState)
             };
             for (int i = 0; i < inventoryItems.Count; i++)
             {
@@ -143,8 +144,9 @@ using UnityEngine.Animations;
     {
         public int quantity;
         public ItemSO item;
+        public List<ItemParameter> itemState;
 
-        public bool IsEmpty { get; internal set; }
+    public bool IsEmpty { get; internal set; }
 
         public InventoryItem ChangeQuantity(int newQuantity)
         {
@@ -152,12 +154,14 @@ using UnityEngine.Animations;
             {
                 item = this.item,
                 quantity = newQuantity,
+                itemState = new List<ItemParameter>(this.itemState)
             };
         }
         public static InventoryItem GetEmptyItem() => new InventoryItem
         {
             item = null,
             quantity = 0,
+            itemState = new List<ItemParameter>()
         };
     }
 

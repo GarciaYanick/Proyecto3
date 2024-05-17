@@ -49,6 +49,7 @@ public class EnemyController : EnemyStateController, IDamageable
             bulletSpeed += 2;
             stats.money += monetaryValue;
             OnKilled?.Invoke(this, EventArgs.Empty);
+            if (typeEnemy == 1) InventoryController.instance.AddMoreSlots();
             Destroy(gameObject);
         }
     }
