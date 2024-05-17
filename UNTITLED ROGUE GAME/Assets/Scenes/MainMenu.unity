@@ -12298,9 +12298,9 @@ RectTransform:
   - {fileID: 1700709935}
   m_Father: {fileID: 1954000745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -301.25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725210559
@@ -14889,6 +14889,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1772177746}
     m_Modifications:
+    - target: {fileID: 291442896280139555, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4360823683693891697, guid: 7a47d28218c4cb24fb989bc2b794a574, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -23577,8 +23581,6 @@ MonoBehaviour:
   contentPanel: {fileID: 405533706}
   contentBagPanel: {fileID: 979854699}
   contentBasePanel: {fileID: 24209395}
-  image: {fileID: -1403046778, guid: 3ab1a2b06d3dfec41ba92c9c49b79993, type: 3}
-  image2: {fileID: 21300000, guid: e05ac46fd31fb434db7a0e8fea68bc73, type: 3}
 --- !u!1 &1369874431
 GameObject:
   m_ObjectHideFlags: 0
@@ -25491,7 +25493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1488900566
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25966,6 +25968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 1367278190}
+  inventarySO: {fileID: 11400000, guid: 84853d3aa7c73dd4cb50976045482aa3, type: 2}
   invCharSize: 6
   invBagSize: 8
   invBaseSize: 64
@@ -28003,9 +28006,9 @@ RectTransform:
   - {fileID: 1404495922}
   m_Father: {fileID: 1954000745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -778.75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633535417
@@ -30708,7 +30711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0367c0f303b684482dba29c99d3674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  canvas: {fileID: 1215549752}
   item: {fileID: 0}
 --- !u!1 &1773188399
 GameObject:

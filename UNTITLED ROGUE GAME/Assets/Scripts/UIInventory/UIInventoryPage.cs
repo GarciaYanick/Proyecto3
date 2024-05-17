@@ -161,4 +161,13 @@ public class UIInventoryPage : MonoBehaviour
         gameObject.SetActive(false);
         ResetDraggedItem();
     }
+
+    internal void ResetAllItems()
+    {
+        foreach (var item in inventoryItems)
+        {
+            item.ResetData();
+            item.Deselect();
+        }
+    }
 }
