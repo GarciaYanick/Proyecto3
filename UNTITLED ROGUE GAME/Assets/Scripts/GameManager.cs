@@ -30,24 +30,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
 
-
-        Debug.Log("En el DataManager es: " + DataManager.instance.isThereSaveFile);
-
-        if (DataManager.instance.isThereSaveFile)
-        {
-            isThereSaveData = true;
-        }
-
-
-        Debug.Log("En el GameManager es: " + isThereSaveData);
+        LoadData();
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        DataManager.instance.LoadData();
-
-       
-
         LevelChange();
     }
 
@@ -72,6 +59,15 @@ public class GameManager : MonoBehaviour
 
         }
         else Destroy(gameObject);
+    }
+
+    public void LoadData()
+    {
+        DataManager.instance.LoadData();
+        if (DataManager.instance.isThereSaveFile)
+        {
+            isThereSaveData = true;
+        }
     }
     public void LevelChange()
     {

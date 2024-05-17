@@ -24,7 +24,15 @@ public class AudioManagerScript : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("En el audioManager es: " + GameManager.Instance.isThereSaveData);
+        StartCoroutine(InitializeAudio());
+    }
+
+    private IEnumerator InitializeAudio()
+    {
+        // Wait for one frame to ensure GameManager is initialized and data is loaded
+        yield return null;
+
+        Debug.Log("AudioManager isThereSaveData: " + GameManager.Instance.isThereSaveData);
 
         if (GameManager.Instance.isThereSaveData)
         {
