@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Equipment 1
   m_EditorClassIdentifier: 
   itemID: 0
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 146581eb8ffc2764ab777a48dddd3ae6, type: 3}
+  RarityString: 
   Rarity: 0
-  statMultiplier: 0
+  statMultiplier: 1
   stats:
   - health
   - armor
-  multiplier: 
+  multiplier: armor

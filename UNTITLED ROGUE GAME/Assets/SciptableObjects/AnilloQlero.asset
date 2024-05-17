@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AnilloQlero
   m_EditorClassIdentifier: 
   itemID: 0
-  itemImage: {fileID: 21300000, guid: 33e904736cb05b24db2962d89ce1ec66, type: 3}
+  itemImage: {fileID: 364256282, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
   RarityString: 
   Rarity: 0
   statMultiplier: 1
