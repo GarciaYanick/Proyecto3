@@ -29,26 +29,14 @@ public class SettingsManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("muteToggleValue del GameManager es: " + GameManager.Instance.mutedToggleValue);
-
         muteToggle.isOn = GameManager.Instance.mutedToggleValue;
 
-        if(GameManager.Instance.mutedText != null)
+        if (GameManager.Instance.mutedText != null)
         {
-            Debug.Log("texto mute no es null");
             muteText = GameManager.Instance.mutedText;
         }
 
-        Debug.Log("Variable llamada musicSliderValue es: " + musicSliderValue);
-        Debug.Log("Music slider value del slider es: " + musicSlider.value);
-
-        musicSliderValue = musicSlider.value;
-
-        SFXSliderValue = SFXSlider.value;
-
-        Debug.Log("Variable del GameManager llamada musicSliderValue es: " + GameManager.Instance.musicSliderValue);
-
-        if(GameManager.Instance.isThereSaveData)
+        if (GameManager.Instance.isThereSaveData)
         {
             musicSlider.value = GameManager.Instance.musicSliderValue;
             SFXSlider.value = GameManager.Instance.SFXSliderValue;
@@ -60,6 +48,8 @@ public class SettingsManager : MonoBehaviour
             SFXSlider.value = AudioManagerScript.instance.sfxSource.volume;
         }
 
+        musicSliderValue = musicSlider.value;
+        SFXSliderValue = SFXSlider.value;
     }
 
     private void Start()
@@ -101,12 +91,9 @@ public class SettingsManager : MonoBehaviour
 
         GameManager.Instance.musicSliderValue = volume;
 
-        Debug.Log("ismutedbool del gameManager: " + GameManager.Instance.isMutedBool);
-
         if (!GameManager.Instance.isMutedBool)
         {
             musicSliderValue = volume;
-            Debug.Log("music slider value: " + musicSliderValue);
         }
 
     }
@@ -127,8 +114,8 @@ public class SettingsManager : MonoBehaviour
     {
         GameManager.Instance.isMutedBool = true;
 
-        musicSlider.value = -35;
-        SFXSlider.value = -35;
+        musicSlider.value = 0f;
+        SFXSlider.value = 0f;
 
         AudioManagerScript.instance.musicSource.volume = 0f;
         AudioManagerScript.instance.sfxSource.volume = 0f;
@@ -140,11 +127,16 @@ public class SettingsManager : MonoBehaviour
     {
         GameManager.Instance.isMutedBool = false;
 
-        AudioManagerScript.instance.musicSource.volume = musicSliderValue;
-        AudioManagerScript.instance.sfxSource.volume = SFXSliderValue;
+        Debug.Log("El GameManagerMusicSlider antes de mutear es: " + GameManager.Instance.musicSliderValueBeforeMuting);
 
-        musicSlider.value = musicSliderValue;
-        SFXSlider.value = SFXSliderValue;
+        AudioManagerScript.instance.musicSource.volume = GameManager.Instance.musicSliderValueBeforeMuting;
+        AudioManagerScript.instance.sfxSource.volume = GameManager.Instance.SFXSliderValueBeforeMuting;
+
+        musicSlider.value = GameManager.Instance.musicSliderValueBeforeMuting;
+        SFXSlider.value = GameManager.Instance.SFXSliderValueBeforeMuting;
+
+        Debug.Log("El slider de la musica es: " + musicSlider.value);
+
 
         muteText.text = "No";
     }
@@ -153,6 +145,12 @@ public class SettingsManager : MonoBehaviour
     {
         if (muteToggle.isOn)
         {
+            musicSliderValue = musicSlider.value;
+            SFXSliderValue = SFXSlider.value;
+
+            GameManager.Instance.musicSliderValueBeforeMuting = musicSliderValue;
+            GameManager.Instance.SFXSliderValueBeforeMuting = SFXSliderValue;
+
             Mute();
         }
         else
@@ -161,9 +159,6 @@ public class SettingsManager : MonoBehaviour
         }
 
         GameManager.Instance.mutedToggleValue = muteToggle.isOn;
-        Debug.Log(GameManager.Instance.mutedToggleValue);
-        //GameManager.Instance.mutedText.text = muteText.text;
-
     }
 
     public void ShowFPS()

@@ -18,8 +18,12 @@ public class GameManager : MonoBehaviour
     public bool isMutedBool = false;
     public Text mutedText;
     public bool mutedToggleValue = false;
+
     public float musicSliderValue;
     public float SFXSliderValue;
+
+    public float musicSliderValueBeforeMuting;
+    public float SFXSliderValueBeforeMuting;
 
     public bool isFrameTextActive;
     public bool isThereSaveData = false;
@@ -67,7 +71,11 @@ public class GameManager : MonoBehaviour
         if (DataManager.instance.isThereSaveFile)
         {
             isThereSaveData = true;
+
+            Debug.Log("Loaded values: Music Slider Before Muting: " + musicSliderValueBeforeMuting + ", SFX Slider Before Muting: " + SFXSliderValueBeforeMuting);
         }
+
+
     }
     public void LevelChange()
     {

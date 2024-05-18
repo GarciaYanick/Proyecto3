@@ -13,6 +13,9 @@ public class GameData
     public float musicSliderValue;
     public float SFXSliderValue;
 
+    public float musicSliderValueBeforeMuting;
+    public float SFXSliderValueBeforeMuting;
+
     public bool isThereSaveData;
     //public PowerUp[] powerUps;
     // public List<Slot> slots;

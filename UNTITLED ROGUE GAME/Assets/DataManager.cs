@@ -43,32 +43,26 @@ public class DataManager : MonoBehaviour
             gameData.musicSliderValue = loadedData.musicSliderValue;
             gameData.SFXSliderValue = loadedData.SFXSliderValue;
 
+            gameData.musicSliderValueBeforeMuting = loadedData.musicSliderValueBeforeMuting;
+            gameData.SFXSliderValueBeforeMuting = loadedData.SFXSliderValueBeforeMuting;
+
             gameData.isThereSaveData = loadedData.isThereSaveData;
 
-            //gameData.bytes = loadedData.bytes;
-            //gameData.powerUps = loadedData.powerUps;
-            //gameData.images = loadedData.images;
 
-            //gameData.sliderMusicValue = loadedData.sliderMusicValue;
-            //gameData.sliderSFXValue = loadedData.sliderSFXValue;
-
-            //gameData.logroPuntos = loadedData.logroPuntos;
-            //gameData.logroMatar = loadedData.logroMatar;
-
-            //_____________________________________________________________
 
             GameManager.Instance.isMutedBool = gameData.isMutedBool;
             GameManager.Instance.mutedText = gameData.muteText;
             GameManager.Instance.mutedToggleValue = gameData.muteToggleValue;
+
             GameManager.Instance.musicSliderValue = gameData.musicSliderValue;
+            GameManager.Instance.SFXSliderValue = gameData.SFXSliderValue;
+
+            GameManager.Instance.musicSliderValueBeforeMuting = gameData.musicSliderValueBeforeMuting;
+            GameManager.Instance.SFXSliderValueBeforeMuting = gameData.SFXSliderValueBeforeMuting;
+
             GameManager.Instance.isThereSaveData = gameData.isThereSaveData;
 
-
-
-            //StartCoroutine(LoadSound());
-            //StartCoroutine(LoadAchievements());
-            //StartCoroutine(LoadInventoryData());
-
+            Debug.Log("Loaded values: Music Slider Before Muting: " + GameManager.Instance.musicSliderValueBeforeMuting + ", SFX Slider Before Muting: " + GameManager.Instance.SFXSliderValueBeforeMuting);
         }
         else
         {
@@ -89,108 +83,20 @@ public class DataManager : MonoBehaviour
             newData.musicSliderValue = GameManager.Instance.musicSliderValue;
             newData.SFXSliderValue = GameManager.Instance.SFXSliderValue;
 
+            newData.musicSliderValueBeforeMuting = GameManager.Instance.musicSliderValueBeforeMuting;
+            newData.SFXSliderValueBeforeMuting = GameManager.Instance.SFXSliderValueBeforeMuting;
+
             GameManager.Instance.isThereSaveData = true;
+
             newData.isThereSaveData = GameManager.Instance.isThereSaveData;
-
-            //if (Inventory.instance != null)
-            //{
-            //    newData.powerUps = Inventory.instance.powerUps;
-            //    newData.images = new List<Sprite>();
-
-            //    for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
-            //    {
-            //        newData.images.Add(InventoryUI.instance.slots[i].icon.sprite);
-            //        newData.images[i] = InventoryUI.instance.slots[i].icon.sprite;
-            //    }
-
-
-            //}
-
-            //if (TestSlider.instance != null)
-            //{
-            //    newData.sliderMusicValue = TestSlider.instance.musicSlider.value;
-            //    newData.sliderSFXValue = TestSlider.instance.efectSlider.value;
-            //}
-
-            //if (TestSlider.instance == null)
-            //{
-            //    newData.sliderMusicValue = 0.5f;
-            //    newData.sliderSFXValue = 0.5f;
-            //}
-
-            //if (newData.powerUps != null)
-            //{
-            //    GameManager.Instance.powerUps = new PowerUp[newData.powerUps.Length];
-
-            //    for (int i = 0; i < newData.powerUps.Length; i++)
-            //    {
-            //        GameManager.Instance.powerUps[i] = newData.powerUps[i];
-            //    }
-            //}
-
-
-            //newData.logroPuntos = GameManager.Instance.SeDesbloqueo;
-            //newData.logroMatar = GameManager.Instance.SeDesbloqueo1;
         };
 
         string JsonString = JsonUtility.ToJson(newData, true);
 
         File.WriteAllText(SaveFiles, JsonString);
 
+        Debug.Log("Saved File with values: Music Slider Before Muting: " + newData.musicSliderValueBeforeMuting + ", SFX Slider Before Muting: " + newData.SFXSliderValueBeforeMuting);
+
         Debug.Log("Saved File");
     }
-
-    //IEnumerator LoadInventoryData()
-    //{
-    //    while (Inventory.instance == null)
-    //    {
-    //        yield return null;
-    //    }
-
-    //    if (gameData.powerUps.Length != 0)
-    //    {
-    //        Inventory.instance.powerUps = gameData.powerUps;
-    //    }
-
-    //    if (InventoryUI.instance != null)
-    //    {
-    //        for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
-    //        {
-    //            if (InventoryUI.instance.slots[i] != null)
-    //            {
-    //                PowerUp currentPowerUp = Inventory.instance.powerUps[i];
-
-    //                if (currentPowerUp != null)
-    //                {
-    //                    InventoryUI.instance.slots[i].UpdateSlotUI(currentPowerUp);
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
-
-    //IEnumerator LoadSound()
-    //{
-    //    while (TestSlider.instance == null)
-    //    {
-    //        yield return null;
-    //    }
-
-    //    if (TestSlider.instance != null)
-    //    {
-    //        TestSlider.instance.musicSlider.value = gameData.sliderMusicValue;
-    //        TestSlider.instance.efectSlider.value = gameData.sliderSFXValue;
-    //    }
-
-
-    //    yield return true;
-    //}
-
-    //IEnumerator LoadAchievements()
-    //{
-    //    GameManager.Instance.SeDesbloqueo = gameData.logroPuntos;
-    //    GameManager.Instance.SeDesbloqueo1 = gameData.logroMatar;
-
-    //    yield return true;
-    //}
 }
