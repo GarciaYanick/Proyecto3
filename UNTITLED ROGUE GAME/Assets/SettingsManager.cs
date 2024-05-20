@@ -31,6 +31,13 @@ public class SettingsManager : MonoBehaviour
     {
         muteToggle.isOn = GameManager.Instance.mutedToggleValue;
 
+        fpsToggle.isOn = GameManager.Instance.FPSToggleValue;
+
+        if (GameManager.Instance.FPSText != null)
+        {
+            fpsYesNoText = GameManager.Instance.FPSText;
+        }
+
         if (GameManager.Instance.mutedText != null)
         {
             muteText = GameManager.Instance.mutedText;
@@ -165,15 +172,17 @@ public class SettingsManager : MonoBehaviour
     {
         if (fpsToggle.isOn)
         {
-            GameManager.Instance.isFrameTextActive = true;
+            GameManager.Instance.isFPSTextActive = true;
             fpsYesNoText.text = "Yes";
         }
         else
         {
             fpsYesNoText.text = "No";
 
-            GameManager.Instance.isFrameTextActive = false;
+            GameManager.Instance.isFPSTextActive = false;
         }
+
+        GameManager.Instance.FPSToggleValue = fpsToggle.isOn;
     }
 
     public void SetFullScreen()

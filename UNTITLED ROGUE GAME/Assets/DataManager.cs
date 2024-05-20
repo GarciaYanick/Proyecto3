@@ -40,6 +40,10 @@ public class DataManager : MonoBehaviour
             gameData.muteText = loadedData.muteText;
             gameData.muteToggleValue = loadedData.muteToggleValue;
 
+            gameData.isFPSTextActive = loadedData.isFPSTextActive;
+            gameData.FPSText = loadedData.FPSText;
+            gameData.FPSToggleValue = loadedData.FPSToggleValue;
+
             gameData.musicSliderValue = loadedData.musicSliderValue;
             gameData.SFXSliderValue = loadedData.SFXSliderValue;
 
@@ -53,6 +57,10 @@ public class DataManager : MonoBehaviour
             GameManager.Instance.isMutedBool = gameData.isMutedBool;
             GameManager.Instance.mutedText = gameData.muteText;
             GameManager.Instance.mutedToggleValue = gameData.muteToggleValue;
+
+            GameManager.Instance.isFPSTextActive = gameData.isFPSTextActive;
+            GameManager.Instance.FPSText = gameData.FPSText;
+            GameManager.Instance.FPSToggleValue = gameData.FPSToggleValue;
 
             GameManager.Instance.musicSliderValue = gameData.musicSliderValue;
             GameManager.Instance.SFXSliderValue = gameData.SFXSliderValue;
@@ -79,6 +87,10 @@ public class DataManager : MonoBehaviour
             newData.isMutedBool = GameManager.Instance.isMutedBool;
             newData.muteText = GameManager.Instance.mutedText;
             newData.muteToggleValue = GameManager.Instance.mutedToggleValue;
+
+            newData.isFPSTextActive = GameManager.Instance.isFPSTextActive;
+            newData.FPSText = GameManager.Instance.FPSText;
+            newData.FPSToggleValue = GameManager.Instance.FPSToggleValue;
 
             newData.musicSliderValue = GameManager.Instance.musicSliderValue;
             newData.SFXSliderValue = GameManager.Instance.SFXSliderValue;

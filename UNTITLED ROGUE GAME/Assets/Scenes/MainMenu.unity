@@ -37158,6 +37158,8 @@ MonoBehaviour:
     muteToggleValue: 0
     musicSliderValue: 0
     SFXSliderValue: 0
+    musicSliderValueBeforeMuting: 0
+    SFXSliderValueBeforeMuting: 0
     isThereSaveData: 0
   isThereSaveFile: 0
 --- !u!4 &1438352627
@@ -43411,6 +43413,8 @@ MonoBehaviour:
   mutedToggleValue: 0
   musicSliderValue: 0
   SFXSliderValue: 0
+  musicSliderValueBeforeMuting: 0
+  SFXSliderValueBeforeMuting: 0
   isFrameTextActive: 0
   isThereSaveData: 0
   canvasManager: {fileID: 0}

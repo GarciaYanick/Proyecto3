@@ -10,6 +10,10 @@ public class GameData
     public Text muteText;
     public bool muteToggleValue;
 
+    public bool isFPSTextActive;
+    public Text FPSText;
+    public bool FPSToggleValue;
+
     public float musicSliderValue;
     public float SFXSliderValue;
 

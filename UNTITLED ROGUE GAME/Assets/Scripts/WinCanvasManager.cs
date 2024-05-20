@@ -23,9 +23,9 @@ public class WinCanvasManager : MonoBehaviour
     {
         frameDeltaTimeArray = new float[100];
 
-        if (GameManager.Instance.isFrameTextActive)
+        if (GameManager.Instance.isFPSTextActive)
         {
-            Debug.Log(GameManager.Instance.isFrameTextActive);
+            Debug.Log(GameManager.Instance.isFPSTextActive);
             fpsText.gameObject.SetActive(true);
         }
 

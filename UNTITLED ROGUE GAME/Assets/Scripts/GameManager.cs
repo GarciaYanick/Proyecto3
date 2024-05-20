@@ -16,8 +16,12 @@ public class GameManager : MonoBehaviour
     public int currentLevel = 1;
 
     public bool isMutedBool = false;
+
     public Text mutedText;
+    public Text FPSText;
+
     public bool mutedToggleValue = false;
+    public bool FPSToggleValue = false;
 
     public float musicSliderValue;
     public float SFXSliderValue;
@@ -25,7 +29,7 @@ public class GameManager : MonoBehaviour
     public float musicSliderValueBeforeMuting;
     public float SFXSliderValueBeforeMuting;
 
-    public bool isFrameTextActive;
+    public bool isFPSTextActive;
     public bool isThereSaveData = false;
     public WinCanvasManager canvasManager;
 
