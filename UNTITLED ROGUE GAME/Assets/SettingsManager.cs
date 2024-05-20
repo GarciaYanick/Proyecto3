@@ -33,6 +33,8 @@ public class SettingsManager : MonoBehaviour
 
         fpsToggle.isOn = GameManager.Instance.FPSToggleValue;
 
+        fullScreenToggle.isOn = GameManager.Instance.FullScreenToggleValue;
+
         if (GameManager.Instance.FPSText != null)
         {
             fpsYesNoText = GameManager.Instance.FPSText;
@@ -41,6 +43,11 @@ public class SettingsManager : MonoBehaviour
         if (GameManager.Instance.mutedText != null)
         {
             muteText = GameManager.Instance.mutedText;
+        }
+
+        if (GameManager.Instance.FullScreenText != null)
+        {
+            fullScreenYesNoText = GameManager.Instance.FullScreenText;
         }
 
         if (GameManager.Instance.isThereSaveData)
@@ -189,14 +196,18 @@ public class SettingsManager : MonoBehaviour
     {
         if (fullScreenToggle.isOn)
         {
+            GameManager.Instance.isFullScreen = true;
             Screen.fullScreen = true;
             fullScreenYesNoText.text = "Yes";
         }
         else
         {
+            GameManager.Instance.isFullScreen = false;
             Screen.fullScreen = false;
             fullScreenYesNoText.text = "No";
         }
+
+        GameManager.Instance.FullScreenToggleValue = fullScreenToggle.isOn;
 
     }
 

@@ -16,12 +16,16 @@ public class GameManager : MonoBehaviour
     public int currentLevel = 1;
 
     public bool isMutedBool = false;
+    public bool isFPSTextActive;
+    public bool isFullScreen = false;
 
     public Text mutedText;
     public Text FPSText;
+    public Text FullScreenText;
 
     public bool mutedToggleValue = false;
     public bool FPSToggleValue = false;
+    public bool FullScreenToggleValue = false;
 
     public float musicSliderValue;
     public float SFXSliderValue;
@@ -29,7 +33,6 @@ public class GameManager : MonoBehaviour
     public float musicSliderValueBeforeMuting;
     public float SFXSliderValueBeforeMuting;
 
-    public bool isFPSTextActive;
     public bool isThereSaveData = false;
     public WinCanvasManager canvasManager;
 
@@ -39,6 +42,8 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         LoadData();
+
+        Screen.fullScreen = isFullScreen;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

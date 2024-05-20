@@ -44,6 +44,10 @@ public class DataManager : MonoBehaviour
             gameData.FPSText = loadedData.FPSText;
             gameData.FPSToggleValue = loadedData.FPSToggleValue;
 
+            gameData.isFullScreen = loadedData.isFullScreen;
+            gameData.FullScreenText = loadedData.FullScreenText;
+            gameData.FullScreenToggleValue = loadedData.FullScreenToggleValue;
+
             gameData.musicSliderValue = loadedData.musicSliderValue;
             gameData.SFXSliderValue = loadedData.SFXSliderValue;
 
@@ -61,6 +65,10 @@ public class DataManager : MonoBehaviour
             GameManager.Instance.isFPSTextActive = gameData.isFPSTextActive;
             GameManager.Instance.FPSText = gameData.FPSText;
             GameManager.Instance.FPSToggleValue = gameData.FPSToggleValue;
+
+            GameManager.Instance.isFullScreen = gameData.isFullScreen;
+            GameManager.Instance.FullScreenText = gameData.FullScreenText;
+            GameManager.Instance.FullScreenToggleValue = gameData.FullScreenToggleValue;
 
             GameManager.Instance.musicSliderValue = gameData.musicSliderValue;
             GameManager.Instance.SFXSliderValue = gameData.SFXSliderValue;
@@ -91,6 +99,10 @@ public class DataManager : MonoBehaviour
             newData.isFPSTextActive = GameManager.Instance.isFPSTextActive;
             newData.FPSText = GameManager.Instance.FPSText;
             newData.FPSToggleValue = GameManager.Instance.FPSToggleValue;
+
+            newData.isFullScreen = GameManager.Instance.isFullScreen;
+            newData.FullScreenText = GameManager.Instance.FullScreenText;
+            newData.FullScreenToggleValue = GameManager.Instance.FullScreenToggleValue;
 
             newData.musicSliderValue = GameManager.Instance.musicSliderValue;
             newData.SFXSliderValue = GameManager.Instance.SFXSliderValue;

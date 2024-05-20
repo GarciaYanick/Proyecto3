@@ -14,6 +14,10 @@ public class GameData
     public Text FPSText;
     public bool FPSToggleValue;
 
+    public bool isFullScreen;
+    public Text FullScreenText;
+    public bool FullScreenToggleValue;
+
     public float musicSliderValue;
     public float SFXSliderValue;
 
