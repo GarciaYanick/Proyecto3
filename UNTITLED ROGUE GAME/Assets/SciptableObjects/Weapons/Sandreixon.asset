@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Sandreixon
   m_EditorClassIdentifier: 
   itemID: 0
+  itemName: Sandra
   itemImage: {fileID: -1526172112, guid: cbd4e2b2ab2a16149b38996f4998bf75, type: 3}
+  cost: 60
+  description: Es una larga historia
   RarityString: Legendary
   Rarity: 3
   size: 1

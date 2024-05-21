@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: HAMMOH
   m_EditorClassIdentifier: 
   itemID: 2
+  itemName: "Hamas Mohar\xE9"
   itemImage: {fileID: 935863093, guid: 48b89c1a267395443b2ce0d5c742bf73, type: 3}
-  RarityString: 
-  Rarity: 0
+  cost: 100
+  description: Esta escopeta dispara cabezas de gato que gritan AMIAU AKBAR
+  RarityString: Legendary
+  Rarity: 3
   size: 2
   delay: 2
   power: 5
