@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 316942462866074156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.333332}
+  m_LocalPosition: {x: 0, y: 0, z: -8.333333}
   m_LocalScale: {x: 0.59763324, y: 0.59763324, z: 0.59763324}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -446,6 +446,7 @@ MonoBehaviour:
   hp: 100
   maxhp: 100
   healthSlider: {fileID: 0}
+  inventoryHealth: {fileID: 0}
   weaponSprite: {fileID: 3658244459107867238}
   money: 0
 --- !u!114 &2518287987090293933
@@ -532,7 +533,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994757597059758968}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 377df98bde7799f48adfefb534708c0c, type: 3}
   m_Name: 
