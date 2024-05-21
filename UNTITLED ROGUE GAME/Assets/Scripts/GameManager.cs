@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,14 +15,35 @@ public class GameManager : MonoBehaviour
 
     public int currentLevel = 1;
 
-    public bool isFrameTextActive;
+    public bool isMutedBool = false;
+    public bool isFPSTextActive;
+    public bool isFullScreen = false;
 
+    public Text mutedText;
+    public Text FPSText;
+    public Text FullScreenText;
+
+    public bool mutedToggleValue = false;
+    public bool FPSToggleValue = false;
+    public bool FullScreenToggleValue = false;
+
+    public float musicSliderValue;
+    public float SFXSliderValue;
+
+    public float musicSliderValueBeforeMuting;
+    public float SFXSliderValueBeforeMuting;
+
+    public bool isThereSaveData = false;
     public WinCanvasManager canvasManager;
+
 
     void OnEnable()
     {
-        Debug.Log("OnEnable called");
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        LoadData();
+
+        Screen.fullScreen = isFullScreen;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -35,12 +58,13 @@ public class GameManager : MonoBehaviour
 
     void OnDisable()
     {
-        Debug.Log("OnDisable");
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     void Awake()
     {
+        Debug.Log("GameManager Awake");
+
         if (Instance == null)
         {
             Instance = this;
@@ -48,6 +72,19 @@ public class GameManager : MonoBehaviour
 
         }
         else Destroy(gameObject);
+    }
+
+    public void LoadData()
+    {
+        DataManager.instance.LoadData();
+        if (DataManager.instance.isThereSaveFile)
+        {
+            isThereSaveData = true;
+
+            Debug.Log("Loaded values: Music Slider Before Muting: " + musicSliderValueBeforeMuting + ", SFX Slider Before Muting: " + SFXSliderValueBeforeMuting);
+        }
+
+
     }
     public void LevelChange()
     {

@@ -10,6 +10,7 @@ public class WinCanvasManager : MonoBehaviour
 {
     public GameObject hudmenu;
     public GameObject gameOverMenu;
+    public GameObject pauseMenu;
     public GameObject inventoryMenu;
     public Text coinsText;
 
@@ -17,16 +18,18 @@ public class WinCanvasManager : MonoBehaviour
 
     private int lastFrameIndex;
     private float[] frameDeltaTimeArray;
+    private bool isGamePaused;
+
+
 
 
     private void Awake()
     {
         frameDeltaTimeArray = new float[100];
 
-        if (GameManager.Instance.isFrameTextActive)
+        if (GameManager.Instance.isFPSTextActive)
         {
-
-            Debug.Log(GameManager.Instance.isFrameTextActive);
+            Debug.Log(GameManager.Instance.isFPSTextActive);
             fpsText.gameObject.SetActive(true);
         }
 
@@ -41,7 +44,9 @@ public class WinCanvasManager : MonoBehaviour
         frameDeltaTimeArray[lastFrameIndex] = Time.deltaTime;
         lastFrameIndex = (lastFrameIndex + 1) % frameDeltaTimeArray.Length;
 
-        fpsText.text = Mathf.RoundToInt(CalculateFPS()).ToString();
+        fpsText.text = "FPS: " + Mathf.RoundToInt(CalculateFPS()).ToString();
+
+        PauseMenu();
     }
     private void FixedUpdate()
     {
@@ -88,6 +93,42 @@ public class WinCanvasManager : MonoBehaviour
         Time.timeScale = 1.0f;
         hudmenu.SetActive(true );
     }
+
+    public void PauseMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isGamePaused)
+            {
+                Resume();
+            }
+
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        isGamePaused = false;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void Pause()
+    {
+        isGamePaused = true;
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

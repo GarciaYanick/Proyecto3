@@ -132,6 +132,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:UNTITLED ROGUE GAME/Assets/Resources/Sprites/Chest/Average/Layer-2.png.meta
   - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
@@ -145,6 +146,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> Data:UNTITLED ROGUE GAME/Assets/tiles/Average/Layer-2.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []

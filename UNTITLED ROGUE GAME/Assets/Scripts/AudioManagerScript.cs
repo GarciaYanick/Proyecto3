@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
 {
     [NonSerialized] public static AudioManagerScript instance;
     [Header("------------Audio Source --------------")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource sfxSource;
+    [SerializeField] public AudioSource musicSource;
+    [SerializeField] public AudioSource sfxSource;
 
     [Header("------------Audio Clips -------------")]
     public AudioClip menuTheme;
@@ -20,6 +22,25 @@ public class AudioManagerScript : MonoBehaviour
     public AudioClip collectCoin;
     public AudioClip killEnemy;
 
+    private void OnEnable()
+    {
+        StartCoroutine(InitializeAudio());
+    }
+
+    private IEnumerator InitializeAudio()
+    {
+        // Wait for one frame to ensure GameManager is initialized and data is loaded
+        yield return null;
+
+        Debug.Log("AudioManager isThereSaveData: " + GameManager.Instance.isThereSaveData);
+
+        if (GameManager.Instance.isThereSaveData)
+        {
+            Debug.Log("Game Manager MusicSliderValue: " + GameManager.Instance.musicSliderValue);
+            musicSource.volume = GameManager.Instance.musicSliderValue;
+            sfxSource.volume = GameManager.Instance.SFXSliderValue;
+        }
+    }
 
     void Awake()
     {
@@ -30,12 +51,15 @@ public class AudioManagerScript : MonoBehaviour
 
         }
         else Destroy(gameObject);
-        musicSource.volume = 0.35f;
-
     }
+
+    //public void SetMixerOnStart(float volume)
+    //{
+    //    musicMixer.SetFloat("MusicVolume", volume);
+    //}
+
     void Start()
     {
-        musicSource.volume = 0.35f;
         musicSource.clip = menuTheme;
         musicSource.Play();
     }

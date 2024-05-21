@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
-    public AudioMixer musicMixer;
-    public AudioMixer SFXMixer;
+    //public AudioMixer musicMixer;
+    //public AudioMixer SFXMixer;
 
     public Toggle muteToggle;
     public Toggle fpsToggle;
@@ -23,18 +23,47 @@ public class SettingsManager : MonoBehaviour
     public float musicSliderValue;
     public float SFXSliderValue;
 
-    public bool isMuted = false;
-
     Resolution[] resolutions;
 
     public Dropdown resolutionDropdown;
 
-    void Awake()
+    private void OnEnable()
     {
+        muteToggle.isOn = GameManager.Instance.mutedToggleValue;
+
+        fpsToggle.isOn = GameManager.Instance.FPSToggleValue;
+
+        fullScreenToggle.isOn = GameManager.Instance.FullScreenToggleValue;
+
+        if (GameManager.Instance.FPSText != null)
+        {
+            fpsYesNoText = GameManager.Instance.FPSText;
+        }
+
+        if (GameManager.Instance.mutedText != null)
+        {
+            muteText = GameManager.Instance.mutedText;
+        }
+
+        if (GameManager.Instance.FullScreenText != null)
+        {
+            fullScreenYesNoText = GameManager.Instance.FullScreenText;
+        }
+
+        if (GameManager.Instance.isThereSaveData)
+        {
+            musicSlider.value = GameManager.Instance.musicSliderValue;
+            SFXSlider.value = GameManager.Instance.SFXSliderValue;
+        }
+
+        else
+        {
+            musicSlider.value = AudioManagerScript.instance.musicSource.volume;
+            SFXSlider.value = AudioManagerScript.instance.sfxSource.volume;
+        }
+
         musicSliderValue = musicSlider.value;
         SFXSliderValue = SFXSlider.value;
-
-        
     }
 
     private void Start()
@@ -72,8 +101,11 @@ public class SettingsManager : MonoBehaviour
 
     public void SetMusic(float volume)
     {
-        musicMixer.SetFloat("MusicVolume", volume);
-        if (!isMuted)
+        AudioManagerScript.instance.musicSource.volume = volume;
+
+        GameManager.Instance.musicSliderValue = volume;
+
+        if (!GameManager.Instance.isMutedBool)
         {
             musicSliderValue = volume;
         }
@@ -82,9 +114,11 @@ public class SettingsManager : MonoBehaviour
 
     public void SetSFX(float volume)
     {
-        SFXMixer.SetFloat("SFXVolume", volume);
+        AudioManagerScript.instance.sfxSource.volume = volume;
 
-        if (!isMuted)
+        GameManager.Instance.SFXSliderValue = volume;
+
+        if (!GameManager.Instance.isMutedBool)
         {
             SFXSliderValue = volume;
         }
@@ -92,26 +126,31 @@ public class SettingsManager : MonoBehaviour
 
     public void Mute()
     {
-        isMuted = true;
+        GameManager.Instance.isMutedBool = true;
 
-        musicMixer.SetFloat("MusicVolume", -60);
-        SFXMixer.SetFloat("MusicVolume", -60);
+        musicSlider.value = 0f;
+        SFXSlider.value = 0f;
 
-        musicSlider.value = -40;
-        SFXSlider.value = -40;
+        AudioManagerScript.instance.musicSource.volume = 0f;
+        AudioManagerScript.instance.sfxSource.volume = 0f;
 
         muteText.text = "Yes";
     }
 
     public void UnMute()
     {
-        isMuted = false;
+        GameManager.Instance.isMutedBool = false;
 
-        musicMixer.SetFloat("MusicVolume", musicSliderValue);
-        SFXMixer.SetFloat("MusicVolume", SFXSliderValue);
+        Debug.Log("El GameManagerMusicSlider antes de mutear es: " + GameManager.Instance.musicSliderValueBeforeMuting);
 
-        musicSlider.value = musicSliderValue;
-        SFXSlider.value = SFXSliderValue;
+        AudioManagerScript.instance.musicSource.volume = GameManager.Instance.musicSliderValueBeforeMuting;
+        AudioManagerScript.instance.sfxSource.volume = GameManager.Instance.SFXSliderValueBeforeMuting;
+
+        musicSlider.value = GameManager.Instance.musicSliderValueBeforeMuting;
+        SFXSlider.value = GameManager.Instance.SFXSliderValueBeforeMuting;
+
+        Debug.Log("El slider de la musica es: " + musicSlider.value);
+
 
         muteText.text = "No";
     }
@@ -120,43 +159,55 @@ public class SettingsManager : MonoBehaviour
     {
         if (muteToggle.isOn)
         {
+            musicSliderValue = musicSlider.value;
+            SFXSliderValue = SFXSlider.value;
+
+            GameManager.Instance.musicSliderValueBeforeMuting = musicSliderValue;
+            GameManager.Instance.SFXSliderValueBeforeMuting = SFXSliderValue;
+
             Mute();
-            muteText.text = "No";
         }
         else
         {
             UnMute();
-            muteText.text = "Yes";
         }
+
+        GameManager.Instance.mutedToggleValue = muteToggle.isOn;
     }
 
     public void ShowFPS()
     {
         if (fpsToggle.isOn)
         {
-            GameManager.Instance.isFrameTextActive = true;
+            GameManager.Instance.isFPSTextActive = true;
             fpsYesNoText.text = "Yes";
         }
         else
         {
             fpsYesNoText.text = "No";
 
-            GameManager.Instance.isFrameTextActive = false;
+            GameManager.Instance.isFPSTextActive = false;
         }
+
+        GameManager.Instance.FPSToggleValue = fpsToggle.isOn;
     }
 
     public void SetFullScreen()
     {
         if (fullScreenToggle.isOn)
         {
+            GameManager.Instance.isFullScreen = true;
             Screen.fullScreen = true;
             fullScreenYesNoText.text = "Yes";
         }
         else
         {
+            GameManager.Instance.isFullScreen = false;
             Screen.fullScreen = false;
             fullScreenYesNoText.text = "No";
         }
+
+        GameManager.Instance.FullScreenToggleValue = fullScreenToggle.isOn;
 
     }
 

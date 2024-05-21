@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -19,14 +20,22 @@ public class MenuManager : MonoBehaviour
     public GameObject maliciaShopPanel;
     public GameObject maliciaProfilePanel;
 
+
+    public float initialAudio = -20f;
+
     [SerializeField]public GameObject currentPanel;
+
+    private void OnEnable()
+    {
+        Time.timeScale = 1f;
+    }
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         //AudioManagerScript.instance.StartMenuTheme();
     }
-    
+
     public void Quit()
     {
         Application.Quit();
@@ -44,9 +53,6 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator LoadStartAnimation()
     {
-
-        Debug.Log("XD");
-
         animator.SetTrigger("StartGame");
 
         yield return new WaitForSeconds(flipClip.length + 0.1f);
@@ -54,7 +60,6 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator LoadReverseAnimation()
     {
-        Debug.Log("Reverse");
         animator.SetTrigger("BackToMenu");
 
         yield return new WaitForSeconds(reverseClip.length + 0.1f);
