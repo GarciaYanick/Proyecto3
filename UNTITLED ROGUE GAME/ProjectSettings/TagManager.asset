@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - coin
   - Level
+  - Basement
   layers:
   - Default
   - TransparentFX
