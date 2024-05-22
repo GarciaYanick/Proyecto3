@@ -20,7 +20,6 @@ public class MenuManager : MonoBehaviour
     public GameObject maliciaShopPanel;
     public GameObject maliciaProfilePanel;
 
-
     public float initialAudio = -20f;
 
     [SerializeField]public GameObject currentPanel;
@@ -33,7 +32,6 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        //AudioManagerScript.instance.StartMenuTheme();
     }
 
     public void Quit()
@@ -68,6 +66,11 @@ public class MenuManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void ExitBase()
+    {
+        GameManager.Instance.isInMainMenu = false;
     }
 
     public void LoadBuyPanel()

@@ -409,7 +409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &171881086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1032,7 +1032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &667086038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1799,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1111810717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2234,7 +2234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1477447435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2526,7 +2526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1687148589
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2742,8 +2742,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 994757597059758968, guid: f33c82fa394c94740967737f45b7777c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1729054330}
   m_SourcePrefab: {fileID: 100100000, guid: f33c82fa394c94740967737f45b7777c, type: 3}
+--- !u!1 &1729054329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 994757597059758968, guid: f33c82fa394c94740967737f45b7777c, type: 3}
+  m_PrefabInstance: {fileID: 1729054328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729054330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729054329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2b24375e7549043b25b930ba8e1165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: 76e6c7faf2b484e4cb73fd23671c575c, type: 2}
 --- !u!1 &1759696443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1964658952
 RectTransform:
   m_ObjectHideFlags: 0

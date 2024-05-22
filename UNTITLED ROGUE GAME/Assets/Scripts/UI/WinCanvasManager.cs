@@ -62,7 +62,8 @@ public class WinCanvasManager : MonoBehaviour
 
     public void ReturnToBase()
     {
-        SceneManager.LoadScene("MainMenu");
+        GameManager.Instance.isInMainMenu = true;
+        SceneManager.LoadScene("MainMenuNewInv");
     }
 
     public float CalculateFPS()
