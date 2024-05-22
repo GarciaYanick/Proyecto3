@@ -12175,6 +12175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4990937619367996481, guid: 3168461c75a391a439f1a4815a31cdbe, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5183926162630428572, guid: 3168461c75a391a439f1a4815a31cdbe, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -29179,7 +29183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Inventory
+  m_Text: Equipment
 --- !u!222 &1950994525
 CanvasRenderer:
   m_ObjectHideFlags: 0

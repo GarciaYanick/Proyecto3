@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
     {
         //LevelChange();
         inventoryController = GameObject.Find("InventoryController").GetComponent<InventoryController>();
+        currentLevel = 1;
+        
     }
 
     void OnDisable()
@@ -99,6 +101,7 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
         {
             canvasManager = GameObject.Find("Canvas").GetComponent<WinCanvasManager>();
+
         }
     }
     public void LevelChange()
@@ -142,6 +145,11 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Win");
                 break;
         }
+    }
+    public void NewLevel()
+    {
+        currentLevel++;
+        LevelChange();
     }
     public void SetGameOver()
     {

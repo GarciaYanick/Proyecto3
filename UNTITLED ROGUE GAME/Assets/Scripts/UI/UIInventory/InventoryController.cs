@@ -169,6 +169,36 @@ public class InventoryController: MonoBehaviour
         inventorySO.Initialize();
 
     }
+    public int CountInventoryItems()
+    {
+        int count = 79;
+        for(int i = 0;i < inventorySO.inventoryItems.Count; i++)
+        {
+            if (inventorySO.inventoryItems[i].item == null) count--; 
+        }
+        return count;
+    }
+    public void SaveInventory()
+    {
+        int count = CountInventoryItems();
+        Debug.Log(count);
+        for (int i = 14; i < inventorySO.inventoryItems.Count; i++)
+        {
+            for(int j = 14; j < basementSO.inventoryItems.Count; j++)
+            {
+                if (count == 0) return;
+                if (inventorySO.inventoryItems[j].item != null)
+                {
+                    if (basementSO.inventoryItems[i].item == null)
+                    {
+                        basementSO.inventoryItems[i] = inventorySO.inventoryItems[j];
+                        count--;
+                    }
+                }
+                
+            }
+        }
+    }
     /*
 private void Update()
 {

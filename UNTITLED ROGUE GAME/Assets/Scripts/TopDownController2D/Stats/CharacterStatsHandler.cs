@@ -198,6 +198,10 @@ namespace TopDownCharacter2D.Stats
                 GameManager.Instance.SetGameOver();
             }
         }
+        public void SetPosition()
+        {
+            transform.position = new Vector2(0, 0);
+        }
         #region Stats limits
 
         private const float MinAttackDelay = 0.03f;

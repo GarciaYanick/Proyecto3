@@ -12,6 +12,7 @@ public class WinCanvasManager : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
     public GameObject inventoryMenu;
+    public GameObject checkpointMenu;
     public Text coinsText;
 
     public Text fpsText;
@@ -128,7 +129,14 @@ public class WinCanvasManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
+    public void ShowCheckpointMenu() {
+        
+        checkpointMenu.SetActive(true);
+    }
+    public void HideCheckpointMenu()
+    {
+        checkpointMenu.SetActive(false);
+    }
     public void QuitGame()
     {
         Application.Quit();
