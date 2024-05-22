@@ -9,8 +9,6 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Mira lo pillaste");
-
         Item item = collision.GetComponent<Item>();
         if(item != null )
         {

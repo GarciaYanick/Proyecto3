@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 0
   itemName: Cubo de Infinidad
   itemImage: {fileID: 364256282, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
-  cost: 0
+  cost: 60
   description: "Con este gran casco y una bata ser\xE1s el mejor cubata"
   RarityString: Rare
   Rarity: 0
