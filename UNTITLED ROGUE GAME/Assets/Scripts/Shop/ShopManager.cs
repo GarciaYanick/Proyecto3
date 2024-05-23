@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public int coins = 1000;
     public Text coinsUI;
 
     public ItemSO[] shopItemsSO;
@@ -17,22 +16,30 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        coinsUI.text = coins.ToString();
+        inventoryData.Initialize();
+        coinsUI.text = "x" + GameManager.Instance.playerMoney.ToString();
         LoadPanels();
         CheckPurchaseable();
+
+        //for(int i = 0; i < inventoryData.inventoryItems.Count; i++)
+        //{
+        //    inventoryData.RemoveItem(i, 1);
+        //}
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        AddCoins();
     }
 
     public void AddCoins()
     {
-        coins++;
-        coinsUI.text = "Coins: " + coins.ToString();
-        CheckPurchaseable();
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            GameManager.Instance.playerMoney+= 10;
+            coinsUI.text = "x" + GameManager.Instance.playerMoney.ToString();
+            CheckPurchaseable();
+        }
     }
 
     public void LoadPanels()
@@ -50,7 +57,7 @@ public class ShopManager : MonoBehaviour
     {
         for(int i = 0;i < shopItemsSO.Length;i++)
         {
-            if(coins >= shopItemsSO[i].cost)
+            if(GameManager.Instance.playerMoney >= shopItemsSO[i].cost)
             {
                 purchaseButtons[i].interactable = true;
             }
@@ -64,12 +71,30 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(int btnNumber)
     {
-        if(coins >= shopItemsSO[btnNumber].cost)
+        if(GameManager.Instance.playerMoney >= shopItemsSO[btnNumber].cost)
         {
-            coins = coins - shopItemsSO[btnNumber].cost;
-            coinsUI.text = coins.ToString();
-            inventoryData.AddItem(shopItemsSO[btnNumber], 1);
-            CheckPurchaseable();
+            GameManager.Instance.playerMoney = GameManager.Instance.playerMoney - shopItemsSO[btnNumber].cost;
+            coinsUI.text = GameManager.Instance.playerMoney.ToString();
+
+            for (int i = 14; i < inventoryData.Size; i++)
+            {
+                if (inventoryData.inventoryItems[i].IsEmpty)
+                {
+                    inventoryData.AddItemAtPosition(shopItemsSO[btnNumber], 1, i);
+                    CheckPurchaseable();
+                    return;
+                }
+            }
+
+            for (int i = 0; i < 14; i++)
+            {
+                if (inventoryData.inventoryItems[i].IsEmpty)
+                {
+                    inventoryData.AddItemAtPosition(shopItemsSO[btnNumber], 1, i);
+                    CheckPurchaseable();
+                    return;
+                }
+            }
         }
     }
 

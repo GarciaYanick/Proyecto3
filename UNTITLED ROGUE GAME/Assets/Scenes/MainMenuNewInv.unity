@@ -1262,7 +1262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d6d5c388b24d9901d3fbb602da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 500
   coinsUI: {fileID: 2000468105}
   shopItemsSO:
   - {fileID: 11400000, guid: b6439e4b039fd444f81158342a9cf0f6, type: 2}
@@ -6561,7 +6560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d6d5c388b24d9901d3fbb602da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 500
   coinsUI: {fileID: 2000468105}
   shopItemsSO:
   - {fileID: 11400000, guid: 558945eeb9d415447b0696cbc80cc03c, type: 2}
@@ -6813,6 +6811,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676339904}
   m_CullTransparentMesh: 1
+--- !u!114 &686110349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4779254307476086939, guid: 1040988675258ea45a5be642f240c5c1, type: 3}
+  m_PrefabInstance: {fileID: 1922218279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d3b5ddcd39fa7409f3ac41ff823e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &696192788 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7369849438366305688, guid: daefb0811d0055d43888f92c466f3476, type: 3}
@@ -10880,6 +10889,7 @@ GameObject:
   - component: {fileID: 1139865282}
   - component: {fileID: 1139865284}
   - component: {fileID: 1139865283}
+  - component: {fileID: 1139865285}
   m_Layer: 5
   m_Name: ShopPanel
   m_TagString: Untagged
@@ -10948,6 +10958,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139865281}
   m_CullTransparentMesh: 1
+--- !u!114 &1139865285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139865281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdf8a533290be347bbe0a22360e4fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsUI: {fileID: 2000468105}
 --- !u!1 &1160054431
 GameObject:
   m_ObjectHideFlags: 0
@@ -15982,6 +16005,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5411677895039060105, guid: 741d190fa8bc5f3409eed9816e9622c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686110349}
+    - target: {fileID: 5411677895039060105, guid: 741d190fa8bc5f3409eed9816e9622c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveData
+      objectReference: {fileID: 0}
     - target: {fileID: 6740389690072774198, guid: 741d190fa8bc5f3409eed9816e9622c6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17291,6 +17322,7 @@ MonoBehaviour:
   maliciaProfilePanel: {fileID: 0}
   initialAudio: -20
   currentPanel: {fileID: 0}
+  playerMoneyText: {fileID: 909159382}
 --- !u!1 &1761474963
 GameObject:
   m_ObjectHideFlags: 0
@@ -18141,7 +18173,7 @@ RectTransform:
   m_GameObject: {fileID: 1876908789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000486, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 25601342}
@@ -18171,7 +18203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2146014937, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  m_Sprite: {fileID: 476744077, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20567,7 +20599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b21bac2db97a99f45b1094f9e8411d6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02fa11902ed4b2e4eb033a03fb0858f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

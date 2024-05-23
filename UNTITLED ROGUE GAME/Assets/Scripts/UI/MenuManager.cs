@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField]public GameObject currentPanel;
 
+    public Text playerMoneyText;
+
     private void OnEnable()
     {
         Time.timeScale = 1f;
@@ -32,6 +35,11 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        playerMoneyText.text = "x" + GameManager.Instance.playerMoney.ToString();
     }
 
     public void Quit()

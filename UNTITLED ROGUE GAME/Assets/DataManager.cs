@@ -56,6 +56,8 @@ public class DataManager : MonoBehaviour
 
             gameData.isThereSaveData = loadedData.isThereSaveData;
 
+            gameData.playerMoney = loadedData.playerMoney;
+
 
 
             GameManager.Instance.isMutedBool = gameData.isMutedBool;
@@ -78,8 +80,9 @@ public class DataManager : MonoBehaviour
 
             GameManager.Instance.isThereSaveData = gameData.isThereSaveData;
 
-            Debug.Log("Loaded values: Music Slider Before Muting: " + GameManager.Instance.musicSliderValueBeforeMuting + ", SFX Slider Before Muting: " + GameManager.Instance.SFXSliderValueBeforeMuting);
+            GameManager.Instance.playerMoney = gameData.playerMoney;
         }
+
         else
         {
             Debug.Log("El archivo de guardado no existe");
@@ -113,13 +116,13 @@ public class DataManager : MonoBehaviour
             GameManager.Instance.isThereSaveData = true;
 
             newData.isThereSaveData = GameManager.Instance.isThereSaveData;
+
+            newData.playerMoney = GameManager.Instance.playerMoney;
         };
 
         string JsonString = JsonUtility.ToJson(newData, true);
 
         File.WriteAllText(SaveFiles, JsonString);
-
-        Debug.Log("Saved File with values: Music Slider Before Muting: " + newData.musicSliderValueBeforeMuting + ", SFX Slider Before Muting: " + newData.SFXSliderValueBeforeMuting);
 
         Debug.Log("Saved File");
     }

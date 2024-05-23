@@ -31,7 +31,7 @@ namespace TopDownCharacter2D.Stats
         {
             UpdateCharacterStats(null, null);
             statsModifiers.CollectionChanged += UpdateCharacterStats;
-            
+            money = GameManager.Instance.playerMoney;
         }
         private void Start()
         {

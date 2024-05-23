@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public bool isInMainMenu = true;
     public WinCanvasManager canvasManager;
 
+    public int playerMoney = 0;
 
     void OnEnable()
     {

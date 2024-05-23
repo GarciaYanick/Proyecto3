@@ -52,6 +52,7 @@ public class EnemyController : EnemyStateController, IDamageable
         {
             bulletSpeed += 2;
             stats.money += monetaryValue;
+            GameManager.Instance.playerMoney = stats.money;
             OnKilled?.Invoke(this, EventArgs.Empty);
             if (typeEnemy == 1) InventoryController.instance.AddMoreSlots();
             Destroy(gameObject);
