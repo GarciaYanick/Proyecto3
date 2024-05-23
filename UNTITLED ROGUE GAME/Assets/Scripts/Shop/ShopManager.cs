@@ -12,12 +12,10 @@ public class ShopManager : MonoBehaviour
     public ShopTemplate[] shopPanels;
 
     public InventarySO inventoryData;
-
-    // Start is called before the first frame update
     void Start()
     {
         inventoryData.Initialize();
-        coinsUI.text = "x" + GameManager.Instance.playerMoney.ToString();
+        coinsUI.text = GameManager.Instance.playerMoney.ToString();
         LoadPanels();
         CheckPurchaseable();
 
@@ -37,7 +35,7 @@ public class ShopManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.M))
         {
             GameManager.Instance.playerMoney+= 10;
-            coinsUI.text = "x" + GameManager.Instance.playerMoney.ToString();
+            coinsUI.text = GameManager.Instance.playerMoney.ToString();
             CheckPurchaseable();
         }
     }

@@ -17,7 +17,6 @@ public class collectMoney : MonoBehaviour
        if (collision.CompareTag("Player"))
        {
             statsHandler.money++;
-            GameManager.Instance.playerMoney = statsHandler.money;
             Debug.Log("dinero " + statsHandler.money);
             coin.SetActive(false);
        }
