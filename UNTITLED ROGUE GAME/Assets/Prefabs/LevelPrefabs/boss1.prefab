@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemies: 1
+  canvasManager: {fileID: 0}
 --- !u!61 &8301491800713329395
 BoxCollider2D:
   m_ObjectHideFlags: 0

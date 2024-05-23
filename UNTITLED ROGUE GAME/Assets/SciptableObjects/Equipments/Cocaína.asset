@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a67ea656339b0c4d8ddfe9ac9c62db7, type: 3}
-  m_Name: CotaMalla
+  m_Name: "Coca\xEDna"
   m_EditorClassIdentifier: 
   itemID: 0
-  itemName: Cota de Malla
-  itemImage: {fileID: 732591523, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  itemName: Polvo Blanco
+  itemImage: {fileID: -1857518096, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
   cost: 100
-  description: "Gran armadura protectora hecha por los mism\xEDsimos enanos del inframundo"
-  RarityString: 
-  Rarity: 0
+  description: Te eleva a las nubes, te hace sentir especial
+  RarityString: Legendary
+  Rarity: 3
   statMultiplier: 0
   stats:
   - health

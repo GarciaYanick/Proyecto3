@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 0
   itemName: Baratija
-  itemImage: {fileID: -1085919842, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  itemImage: {fileID: -2066154982, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
   cost: 50
   description: "Tan desechable como t\xFA"
-  RarityString: 
+  RarityString: Rare
   Rarity: 0
   statMultiplier: 0
   stats:

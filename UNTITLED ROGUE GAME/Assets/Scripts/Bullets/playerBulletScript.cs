@@ -12,6 +12,7 @@ public class playerBulletScript : MonoBehaviour
         if (temp != null)
         {
             temp.OnHurt(5);
+
             gameObject.SetActive(false);
         }
     }

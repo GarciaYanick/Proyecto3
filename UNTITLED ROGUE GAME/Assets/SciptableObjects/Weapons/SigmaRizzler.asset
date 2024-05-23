@@ -21,7 +21,7 @@ MonoBehaviour:
   Rarity: 0
   size: 1
   delay: 0.5
-  power: 1
+  power: 3
   speed: 20
   target:
     serializedVersion: 2

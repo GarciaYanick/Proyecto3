@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b9de7d504aba8c47831d8ac5e3c66c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,10 +137,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63a66bc5d0f6fef4da842af4089bebba, type: 2}
   - {fileID: 11400000, guid: 4ea9669c1a755214b8dbbd85006ec1b3, type: 2}
   - {fileID: 11400000, guid: 6d8099ef38553e1439df9a7d0966324b, type: 2}
-  weaponMeleeList:
-  - {fileID: 11400000, guid: b6439e4b039fd444f81158342a9cf0f6, type: 2}
-  - {fileID: 11400000, guid: f717f99d1c8b9b4429fc017c9ad59077, type: 2}
+  weaponMeleeList: []
   complementsList:
   - {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
+  - {fileID: 11400000, guid: 558945eeb9d415447b0696cbc80cc03c, type: 2}
+  - {fileID: 11400000, guid: 8aa9f880a74e4074499fbee7d31e4691, type: 2}
+  - {fileID: 11400000, guid: 1a79e5d689d52e74ca950e5508366cc4, type: 2}
+  - {fileID: 11400000, guid: 35627e6694cf6e94abdcb9f82dbd8764, type: 2}
   equipmentList:
   - {fileID: 11400000, guid: 4d503ec33a2b0634eae4b304a7ff52c9, type: 2}

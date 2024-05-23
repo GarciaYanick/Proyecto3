@@ -21,9 +21,11 @@ public class WinCanvasManager : MonoBehaviour
     private float[] frameDeltaTimeArray;
     private bool isGamePaused;
 
-
-
-
+    private void OnEnable()
+    {
+        AudioManagerScript.instance.musicSource.clip = AudioManagerScript.instance.gameTheme;
+        AudioManagerScript.instance.musicSource.Play();
+    }
     private void Awake()
     {
         frameDeltaTimeArray = new float[100];
@@ -58,6 +60,7 @@ public class WinCanvasManager : MonoBehaviour
     public void ShowGameOverMenu()
     {
         hudmenu.SetActive(false);
+        Time.timeScale = 0f;
         gameOverMenu.SetActive(true);
     }
 

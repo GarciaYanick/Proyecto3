@@ -30,6 +30,8 @@ public class MenuManager : MonoBehaviour
     private void OnEnable()
     {
         Time.timeScale = 1f;
+        AudioManagerScript.instance.musicSource.clip = AudioManagerScript.instance.menuTheme;
+        AudioManagerScript.instance.musicSource.Play();
     }
 
     private void Awake()

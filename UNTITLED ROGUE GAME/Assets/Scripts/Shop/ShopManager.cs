@@ -74,6 +74,8 @@ public class ShopManager : MonoBehaviour
             GameManager.Instance.playerMoney = GameManager.Instance.playerMoney - shopItemsSO[btnNumber].cost;
             coinsUI.text = GameManager.Instance.playerMoney.ToString();
 
+            DataManager.instance.SaveData();
+
             for (int i = 14; i < inventoryData.Size; i++)
             {
                 if (inventoryData.inventoryItems[i].IsEmpty)

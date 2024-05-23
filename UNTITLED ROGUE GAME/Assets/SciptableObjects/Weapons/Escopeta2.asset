@@ -20,8 +20,8 @@ MonoBehaviour:
   RarityString: Rare
   Rarity: 0
   size: 1
-  delay: 1
-  power: 5
+  delay: 0.5
+  power: 8
   speed: 15
   target:
     serializedVersion: 2

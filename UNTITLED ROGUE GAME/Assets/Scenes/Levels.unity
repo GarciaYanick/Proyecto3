@@ -2498,7 +2498,7 @@ MonoBehaviour:
   contentPanel: {fileID: 3843825391380502877}
   contentBagPanel: {fileID: 6719076726457427126}
   contentBasePanel: {fileID: 2863315224474307679}
-  secureBag: {fileID: 0}
+  secureBag: {fileID: 1615422440495279805}
   actionPanel: {fileID: 229073373}
 --- !u!1 &885016653
 GameObject:

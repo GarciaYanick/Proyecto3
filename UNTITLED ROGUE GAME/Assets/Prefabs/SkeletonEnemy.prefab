@@ -415,8 +415,8 @@ MonoBehaviour:
   currentState: {fileID: 11400000, guid: 486115779b5d2084b95d79f3e48ed93c, type: 2}
   target: {fileID: 0}
   typeEnemy: 0
-  HP: 100
-  maxhp: 100
+  HP: 60
+  maxhp: 60
   healthSlider: {fileID: 0}
   AttackDistance: 1
   bulletPrefab: {fileID: 0}

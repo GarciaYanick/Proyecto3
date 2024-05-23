@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: AnilloCompromiso
   m_EditorClassIdentifier: 
   itemID: 0
-  itemName: Anillo Compromiso
-  itemImage: {fileID: -2066154982, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
+  itemName: Coco
+  itemImage: {fileID: 364256282, guid: 4e88ee53d70014c4bab5c6815c65ea58, type: 3}
   cost: 300
-  description: "Con este anillo todos los enemigos de g\xE9nero femenino huir\xE1n
-    de ti"
+  description: Un PNG de un coco. Por favor no lo elimines, el juego no funciona
+    sin esto
   RarityString: Legendary
   Rarity: 3
   statMultiplier: 0

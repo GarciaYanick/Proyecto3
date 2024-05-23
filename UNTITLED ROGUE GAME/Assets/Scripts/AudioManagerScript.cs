@@ -29,14 +29,12 @@ public class AudioManagerScript : MonoBehaviour
 
     private IEnumerator InitializeAudio()
     {
-        // Wait for one frame to ensure GameManager is initialized and data is loaded
+        
         yield return null;
-
-        Debug.Log("AudioManager isThereSaveData: " + GameManager.Instance.isThereSaveData);
 
         if (GameManager.Instance.isThereSaveData)
         {
-            Debug.Log("Game Manager MusicSliderValue: " + GameManager.Instance.musicSliderValue);
+           
             musicSource.volume = GameManager.Instance.musicSliderValue;
             sfxSource.volume = GameManager.Instance.SFXSliderValue;
         }

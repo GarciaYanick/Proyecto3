@@ -18,6 +18,8 @@ public class collectMoney : MonoBehaviour
        {
             statsHandler.money++;
             Debug.Log("dinero " + statsHandler.money);
+            AudioManagerScript.instance.sfxSource.clip = AudioManagerScript.instance.collectCoin;
+            AudioManagerScript.instance.sfxSource.Play();
             coin.SetActive(false);
        }
     }
