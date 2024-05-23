@@ -8,11 +8,19 @@ public class ItemSO : ScriptableObject
 {
     public int itemID;
 
+    public string itemName;
+
     public Sprite itemImage;
+
+    public int cost;
+
+    [TextArea]
+    public string description;
 
     private static readonly string[] Rarities = { "Rare", "Epic", "Mythic", "Legendary" };
 
     public string RarityString;
+
     [DoNotSerialize] public int Rarity;
 
     [DoNotSerialize] public List<ItemParameter> DefaultParametersList { get; set; }

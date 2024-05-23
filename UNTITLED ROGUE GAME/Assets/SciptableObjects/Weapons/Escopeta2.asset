@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Escopeta2
   m_EditorClassIdentifier: 
   itemID: 3
+  itemName: Escopeta
   itemImage: {fileID: 21300000, guid: b4bc7753b0ca2f54c818fc6c63778318, type: 3}
-  RarityString: 
+  cost: 50
+  description: Hace Pium Pium Pium
+  RarityString: Rare
   Rarity: 0
   size: 1
   delay: 1

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -20,10 +21,11 @@ public class MenuManager : MonoBehaviour
     public GameObject maliciaShopPanel;
     public GameObject maliciaProfilePanel;
 
-
     public float initialAudio = -20f;
 
     [SerializeField]public GameObject currentPanel;
+
+    public Text playerMoneyText;
 
     private void OnEnable()
     {
@@ -33,7 +35,11 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        //AudioManagerScript.instance.StartMenuTheme();
+    }
+
+    private void Update()
+    {
+        playerMoneyText.text = GameManager.Instance.playerMoney.ToString();
     }
 
     public void Quit()
@@ -68,6 +74,11 @@ public class MenuManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void ExitBase()
+    {
+        GameManager.Instance.isInMainMenu = false;
     }
 
     public void LoadBuyPanel()

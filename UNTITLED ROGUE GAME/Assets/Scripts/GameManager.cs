@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using TopDownCharacter2D.Stats;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,9 +36,11 @@ public class GameManager : MonoBehaviour
     public float SFXSliderValueBeforeMuting;
 
     public bool isThereSaveData = false;
+    public bool isInMainMenu = true;
     public WinCanvasManager canvasManager;
 
     private InventoryController inventoryController;
+    public int playerMoney = 0;
 
 
     void OnEnable()

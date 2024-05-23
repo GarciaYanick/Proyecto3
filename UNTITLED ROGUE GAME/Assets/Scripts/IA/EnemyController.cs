@@ -22,14 +22,18 @@ public class EnemyController : EnemyStateController, IDamageable
     private InventoryController inventoryController;
     private void Start()
     {
-        stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
+        if (GetComponent<CharacterStatsHandler>() != null)
+        {
+
+            stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
+        }
         inventoryController = GameObject.Find("InventoryController").GetComponent<InventoryController>();
     }
     void Update()
     {
         StateTransition();
         if (currentState.action != null) currentState.action.OnUpdate();
-        
+
     }
     public void OnHurt(float damage)
     {
@@ -57,7 +61,7 @@ public class EnemyController : EnemyStateController, IDamageable
     }
     public void LaunchBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         var bulletrb = bullet.GetComponent<Rigidbody2D>();
         bulletrb.velocity = (target.transform.position - transform.position) * bulletSpeed;
     }
@@ -76,12 +80,12 @@ public class EnemyController : EnemyStateController, IDamageable
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (collision.gameObject.CompareTag("Player"))
         {
             target = collision.gameObject;
         }
-       // target = GameObject.Find("Player");
+        // target = GameObject.Find("Player");
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

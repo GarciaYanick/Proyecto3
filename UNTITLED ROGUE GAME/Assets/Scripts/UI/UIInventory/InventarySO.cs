@@ -40,59 +40,75 @@ using UnityEngine.Animations;
             
         }
 
-        public int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
+    public void AddItemAtPosition(ItemSO item, int quantity, int position, List<ItemParameter> itemState = null)
+    {
+        if (position < 0 || position >= inventoryItems.Count) return;
+        if (inventoryItems[position].IsEmpty || inventoryItems[position].item == null)
         {
             InventoryItem newItem = new InventoryItem
             {
                 item = item,
                 quantity = quantity,
-                itemState = new List<ItemParameter>(itemState==null ? item.DefaultParametersList : itemState)
+                itemState = new List<ItemParameter>(itemState ?? item.DefaultParametersList)
             };
-            for (int i = 14; i < inventoryItems.Count; i++)
-            {
-                if (inventoryItems[i].IsEmpty || inventoryItems[i].item == null)
-                {
-                    inventoryItems[i] = newItem;
-                    return quantity;
-                }
-            }
-            return 0;
+            inventoryItems[position] = newItem;
+            InformAboutChange();
         }
+    }
 
-        private bool IsInventoryFull() => inventoryItems.Where(x => x.IsEmpty || x.item == null).Any() == false;
-
-        /*private int AddStackableItem(ItemSO item, int quantity)
+    private int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
+    {
+        InventoryItem newItem = new InventoryItem
         {
-            for (int i = 0; i < inventoryItems.Count; i++)
+            item = item,
+            quantity = quantity,
+            itemState = new List<ItemParameter>(itemState == null ? item.DefaultParametersList : itemState)
+        };
+        for (int i = 0; i < inventoryItems.Count; i++)
+        {
+            if (inventoryItems[i].IsEmpty || inventoryItems[i].item == null)
             {
-                if (inventoryItems[i].IsEmpty || inventoryItems[i].item == null) continue;
-                if (inventoryItems[i].item.itemID == item.itemID)
+                inventoryItems[i] = newItem;
+                return quantity;
+            }
+        }
+        return 0;
+    }
+
+    private bool IsInventoryFull() => inventoryItems.All(x => !x.IsEmpty);
+
+    /*private int AddStackableItem(ItemSO item, int quantity)
+    {
+        for (int i = 0; i < inventoryItems.Count; i++)
+        {
+            if (inventoryItems[i].IsEmpty || inventoryItems[i].item == null) continue;
+            if (inventoryItems[i].item.itemID == item.itemID)
+            {
+                int amountPossibleToTake = inventoryItems[i].item.MaxStackSize - inventoryItems[i].quantity;
+
+                if (quantity > amountPossibleToTake)
                 {
-                    int amountPossibleToTake = inventoryItems[i].item.MaxStackSize - inventoryItems[i].quantity;
-                    
-                    if (quantity > amountPossibleToTake)
-                    {
-                        inventoryItems[i] = inventoryItems[i].ChangeQuantity(inventoryItems[i].item.MaxStackSize);
-                        quantity -= amountPossibleToTake;
-                    }
-                    else
-                    {
-                        inventoryItems[i] = inventoryItems[i].ChangeQuantity(inventoryItems[i].quantity+quantity);
-                        InformAboutChange();
-                        return 0;
-                    }
+                    inventoryItems[i] = inventoryItems[i].ChangeQuantity(inventoryItems[i].item.MaxStackSize);
+                    quantity -= amountPossibleToTake;
+                }
+                else
+                {
+                    inventoryItems[i] = inventoryItems[i].ChangeQuantity(inventoryItems[i].quantity+quantity);
+                    InformAboutChange();
+                    return 0;
                 }
             }
-            while(quantity > 0 && IsInventoryFull() == false)
-            {
-                int newQuantity = Mathf.Clamp(quantity, 0, item.MaxStackSize);
-                quantity -= newQuantity;
-                AddItemToFirstFreeSlot(item,newQuantity);
-            }
-            return quantity;
-        }*/
+        }
+        while(quantity > 0 && IsInventoryFull() == false)
+        {
+            int newQuantity = Mathf.Clamp(quantity, 0, item.MaxStackSize);
+            quantity -= newQuantity;
+            AddItemToFirstFreeSlot(item,newQuantity);
+        }
+        return quantity;
+    }*/
 
-        public void AddItem(InventoryItem item)
+    public void AddItem(InventoryItem item)
         {
             AddItem(item.item, item.quantity);
         }
@@ -146,9 +162,9 @@ using UnityEngine.Animations;
         public ItemSO item;
         public List<ItemParameter> itemState;
 
-    public bool IsEmpty { get; internal set; }
+    public bool IsEmpty => item == null;
 
-        public InventoryItem ChangeQuantity(int newQuantity)
+    public InventoryItem ChangeQuantity(int newQuantity)
         {
             return new InventoryItem
             {

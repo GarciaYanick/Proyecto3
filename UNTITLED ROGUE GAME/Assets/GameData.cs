@@ -25,6 +25,8 @@ public class GameData
     public float SFXSliderValueBeforeMuting;
 
     public bool isThereSaveData;
+
+    public int playerMoney;
     //public PowerUp[] powerUps;
     // public List<Slot> slots;
     //public List<Sprite> images;
