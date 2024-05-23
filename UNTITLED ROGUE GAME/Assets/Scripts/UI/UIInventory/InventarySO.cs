@@ -56,7 +56,7 @@ using UnityEngine.Animations;
         }
     }
 
-    private int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
+    public int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
     {
         InventoryItem newItem = new InventoryItem
         {
