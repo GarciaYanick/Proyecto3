@@ -22,11 +22,8 @@ public class EnemyController : EnemyStateController, IDamageable
     private InventoryController inventoryController;
     private void Start()
     {
-        if (GetComponent<CharacterStatsHandler>() != null)
-        {
+        stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
 
-            stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
-        }
         inventoryController = GameObject.Find("InventoryController").GetComponent<InventoryController>();
     }
     void Update()
