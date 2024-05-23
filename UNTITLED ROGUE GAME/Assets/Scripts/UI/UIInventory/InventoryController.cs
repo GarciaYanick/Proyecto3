@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -174,7 +175,7 @@ public class InventoryController: MonoBehaviour
         int count = 79;
         for(int i = 0;i < inventorySO.inventoryItems.Count; i++)
         {
-            if (inventorySO.inventoryItems[i].item == null) count--; 
+            if (inventorySO.inventoryItems[i].IsEmpty) count--; 
         }
         return count;
     }
@@ -182,22 +183,26 @@ public class InventoryController: MonoBehaviour
     {
         int count = CountInventoryItems();
         Debug.Log(count);
-        for (int i = 14; i < inventorySO.inventoryItems.Count; i++)
-        {
-            for(int j = 14; j < basementSO.inventoryItems.Count; j++)
+
+            for(int j = 14; j < inventorySO.inventoryItems.Count; j++)
             {
                 if (count == 0) return;
-                if (inventorySO.inventoryItems[j].item != null)
-                {
-                    if (basementSO.inventoryItems[i].item == null)
+            if (basementSO.inventoryItems[j].item != null)
+            {
+                inventorySO.AddItemToFirstFreeSlot(basementSO.inventoryItems[j].item, basementSO.inventoryItems[j].quantity);
+                count--;
+            }
+                   /* if (inventorySO.inventoryItems[j].item == null)
                     {
-                        basementSO.inventoryItems[i] = inventorySO.inventoryItems[j];
+                        inventorySO.inventoryItems[i] = basementSO.inventoryItems[j];
                         count--;
+                        i++;
+                        break;
                     }
-                }
+                }*/
                 
             }
-        }
+        
     }
     /*
 private void Update()

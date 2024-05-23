@@ -31911,7 +31911,7 @@ MonoBehaviour:
   invCharSize: 6
   invBagSize: 8
   invBaseSize: 64
-  secureBag: {fileID: 0}
+  secureBag: {fileID: 979854698}
 --- !u!1 &1472648295755635139
 GameObject:
   m_ObjectHideFlags: 0

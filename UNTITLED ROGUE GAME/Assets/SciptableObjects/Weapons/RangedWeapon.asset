@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RangedWeapon
   m_EditorClassIdentifier: 
   itemID: 0
-  itemImage: {fileID: 0}
-  RarityString: 
-  Rarity: 0
+  itemImage: {fileID: 21300000, guid: ee967f8464e4ba147bef4229550baad7, type: 3}
+  RarityString: Legendary
+  Rarity: 3
   size: 0
   delay: 0
   power: 0

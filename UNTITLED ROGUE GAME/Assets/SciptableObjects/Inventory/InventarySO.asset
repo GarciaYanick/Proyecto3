@@ -56,7 +56,7 @@ MonoBehaviour:
     item: {fileID: 0}
     itemState: []
   - quantity: 0
-    item: {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
+    item: {fileID: 0}
     itemState: []
   - quantity: 0
     item: {fileID: 11400000, guid: 3ab3380f8644b1545a0231ad33ae7a2e, type: 2}
@@ -68,19 +68,19 @@ MonoBehaviour:
     item: {fileID: 11400000, guid: 4d503ec33a2b0634eae4b304a7ff52c9, type: 2}
     itemState: []
   - quantity: 0
-    item: {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
+    item: {fileID: 11400000, guid: 4d503ec33a2b0634eae4b304a7ff52c9, type: 2}
     itemState: []
   - quantity: 0
-    item: {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
+    item: {fileID: 0}
     itemState: []
   - quantity: 0
-    item: {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
+    item: {fileID: 0}
     itemState: []
   - quantity: 0
-    item: {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
+    item: {fileID: 0}
     itemState: []
   - quantity: 0
-    item: {fileID: 11400000, guid: 7cf5aea0807abcc49a7803ebe905164a, type: 2}
+    item: {fileID: 0}
     itemState: []
   - quantity: 0
     item: {fileID: 0}
