@@ -9,6 +9,6 @@ public class InitializeCoins : MonoBehaviour
 
     void Start()
     {
-        coinsUI.text = "x" + GameManager.Instance.playerMoney.ToString();
+        coinsUI.text = GameManager.Instance.playerMoney.ToString();
     }
 }

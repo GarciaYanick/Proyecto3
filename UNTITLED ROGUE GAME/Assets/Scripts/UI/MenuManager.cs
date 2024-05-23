@@ -39,7 +39,7 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        playerMoneyText.text = "x" + GameManager.Instance.playerMoney.ToString();
+        playerMoneyText.text = GameManager.Instance.playerMoney.ToString();
     }
 
     public void Quit()
