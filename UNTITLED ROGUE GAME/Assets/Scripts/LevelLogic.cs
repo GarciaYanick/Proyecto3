@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEditor.SearchService;
 using UnityEngine;
 
@@ -10,10 +11,12 @@ public class LevelLogic : MonoBehaviour
 
     [SerializeField] private int _enemies;
     public EventHandler OnEnemiesKilled;
+    public WinCanvasManager canvasManager;
     // Start is called before the first frame update
     void Start()
     {
         GetComponentInChildren<EnemyController>().OnKilled += SubstractEnemyFromList;
+        canvasManager = GameObject.Find("Canvas").GetComponent<WinCanvasManager>();
     }
 
     private void Update()
@@ -29,9 +32,12 @@ public class LevelLogic : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             gameObject.SetActive(false);
-            GameManager.Instance.currentLevel++;
-            GameManager.Instance.LevelChange();
-            collision.gameObject.transform.position = new Vector2(0, 0);
+            if (GameManager.Instance.currentLevel == 4 || GameManager.Instance.currentLevel == 9 | GameManager.Instance.currentLevel==14) canvasManager.ShowCheckpointMenu();
+            else
+            {
+                GameManager.Instance.NewLevel();
+                collision.gameObject.transform.position = new Vector2(0, 0);
+            }
         }
     }
 

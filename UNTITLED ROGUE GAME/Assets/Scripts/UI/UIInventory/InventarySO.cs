@@ -40,7 +40,7 @@ using UnityEngine.Animations;
             
         }
 
-        private int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
+        public int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
             InventoryItem newItem = new InventoryItem
             {
@@ -48,7 +48,7 @@ using UnityEngine.Animations;
                 quantity = quantity,
                 itemState = new List<ItemParameter>(itemState==null ? item.DefaultParametersList : itemState)
             };
-            for (int i = 0; i < inventoryItems.Count; i++)
+            for (int i = 14; i < inventoryItems.Count; i++)
             {
                 if (inventoryItems[i].IsEmpty || inventoryItems[i].item == null)
                 {

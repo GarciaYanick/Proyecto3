@@ -12175,6 +12175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4990937619367996481, guid: 3168461c75a391a439f1a4815a31cdbe, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5183926162630428572, guid: 3168461c75a391a439f1a4815a31cdbe, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -20197,7 +20201,7 @@ GameObject:
   - component: {fileID: 1367278190}
   m_Layer: 5
   m_Name: Punto1Panel
-  m_TagString: Untagged
+  m_TagString: Basement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20280,6 +20284,7 @@ MonoBehaviour:
   contentPanel: {fileID: 405533706}
   contentBagPanel: {fileID: 979854699}
   contentBasePanel: {fileID: 24209395}
+  secureBag: {fileID: 476330927}
   actionPanel: {fileID: 0}
 --- !u!1 &1369874431
 GameObject:
@@ -22334,57 +22339,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528282620}
   m_CullTransparentMesh: 1
---- !u!1 &1536445891
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1536445893}
-  - component: {fileID: 1536445892}
-  m_Layer: 0
-  m_Name: testing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1536445892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536445891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19ceb6923259afc4caf67684cb0274db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 1367278190}
-  basementSO: {fileID: 11400000, guid: 84853d3aa7c73dd4cb50976045482aa3, type: 2}
-  inventorySO: {fileID: 11400000, guid: 76e6c7faf2b484e4cb73fd23671c575c, type: 2}
-  invCharSize: 6
-  invBagSize: 8
-  invBaseSize: 64
-  secureBag: {fileID: 0}
---- !u!4 &1536445893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536445891}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5841849, y: 0.27376664, z: 29.561874}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541935068
 GameObject:
   m_ObjectHideFlags: 0
@@ -29147,6 +29101,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
+        m_MethodName: CopySecurebag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1950994522
 GameObject:
   m_ObjectHideFlags: 0
@@ -29217,7 +29183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Inventory
+  m_Text: Equipment
 --- !u!222 &1950994525
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31927,6 +31893,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145000895}
   m_CullTransparentMesh: 1
+--- !u!114 &825494174500622308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472648295755635139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ceb6923259afc4caf67684cb0274db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 1367278190}
+  basementSO: {fileID: 11400000, guid: 84853d3aa7c73dd4cb50976045482aa3, type: 2}
+  inventorySO: {fileID: 11400000, guid: 76e6c7faf2b484e4cb73fd23671c575c, type: 2}
+  invCharSize: 6
+  invBagSize: 8
+  invBaseSize: 64
+  secureBag: {fileID: 979854698}
+--- !u!1 &1472648295755635139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3433564089688116925}
+  - component: {fileID: 825494174500622308}
+  m_Layer: 0
+  m_Name: InventoryController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!224 &2819535665621525419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31964,6 +31966,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &3433564089688116925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472648295755635139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15517363, y: 0.029786382, z: -3.1055958}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &4436233701537482623
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32013,7 +32030,7 @@ SceneRoots:
   - {fileID: 1662900655}
   - {fileID: 1215549753}
   - {fileID: 1744124604}
-  - {fileID: 1536445893}
   - {fileID: 839410225}
   - {fileID: 1922218279}
   - {fileID: 510838554}
+  - {fileID: 3433564089688116925}

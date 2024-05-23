@@ -19,9 +19,11 @@ public class EnemyController : EnemyStateController, IDamageable
     public CharacterStatsHandler stats;
     public int monetaryValue;
     public EventHandler OnKilled;
+    private InventoryController inventoryController;
     private void Start()
     {
         stats = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
+        inventoryController = GameObject.Find("InventoryController").GetComponent<InventoryController>();
     }
     void Update()
     {
@@ -49,7 +51,7 @@ public class EnemyController : EnemyStateController, IDamageable
             bulletSpeed += 2;
             stats.money += monetaryValue;
             OnKilled?.Invoke(this, EventArgs.Empty);
-            if (typeEnemy == 1) InventoryController.instance.AddMoreSlots();
+            if (typeEnemy == 1) inventoryController.AddMoreSlots();
             Destroy(gameObject);
         }
     }

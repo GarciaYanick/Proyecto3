@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool isMutedBool = false;
     public bool isFPSTextActive;
     public bool isFullScreen = false;
+    public bool isBossDefeated = false;
 
     public Text mutedText;
     public Text FPSText;
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
     public bool isThereSaveData = false;
     public WinCanvasManager canvasManager;
 
+    private InventoryController inventoryController;
+
 
     void OnEnable()
     {
@@ -48,12 +51,19 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        LevelChange();
+        if (SceneManager.GetSceneByBuildIndex(1) == scene)
+        {
+            LevelChange();
+        }
+        
     }
 
     void Start()
     {
         //LevelChange();
+        inventoryController = GameObject.Find("InventoryController").GetComponent<InventoryController>();
+        currentLevel = 1;
+        
     }
 
     void OnDisable()
@@ -85,6 +95,14 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
+        {
+            canvasManager = GameObject.Find("Canvas").GetComponent<WinCanvasManager>();
+
+        }
     }
     public void LevelChange()
     {
@@ -128,8 +146,14 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+    public void NewLevel()
+    {
+        currentLevel++;
+        LevelChange();
+    }
     public void SetGameOver()
     {
         canvasManager.ShowGameOverMenu();
+        inventoryController.SaveSecurebag();
     }
 }

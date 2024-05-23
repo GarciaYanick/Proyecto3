@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class InventoryController: MonoBehaviour
 {
-    public static InventoryController instance;
+    //public static InventoryController instance;
     [SerializeField]
     private UIInventoryPage inventoryUI;
 
@@ -24,7 +26,7 @@ public class InventoryController: MonoBehaviour
 
     [Header("SecureBag")]
     public GameObject secureBag;
-    private void Awake()
+    /*private void Awake()
     {
         if (instance == null)
         {
@@ -33,8 +35,7 @@ public class InventoryController: MonoBehaviour
 
         }
         else Destroy(gameObject);
-
-    }
+    }*/
     private void Start()
     {
         PrepareUI();
@@ -43,6 +44,16 @@ public class InventoryController: MonoBehaviour
         {
             inventoryUI.UpdateData(item.Key, item.Value.item.itemImage);
         }
+    }
+    private void Update()
+    {
+       // if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1) ) inventoryUI = GameObject.FindObjectOfType<UIInventoryPage>().GetComponent<UIInventoryPage>();
+        
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        inventoryUI =  (UIInventoryPage) FindObjectsOfType(typeof(UIInventoryPage))[0];
+
     }
 
     private void PrepareInventoryData()
@@ -133,6 +144,65 @@ public class InventoryController: MonoBehaviour
         }
         if ((invBagSize + 2) < 8) inventoryUI.AddSlots(2);
 
+    }
+    public void CopySecurebagAndEquipment()
+    {
+        for (int i = 0; i < inventorySO.inventoryItems.Count; i++)
+        {
+            if (i < 14)
+            {
+                inventorySO.inventoryItems[i] = basementSO.inventoryItems[i];
+            }
+
+        }
+       
+    }
+    public void SaveSecurebag()
+    {
+        for (int i = 0; i < inventorySO.inventoryItems.Count; i++)
+        {
+            if (i > 5 && i < 14)
+            {
+                basementSO.inventoryItems[i] = inventorySO.inventoryItems[i];
+            }
+
+        }
+        inventorySO.Initialize();
+
+    }
+    public int CountInventoryItems()
+    {
+        int count = 79;
+        for(int i = 0;i < inventorySO.inventoryItems.Count; i++)
+        {
+            if (inventorySO.inventoryItems[i].IsEmpty) count--; 
+        }
+        return count;
+    }
+    public void SaveInventory()
+    {
+        int count = CountInventoryItems();
+        Debug.Log(count);
+
+            for(int j = 14; j < inventorySO.inventoryItems.Count; j++)
+            {
+                if (count == 0) return;
+            if (basementSO.inventoryItems[j].item != null)
+            {
+                inventorySO.AddItemToFirstFreeSlot(basementSO.inventoryItems[j].item, basementSO.inventoryItems[j].quantity);
+                count--;
+            }
+                   /* if (inventorySO.inventoryItems[j].item == null)
+                    {
+                        inventorySO.inventoryItems[i] = basementSO.inventoryItems[j];
+                        count--;
+                        i++;
+                        break;
+                    }
+                }*/
+                
+            }
+        
     }
     /*
 private void Update()

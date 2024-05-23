@@ -28,6 +28,7 @@ public class UIInventoryPage : MonoBehaviour
     public event Action<int> OnImageRequested, OnItemActionRequested, OnStartDragging;
     public event Action<int, int> OnSwapItems;
     private int currentDragItem = -1;
+    public GameObject secureBag;
 
     [SerializeField] private ItemActionPanel actionPanel;
 
@@ -36,6 +37,8 @@ public class UIInventoryPage : MonoBehaviour
         Hide();
         mouseFollower.Toggle(false);
         invImage.ResetImage();
+        if (GameManager.Instance.isBossDefeated == false) secureBag.SetActive(false);
+        else secureBag.SetActive(true);
     }
 
     public void InitializeInvUI(int invCharSize, int invBagSize, int invBaseSize)
