@@ -7,7 +7,7 @@ public class collectMoney : MonoBehaviour
 {
     public GameObject coin;
     public CharacterStatsHandler statsHandler;
-    // Start is called before the first frame update
+
     private void Start()
     {
         statsHandler = GameObject.FindWithTag("Player").GetComponent<CharacterStatsHandler>();
